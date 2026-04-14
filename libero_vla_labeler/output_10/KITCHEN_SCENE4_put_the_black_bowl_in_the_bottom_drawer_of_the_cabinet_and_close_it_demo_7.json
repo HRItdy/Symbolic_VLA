@@ -1,0 +1,133 @@
+{
+  "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+  "demo_id": "demo_7",
+  "hdf5_path": "/home/tiandy/libero_100/libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 234,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "put the black bowl in the bottom drawer of the cabinet and close it",
+    "initial_state": {
+      "On": [
+        "akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region",
+        "wine_bottle_1 kitchen_table_wine_bottle_init_region",
+        "white_cabinet_1 kitchen_table_white_cabinet_init_region",
+        "wine_rack_1 kitchen_table_wine_rack_init_region"
+      ],
+      "Open": [
+        "white_cabinet_1_bottom_region"
+      ]
+    },
+    "goal_state": {
+      "Close": [
+        "white_cabinet_1_bottom_region"
+      ],
+      "In": [
+        "akita_black_bowl_1 white_cabinet_1_bottom_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "akita_black_bowl_1"
+        ],
+        "description": "pick up the black bowl",
+        "key_action": "pick up",
+        "key_event": "picked up black bowl",
+        "preconditions": [
+          "On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region"
+        ],
+        "effects": [
+          "Not On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "akita_black_bowl_1",
+          "white_cabinet_1_bottom_region"
+        ],
+        "description": "place the black bowl in the bottom drawer of the cabinet",
+        "key_action": "place",
+        "key_event": "placed black bowl in cabinet",
+        "preconditions": [
+          "Not On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region",
+          "Open white_cabinet_1_bottom_region"
+        ],
+        "effects": [
+          "In akita_black_bowl_1 white_cabinet_1_bottom_region"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Close",
+        "parameters": [
+          "white_cabinet_1_bottom_region"
+        ],
+        "description": "close the bottom drawer of the cabinet",
+        "key_action": "close",
+        "key_event": "closed cabinet drawer",
+        "preconditions": [
+          "In akita_black_bowl_1 white_cabinet_1_bottom_region"
+        ],
+        "effects": [
+          "Close white_cabinet_1_bottom_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 69,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[black bowl]",
+        "preconditions": [
+          "On black bowl kitchen_table"
+        ],
+        "effects": [],
+        "description": "The robot arm moves towards the black bowl to prepare for picking it up."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 70,
+      "end_frame": 147,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[bottom drawer]",
+        "preconditions": [
+          "In akita_black_bowl_1 white_cabinet_1_bottom_region",
+          "Open white_cabinet_1_bottom_region"
+        ],
+        "effects": [],
+        "description": "The robot arm moves to position itself near the bottom drawer of the cabinet, preparing to close it."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 148,
+      "end_frame": 233,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Close[bottom drawer]",
+        "preconditions": [
+          "In akita_black_bowl_1 white_cabinet_1_bottom_region",
+          "Open white_cabinet_1_bottom_region"
+        ],
+        "effects": [
+          "Close white_cabinet_1_bottom_region"
+        ],
+        "description": "The robot arm grasps the handle of the bottom drawer and pulls it shut."
+      }
+    }
+  ]
+}

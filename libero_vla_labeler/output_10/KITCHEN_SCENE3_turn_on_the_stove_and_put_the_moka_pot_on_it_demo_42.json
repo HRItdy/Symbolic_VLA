@@ -1,0 +1,137 @@
+{
+  "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+  "demo_id": "demo_42",
+  "hdf5_path": "/home/tiandy/libero_100/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 240,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "turn on the stove and put the moka pot on it",
+    "initial_state": {
+      "On": [
+        "flat_stove_1 kitchen_table_flat_stove_init_region",
+        "chefmate_8_frypan_1 kitchen_table_frypan_init_region",
+        "moka_pot_1 kitchen_table_moka_pot_init_region"
+      ]
+    },
+    "goal_state": {
+      "And": [
+        "Turnon flat_stove_1",
+        "On moka_pot_1 flat_stove_1_cook_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "TurnOn",
+        "parameters": [
+          "flat_stove_1"
+        ],
+        "description": "turn on the stove",
+        "key_action": "turn on",
+        "key_event": "stove turned on",
+        "preconditions": [],
+        "effects": [
+          "Turnon flat_stove_1"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "moka_pot_1",
+          "flat_stove_1"
+        ],
+        "description": "put the moka pot on the stove",
+        "key_action": "place",
+        "key_event": "moka pot placed on stove",
+        "preconditions": [
+          "Turnon flat_stove_1"
+        ],
+        "effects": [
+          "On moka_pot_1 flat_stove_1_cook_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 45,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "TurnOn[stove]",
+        "preconditions": [],
+        "effects": [
+          "Turnon stove"
+        ],
+        "description": "The robot turns the knob to switch on the stove."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 46,
+      "end_frame": 87,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "TurnOn[stove]",
+        "preconditions": [],
+        "effects": [
+          "Turnon stove"
+        ],
+        "description": "The robot moves to the stove and turns it on by interacting with the knob."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 88,
+      "end_frame": 167,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "PickUp[moka_pot]",
+        "preconditions": [
+          "On moka_pot_1 kitchen_table_moka_pot_init_region"
+        ],
+        "effects": [
+          "-On moka_pot_1 kitchen_table_moka_pot_init_region",
+          "holding moka_pot_1"
+        ],
+        "description": "The robot grasps the moka pot and lifts it from its initial position on the table."
+      }
+    },
+    {
+      "segment_id": "seg_4",
+      "start_frame": 168,
+      "end_frame": 220,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[stove]",
+        "preconditions": [],
+        "effects": [],
+        "description": "The robot arm moves towards the stove's knob in preparation to turn it on."
+      }
+    },
+    {
+      "segment_id": "seg_5",
+      "start_frame": 221,
+      "end_frame": 239,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[moka pot, stove]",
+        "preconditions": [
+          "Turnon stove"
+        ],
+        "effects": [
+          "On moka pot stove"
+        ],
+        "description": "The robot places the moka pot onto the stove."
+      }
+    }
+  ]
+}

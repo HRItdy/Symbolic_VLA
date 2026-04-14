@@ -1,0 +1,234 @@
+{
+  "task_name": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+  "demo_id": "demo_22",
+  "hdf5_path": "/home/tiandy/libero_100/libero_10/LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 286,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+    "initial_state": {
+      "On": [
+        {
+          "object": "plate_1",
+          "location": "living_room_table_plate_left_region"
+        },
+        {
+          "object": "plate_2",
+          "location": "living_room_table_plate_right_region"
+        },
+        {
+          "object": "red_coffee_mug_1",
+          "location": "living_room_table_red_coffee_mug_init_region"
+        },
+        {
+          "object": "white_yellow_mug_1",
+          "location": "living_room_table_white_yellow_mug_init_region"
+        },
+        {
+          "object": "porcelain_mug_1",
+          "location": "living_room_table_porcelain_mug_init_region"
+        }
+      ]
+    },
+    "goal_state": {
+      "On": [
+        {
+          "object": "porcelain_mug_1",
+          "location": "plate_1"
+        },
+        {
+          "object": "white_yellow_mug_1",
+          "location": "plate_2"
+        }
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "porcelain_mug_1"
+        ],
+        "description": "pick up the porcelain mug",
+        "key_action": "pick up",
+        "key_event": "picked up porcelain mug",
+        "preconditions": [
+          {
+            "predicate": "On",
+            "object": "porcelain_mug_1",
+            "location": "living_room_table_porcelain_mug_init_region"
+          }
+        ],
+        "effects": [
+          {
+            "predicate": "On",
+            "object": "porcelain_mug_1",
+            "location": "hand"
+          }
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "porcelain_mug_1",
+          "plate_1"
+        ],
+        "description": "place the porcelain mug on the left plate",
+        "key_action": "place",
+        "key_event": "placed porcelain mug on plate 1",
+        "preconditions": [
+          {
+            "predicate": "On",
+            "object": "porcelain_mug_1",
+            "location": "hand"
+          },
+          {
+            "predicate": "On",
+            "object": "plate_1",
+            "location": "living_room_table_plate_left_region"
+          }
+        ],
+        "effects": [
+          {
+            "predicate": "On",
+            "object": "porcelain_mug_1",
+            "location": "plate_1"
+          }
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "PickUp",
+        "parameters": [
+          "white_yellow_mug_1"
+        ],
+        "description": "pick up the white and yellow mug",
+        "key_action": "pick up",
+        "key_event": "picked up white and yellow mug",
+        "preconditions": [
+          {
+            "predicate": "On",
+            "object": "white_yellow_mug_1",
+            "location": "living_room_table_white_yellow_mug_init_region"
+          }
+        ],
+        "effects": [
+          {
+            "predicate": "On",
+            "object": "white_yellow_mug_1",
+            "location": "hand"
+          }
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "white_yellow_mug_1",
+          "plate_2"
+        ],
+        "description": "place the white and yellow mug on the right plate",
+        "key_action": "place",
+        "key_event": "placed white and yellow mug on plate 2",
+        "preconditions": [
+          {
+            "predicate": "On",
+            "object": "white_yellow_mug_1",
+            "location": "hand"
+          },
+          {
+            "predicate": "On",
+            "object": "plate_2",
+            "location": "living_room_table_plate_right_region"
+          }
+        ],
+        "effects": [
+          {
+            "predicate": "On",
+            "object": "white_yellow_mug_1",
+            "location": "plate_2"
+          }
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 39,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "Place[white mug, left plate]",
+        "preconditions": [
+          "On porcelain_mug_1 hand",
+          "On plate_1 living_room_table_plate_left_region"
+        ],
+        "effects": [
+          "On porcelain_mug_1 plate_1",
+          "-On porcelain_mug_1 hand"
+        ],
+        "description": "The robot moves the white mug held in its gripper to the left plate and releases it."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 40,
+      "end_frame": 135,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[porcelain mug]",
+        "preconditions": [
+          "On[porcelain_mug_1, living_room_table_porcelain_mug_init_region]"
+        ],
+        "effects": [],
+        "description": "The robot moves its gripper towards the porcelain mug, positioning itself to pick it up."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 136,
+      "end_frame": 201,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[right plate]",
+        "preconditions": [
+          "On[yellow and white mug, hand]"
+        ],
+        "effects": [],
+        "description": "The robot arm moves the held yellow and white mug towards the right plate."
+      }
+    },
+    {
+      "segment_id": "seg_4",
+      "start_frame": 202,
+      "end_frame": 272,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "unknown[]",
+        "preconditions": [],
+        "effects": [],
+        "description": "Annotation unavailable \u2014 response blocked (2)."
+      }
+    },
+    {
+      "segment_id": "seg_5",
+      "start_frame": 273,
+      "end_frame": 285,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "unknown[]",
+        "preconditions": [],
+        "effects": [],
+        "description": "Annotation unavailable \u2014 response blocked (2)."
+      }
+    }
+  ]
+}

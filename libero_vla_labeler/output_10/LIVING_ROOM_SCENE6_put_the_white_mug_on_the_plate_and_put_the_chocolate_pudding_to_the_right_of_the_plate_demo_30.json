@@ -1,0 +1,238 @@
+{
+  "task_name": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate",
+  "demo_id": "demo_30",
+  "hdf5_path": "/home/tiandy/libero_100/libero_10/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 276,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+    "initial_state": {
+      "On": [
+        {
+          "object": "plate_1",
+          "location": "living_room_table_plate_init_region"
+        },
+        {
+          "object": "red_coffee_mug_1",
+          "location": "living_room_table_red_coffee_mug_init_region"
+        },
+        {
+          "object": "chocolate_pudding_1",
+          "location": "living_room_table_chocolate_pudding_init_region"
+        },
+        {
+          "object": "porcelain_mug_1",
+          "location": "living_room_table_porcelain_mug_init_region"
+        }
+      ]
+    },
+    "goal_state": {
+      "On": [
+        {
+          "object": "porcelain_mug_1",
+          "location": "plate_1"
+        },
+        {
+          "object": "chocolate_pudding_1",
+          "location": "living_room_table_plate_right_region"
+        }
+      ]
+    },
+    "operators": [
+      {
+        "name": "Place",
+        "parameters": [
+          "porcelain_mug_1",
+          "plate_1"
+        ],
+        "description": "put the white mug on the plate",
+        "key_action": "place",
+        "key_event": "placed_on",
+        "preconditions": [
+          {
+            "predicate": "On",
+            "object": "porcelain_mug_1",
+            "location": "living_room_table_porcelain_mug_init_region"
+          },
+          {
+            "predicate": "On",
+            "object": "plate_1",
+            "location": "living_room_table_plate_init_region"
+          }
+        ],
+        "effects": [
+          {
+            "predicate": "On",
+            "object": "porcelain_mug_1",
+            "location": "plate_1"
+          }
+        ],
+        "source_predicates": [
+          {
+            "predicate": "On",
+            "object": "porcelain_mug_1",
+            "location": "living_room_table_porcelain_mug_init_region"
+          }
+        ]
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "chocolate_pudding_1",
+          "living_room_table_plate_right_region"
+        ],
+        "description": "put the chocolate pudding to the right of the plate",
+        "key_action": "place",
+        "key_event": "placed_on",
+        "preconditions": [
+          {
+            "predicate": "On",
+            "object": "chocolate_pudding_1",
+            "location": "living_room_table_chocolate_pudding_init_region"
+          },
+          {
+            "predicate": "On",
+            "object": "plate_1",
+            "location": "living_room_table_plate_init_region"
+          }
+        ],
+        "effects": [
+          {
+            "predicate": "On",
+            "object": "chocolate_pudding_1",
+            "location": "living_room_table_plate_right_region"
+          }
+        ],
+        "source_predicates": [
+          {
+            "predicate": "On",
+            "object": "chocolate_pudding_1",
+            "location": "living_room_table_chocolate_pudding_init_region"
+          }
+        ]
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 43,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[red_coffee_mug]",
+        "preconditions": [
+          "Holding[red_coffee_mug]"
+        ],
+        "effects": [],
+        "description": "The robot moves the red coffee mug it is currently holding, away from its initial position."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 44,
+      "end_frame": 72,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[porcelain_mug]",
+        "preconditions": [
+          "On[porcelain_mug_1, living_room_table_porcelain_mug_init_region]",
+          "gripper_open",
+          "hand_empty"
+        ],
+        "effects": [],
+        "description": "The robot arm moves to position itself over the white mug with an open gripper, preparing to pick it up."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 73,
+      "end_frame": 93,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "Place[red mug, table]",
+        "preconditions": [
+          "Holding[red mug]"
+        ],
+        "effects": [
+          "On[red mug, table]",
+          "-Holding[red mug]"
+        ],
+        "description": "The robot places the red mug onto the table."
+      }
+    },
+    {
+      "segment_id": "seg_4",
+      "start_frame": 94,
+      "end_frame": 167,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[porcelain_mug]",
+        "preconditions": [
+          "On[porcelain_mug, living_room_table_porcelain_mug_init_region]",
+          "gripper_is_open"
+        ],
+        "effects": [],
+        "description": "The robot arm moves to position itself above the porcelain mug, preparing to pick it up."
+      }
+    },
+    {
+      "segment_id": "seg_5",
+      "start_frame": 168,
+      "end_frame": 231,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "PickUp[red coffee mug]",
+        "preconditions": [
+          "On[red_coffee_mug, living_room_table_red_coffee_mug_init_region]",
+          "HandEmpty"
+        ],
+        "effects": [
+          "Holding[red_coffee_mug]",
+          "-On[red_coffee_mug, living_room_table_red_coffee_mug_init_region]"
+        ],
+        "description": "The robot moves to and picks up the red coffee mug from the table."
+      }
+    },
+    {
+      "segment_id": "seg_6",
+      "start_frame": 232,
+      "end_frame": 269,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[porcelain_mug]",
+        "preconditions": [
+          "On[porcelain_mug_1, living_room_table_porcelain_mug_init_region]",
+          "GripperOpen"
+        ],
+        "effects": [],
+        "description": "The robot arm moves to position its open gripper over the white mug."
+      }
+    },
+    {
+      "segment_id": "seg_7",
+      "start_frame": 270,
+      "end_frame": 275,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[chocolate pudding, plate right region]",
+        "preconditions": [
+          "Holding[robot, chocolate pudding]"
+        ],
+        "effects": [
+          "On[chocolate pudding, plate right region]",
+          "-Holding[robot, chocolate pudding]"
+        ],
+        "description": "The robot places the chocolate pudding on the region to the right of the plate."
+      }
+    }
+  ]
+}

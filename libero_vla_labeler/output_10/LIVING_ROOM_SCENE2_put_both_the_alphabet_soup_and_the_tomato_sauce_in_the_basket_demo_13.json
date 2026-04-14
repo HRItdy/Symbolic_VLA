@@ -1,0 +1,178 @@
+{
+  "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+  "demo_id": "demo_13",
+  "hdf5_path": "/home/tiandy/libero_100/libero_10/LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 288,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "put both the alphabet soup and the tomato sauce in the basket",
+    "initial_state": {
+      "On": [
+        "alphabet_soup_1 living_room_table",
+        "cream_cheese_1 living_room_table",
+        "tomato_sauce_1 living_room_table",
+        "ketchup_1 living_room_table",
+        "milk_1 living_room_table",
+        "orange_juice_1 living_room_table",
+        "butter_1 living_room_table",
+        "basket_1 living_room_table"
+      ]
+    },
+    "goal_state": {
+      "In": [
+        "alphabet_soup_1 basket_1",
+        "tomato_sauce_1 basket_1"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "alphabet_soup_1"
+        ],
+        "description": "pick up the alphabet soup",
+        "key_action": "pick up",
+        "key_event": "picked up alphabet soup",
+        "preconditions": [
+          "On alphabet_soup_1 living_room_table"
+        ],
+        "effects": [
+          "In alphabet_soup_1 basket_1"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "PickUp",
+        "parameters": [
+          "tomato_sauce_1"
+        ],
+        "description": "pick up the tomato sauce",
+        "key_action": "pick up",
+        "key_event": "picked up tomato sauce",
+        "preconditions": [
+          "On tomato_sauce_1 living_room_table"
+        ],
+        "effects": [
+          "In tomato_sauce_1 basket_1"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "alphabet_soup_1",
+          "basket_1"
+        ],
+        "description": "place the alphabet soup in the basket",
+        "key_action": "place",
+        "key_event": "placed alphabet soup in basket",
+        "preconditions": [
+          "In alphabet_soup_1 basket_1"
+        ],
+        "effects": [],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "tomato_sauce_1",
+          "basket_1"
+        ],
+        "description": "place the tomato sauce in the basket",
+        "key_action": "place",
+        "key_event": "placed tomato sauce in basket",
+        "preconditions": [
+          "In tomato_sauce_1 basket_1"
+        ],
+        "effects": [],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 62,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "Place[tomato_sauce, basket]",
+        "preconditions": [
+          "Holding tomato_sauce"
+        ],
+        "effects": [
+          "-Holding tomato_sauce",
+          "In tomato_sauce basket",
+          "GripperOpen"
+        ],
+        "description": "The robot places the tomato sauce into the basket."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 63,
+      "end_frame": 144,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[alphabet soup]",
+        "preconditions": [
+          "On alphabet_soup_1 living_room_table",
+          "robot_hand_open"
+        ],
+        "effects": [],
+        "description": "The robot arm moves towards the alphabet soup, positioning itself above it in preparation for grasping."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 145,
+      "end_frame": 218,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "PickUp[alphabet soup]",
+        "preconditions": [
+          "On alphabet soup table"
+        ],
+        "effects": [
+          "In alphabet soup basket",
+          "-On alphabet soup table"
+        ],
+        "description": "The robot picks up the alphabet soup from the table."
+      }
+    },
+    {
+      "segment_id": "seg_4",
+      "start_frame": 219,
+      "end_frame": 267,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[alphabet soup]",
+        "preconditions": [
+          "On alphabet_soup_1 living_room_table"
+        ],
+        "effects": [],
+        "description": "The robot arm moves to position itself above the alphabet soup in preparation for grasping."
+      }
+    },
+    {
+      "segment_id": "seg_5",
+      "start_frame": 268,
+      "end_frame": 287,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "moveto[basket]",
+        "preconditions": [
+          "Holding[tomato_sauce]"
+        ],
+        "effects": [],
+        "description": "The robot arm moves towards the basket while holding the tomato sauce."
+      }
+    }
+  ]
+}

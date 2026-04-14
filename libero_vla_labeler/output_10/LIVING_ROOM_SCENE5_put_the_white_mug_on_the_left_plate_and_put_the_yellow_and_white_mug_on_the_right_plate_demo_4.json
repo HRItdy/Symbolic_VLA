@@ -1,0 +1,271 @@
+{
+  "task_name": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+  "demo_id": "demo_4",
+  "hdf5_path": "/home/tiandy/libero_100/libero_10/LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 279,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+    "initial_state": {
+      "On": [
+        {
+          "object": "plate_1",
+          "location": "living_room_table_plate_left_region"
+        },
+        {
+          "object": "plate_2",
+          "location": "living_room_table_plate_right_region"
+        },
+        {
+          "object": "red_coffee_mug_1",
+          "location": "living_room_table_red_coffee_mug_init_region"
+        },
+        {
+          "object": "white_yellow_mug_1",
+          "location": "living_room_table_white_yellow_mug_init_region"
+        },
+        {
+          "object": "porcelain_mug_1",
+          "location": "living_room_table_porcelain_mug_init_region"
+        }
+      ]
+    },
+    "goal_state": {
+      "On": [
+        {
+          "object": "porcelain_mug_1",
+          "location": "plate_1"
+        },
+        {
+          "object": "white_yellow_mug_1",
+          "location": "plate_2"
+        }
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "porcelain_mug_1"
+        ],
+        "description": "pick up the porcelain mug",
+        "key_action": "pick up",
+        "key_event": "picked up porcelain mug",
+        "preconditions": [
+          {
+            "predicate": "On",
+            "object": "porcelain_mug_1",
+            "location": "living_room_table_porcelain_mug_init_region"
+          }
+        ],
+        "effects": [
+          {
+            "predicate": "On",
+            "object": "porcelain_mug_1",
+            "location": "hand"
+          }
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "porcelain_mug_1",
+          "plate_1"
+        ],
+        "description": "place the porcelain mug on the left plate",
+        "key_action": "place",
+        "key_event": "placed porcelain mug on plate 1",
+        "preconditions": [
+          {
+            "predicate": "On",
+            "object": "porcelain_mug_1",
+            "location": "hand"
+          },
+          {
+            "predicate": "On",
+            "object": "plate_1",
+            "location": "living_room_table_plate_left_region"
+          }
+        ],
+        "effects": [
+          {
+            "predicate": "On",
+            "object": "porcelain_mug_1",
+            "location": "plate_1"
+          }
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "PickUp",
+        "parameters": [
+          "white_yellow_mug_1"
+        ],
+        "description": "pick up the white and yellow mug",
+        "key_action": "pick up",
+        "key_event": "picked up white and yellow mug",
+        "preconditions": [
+          {
+            "predicate": "On",
+            "object": "white_yellow_mug_1",
+            "location": "living_room_table_white_yellow_mug_init_region"
+          }
+        ],
+        "effects": [
+          {
+            "predicate": "On",
+            "object": "white_yellow_mug_1",
+            "location": "hand"
+          }
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "white_yellow_mug_1",
+          "plate_2"
+        ],
+        "description": "place the white and yellow mug on the right plate",
+        "key_action": "place",
+        "key_event": "placed white and yellow mug on plate 2",
+        "preconditions": [
+          {
+            "predicate": "On",
+            "object": "white_yellow_mug_1",
+            "location": "hand"
+          },
+          {
+            "predicate": "On",
+            "object": "plate_2",
+            "location": "living_room_table_plate_right_region"
+          }
+        ],
+        "effects": [
+          {
+            "predicate": "On",
+            "object": "white_yellow_mug_1",
+            "location": "plate_2"
+          }
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 34,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "PickUp[porcelain_mug]",
+        "preconditions": [
+          "On[porcelain_mug_1, living_room_table_porcelain_mug_init_region]"
+        ],
+        "effects": [
+          "On[porcelain_mug_1, hand]",
+          "-On[porcelain_mug_1, living_room_table_porcelain_mug_init_region]"
+        ],
+        "description": "The robot picks up the porcelain mug from the table."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 35,
+      "end_frame": 103,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[white mug]",
+        "preconditions": [
+          "On[porcelain_mug_1, living_room_table_porcelain_mug_init_region]"
+        ],
+        "effects": [],
+        "description": "The robot arm moves to position its gripper above the white mug, preparing to pick it up."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 104,
+      "end_frame": 178,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "PickUp[white_yellow_mug]",
+        "preconditions": [
+          "On[white_yellow_mug, living_room_table_white_yellow_mug_init_region]"
+        ],
+        "effects": [
+          "On[white_yellow_mug, hand]",
+          "-On[white_yellow_mug, living_room_table_white_yellow_mug_init_region]"
+        ],
+        "description": "The robot picks up the white and yellow mug from the table."
+      }
+    },
+    {
+      "segment_id": "seg_4",
+      "start_frame": 179,
+      "end_frame": 185,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[white_yellow_mug]",
+        "preconditions": [
+          "On[white_yellow_mug, living_room_table_white_yellow_mug_init_region]"
+        ],
+        "effects": [],
+        "description": "The robot arm moves towards the white and yellow mug, positioning the gripper above it."
+      }
+    },
+    {
+      "segment_id": "seg_5",
+      "start_frame": 186,
+      "end_frame": 202,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[right plate]",
+        "preconditions": [
+          "On[yellow and white mug, hand]",
+          "On[right plate, living_room_table_plate_right_region]"
+        ],
+        "effects": [],
+        "description": "The robot moves the yellow and white mug towards the right plate while holding it."
+      }
+    },
+    {
+      "segment_id": "seg_6",
+      "start_frame": 203,
+      "end_frame": 272,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[white_yellow_mug]",
+        "preconditions": [
+          "On[white_yellow_mug, living_room_table_white_yellow_mug_init_region]"
+        ],
+        "effects": [],
+        "description": "The robot arm moves to position itself over the white and yellow mug, with the gripper open, in preparation for picking it up."
+      }
+    },
+    {
+      "segment_id": "seg_7",
+      "start_frame": 273,
+      "end_frame": 278,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "moveto[right plate]",
+        "preconditions": [
+          "On[white_yellow_mug_1, hand]"
+        ],
+        "effects": [],
+        "description": "The robot moves towards the right plate while holding the yellow and white mug. Although the images show the mug on the table, the closed gripper state and the task goal (to place this mug on the right plate) indicate the robot is holding the mug and repositioning."
+      }
+    }
+  ]
+}

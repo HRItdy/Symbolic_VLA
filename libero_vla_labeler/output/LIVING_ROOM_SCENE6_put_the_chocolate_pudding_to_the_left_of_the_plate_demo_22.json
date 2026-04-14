@@ -1,0 +1,93 @@
+{
+  "task_name": "LIVING_ROOM_SCENE6_put_the_chocolate_pudding_to_the_left_of_the_plate",
+  "demo_id": "demo_22",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/LIVING_ROOM_SCENE6_put_the_chocolate_pudding_to_the_left_of_the_plate_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 108,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "put the chocolate pudding to the left of the plate",
+    "initial_state": {
+      "On": [
+        "plate_1 living_room_table_plate_init_region",
+        "red_coffee_mug_1 living_room_table_red_coffee_mug_init_region",
+        "chocolate_pudding_1 living_room_table_chocolate_pudding_init_region",
+        "porcelain_mug_1 living_room_table_porcelain_mug_init_region"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "chocolate_pudding_1 living_room_table_plate_left_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "chocolate_pudding_1"
+        ],
+        "description": "pick up the chocolate pudding",
+        "key_action": "pick up",
+        "key_event": "picked up chocolate pudding",
+        "preconditions": [
+          "On chocolate_pudding_1 living_room_table_chocolate_pudding_init_region"
+        ],
+        "effects": [
+          "Not(On chocolate_pudding_1 living_room_table_chocolate_pudding_init_region)"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "chocolate_pudding_1",
+          "plate_left_region"
+        ],
+        "description": "place the chocolate pudding to the left of the plate",
+        "key_action": "place",
+        "key_event": "placed chocolate pudding",
+        "preconditions": [
+          "Not(On chocolate_pudding_1 living_room_table_chocolate_pudding_init_region)"
+        ],
+        "effects": [
+          "On chocolate_pudding_1 living_room_table_plate_left_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 50,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[chocolate pudding, left of plate]",
+        "preconditions": [
+          "Not(On chocolate_pudding_1 living_room_table_chocolate_pudding_init_region)"
+        ],
+        "effects": [],
+        "description": "The robot moves the chocolate pudding, which it is currently holding, towards the target location to the left of the plate."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 51,
+      "end_frame": 107,
+      "gripper_state": "open",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[chocolate pudding, plate]",
+        "preconditions": [
+          "Not(On chocolate_pudding_1 living_room_table_chocolate_pudding_init_region)"
+        ],
+        "effects": [
+          "On chocolate_pudding_1 living_room_table_plate_left_region"
+        ],
+        "description": "The robot places the chocolate pudding to the left of the plate."
+      }
+    }
+  ]
+}

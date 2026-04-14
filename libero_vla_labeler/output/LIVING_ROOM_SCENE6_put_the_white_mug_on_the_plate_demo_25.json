@@ -1,0 +1,137 @@
+{
+  "task_name": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate",
+  "demo_id": "demo_25",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 178,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "put the white mug on the plate",
+    "initial_state": {
+      "On": [
+        "plate_1 living_room_table_plate_init_region",
+        "red_coffee_mug_1 living_room_table_red_coffee_mug_init_region",
+        "chocolate_pudding_1 living_room_table_chocolate_pudding_init_region",
+        "porcelain_mug_1 living_room_table_porcelain_mug_init_region"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "porcelain_mug_1 plate_1"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "porcelain_mug_1"
+        ],
+        "description": "pick up the porcelain mug",
+        "key_action": "pick up",
+        "key_event": "mug picked up",
+        "preconditions": [
+          "On porcelain_mug_1 living_room_table_porcelain_mug_init_region"
+        ],
+        "effects": [
+          "Not(On porcelain_mug_1 living_room_table_porcelain_mug_init_region)"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "porcelain_mug_1",
+          "plate_1"
+        ],
+        "description": "place the porcelain mug on the plate",
+        "key_action": "place on",
+        "key_event": "mug placed on plate",
+        "preconditions": [
+          "Not(On porcelain_mug_1 living_room_table_porcelain_mug_init_region)"
+        ],
+        "effects": [
+          "On porcelain_mug_1 plate_1"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 53,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[mug]",
+        "preconditions": [
+          "On porcelain_mug_1 living_room_table_porcelain_mug_init_region"
+        ],
+        "effects": [],
+        "description": "The robot arm moves towards the white mug to prepare for grasping."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 54,
+      "end_frame": 65,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[mug]",
+        "preconditions": [
+          "On porcelain_mug_1 living_room_table_porcelain_mug_init_region"
+        ],
+        "effects": [],
+        "description": "The robot arm moves towards the porcelain mug, positioning the gripper above it to prepare for grasping."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 66,
+      "end_frame": 89,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[plate]",
+        "preconditions": [
+          "GripperClosed",
+          "Holding porcelain_mug"
+        ],
+        "effects": [],
+        "description": "The robot moves the held porcelain mug to a position above the plate, preparing to place it."
+      }
+    },
+    {
+      "segment_id": "seg_4",
+      "start_frame": 90,
+      "end_frame": 172,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[mug]",
+        "preconditions": [
+          "On porcelain_mug_1 living_room_table_porcelain_mug_init_region"
+        ],
+        "effects": [],
+        "description": "The robot moves its arm to position the gripper over the white mug."
+      }
+    },
+    {
+      "segment_id": "seg_5",
+      "start_frame": 173,
+      "end_frame": 177,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "moveto[home]",
+        "preconditions": [
+          "On mug plate"
+        ],
+        "effects": [],
+        "description": "The robot arm moves to a home position with its gripper closed, after having placed the mug on the plate in a prior action."
+      }
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "task_name": "KITCHEN_SCENE9_put_the_frying_pan_on_top_of_the_cabinet",
+  "demo_id": "demo_8",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/KITCHEN_SCENE9_put_the_frying_pan_on_top_of_the_cabinet_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 245,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "put the frying pan on top of the cabinet",
+    "initial_state": {
+      "On": [
+        "flat_stove_1 kitchen_table_flat_stove_init_region",
+        "chefmate_8_frypan_1 kitchen_table_frypan_init_region",
+        "white_bowl_1 kitchen_table_white_bowl_init_region",
+        "wooden_two_layer_shelf_1 kitchen_table_wooden_two_layer_shelf_init_region"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "chefmate_8_frypan_1 wooden_two_layer_shelf_1_top_side"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "frypan"
+        ],
+        "description": "pick up the frying pan from the stove",
+        "key_action": "pick up",
+        "key_event": "frying pan picked up",
+        "preconditions": [
+          "On chefmate_8_frypan_1 flat_stove_1"
+        ],
+        "effects": [
+          "Not On chefmate_8_frypan_1 flat_stove_1"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "frypan",
+          "shelf"
+        ],
+        "description": "place the frying pan on top of the cabinet",
+        "key_action": "place",
+        "key_event": "frying pan placed on shelf",
+        "preconditions": [
+          "Not On chefmate_8_frypan_1 wooden_two_layer_shelf_1_top_side"
+        ],
+        "effects": [
+          "On chefmate_8_frypan_1 wooden_two_layer_shelf_1_top_side"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 86,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "PickUp[frypan]",
+        "preconditions": [
+          "On chefmate_8_frypan_1 flat_stove_1"
+        ],
+        "effects": [
+          "-On chefmate_8_frypan_1 flat_stove_1"
+        ],
+        "description": "The robot moves to and picks up the frying pan from the stove."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 87,
+      "end_frame": 160,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[frypan]",
+        "preconditions": [
+          "On[frypan, table]",
+          "gripper_open"
+        ],
+        "effects": [],
+        "description": "The robot moves its arm to a position directly above the frying pan, preparing to grasp it."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 161,
+      "end_frame": 214,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "Place[frypan, shelf]",
+        "preconditions": [
+          "Holding frypan",
+          "Not On frypan shelf"
+        ],
+        "effects": [
+          "On frypan shelf",
+          "-Holding frypan"
+        ],
+        "description": "The robot moves the frying pan it is holding and places it on the shelf."
+      }
+    },
+    {
+      "segment_id": "seg_4",
+      "start_frame": 215,
+      "end_frame": 244,
+      "gripper_state": "open",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[frypan, shelf]",
+        "preconditions": [
+          "Not On chefmate_8_frypan_1 wooden_two_layer_shelf_1_top_side"
+        ],
+        "effects": [
+          "On chefmate_8_frypan_1 wooden_two_layer_shelf_1_top_side"
+        ],
+        "description": "The robot releases the frying pan onto the shelf and retracts its arm."
+      }
+    }
+  ]
+}

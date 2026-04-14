@@ -1,0 +1,115 @@
+{
+  "task_name": "LIVING_ROOM_SCENE2_pick_up_the_orange_juice_and_put_it_in_the_basket",
+  "demo_id": "demo_7",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/LIVING_ROOM_SCENE2_pick_up_the_orange_juice_and_put_it_in_the_basket_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 156,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "pick up the orange juice and put it in the basket",
+    "initial_state": {
+      "On": [
+        "alphabet_soup_1 living_room_table_alphabet_soup_init_region",
+        "cream_cheese_1 living_room_table_cream_cheese_init_region",
+        "tomato_sauce_1 living_room_table_tomato_sauce_init_region",
+        "ketchup_1 living_room_table_ketchup_init_region",
+        "milk_1 living_room_table_milk_init_region",
+        "orange_juice_1 living_room_table_orange_juice_init_region",
+        "butter_1 living_room_table_butter_init_region",
+        "basket_1 living_room_table_basket_init_region"
+      ]
+    },
+    "goal_state": {
+      "In": [
+        "orange_juice_1 basket_1_contain_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "orange_juice_1"
+        ],
+        "description": "pick up the orange juice",
+        "key_action": "pick up",
+        "key_event": "picked up orange juice",
+        "preconditions": [
+          "On orange_juice_1 living_room_table_orange_juice_init_region"
+        ],
+        "effects": [
+          "Not(On orange_juice_1 living_room_table_orange_juice_init_region)",
+          "Holding orange_juice_1"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "orange_juice_1",
+          "basket_1"
+        ],
+        "description": "put the orange juice in the basket",
+        "key_action": "place",
+        "key_event": "placed orange juice in basket",
+        "preconditions": [
+          "Holding orange_juice_1"
+        ],
+        "effects": [
+          "In orange_juice_1 basket_1_contain_region",
+          "Not(Holding orange_juice_1)"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 54,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[orange_juice]",
+        "preconditions": [
+          "On orange_juice_1 living_room_table_orange_juice_init_region"
+        ],
+        "effects": [],
+        "description": "The robot arm, with its gripper closed, moves downwards towards the orange juice to prepare for grasping."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 55,
+      "end_frame": 139,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[orange_juice]",
+        "preconditions": [
+          "On orange_juice_1 living_room_table_orange_juice_init_region"
+        ],
+        "effects": [],
+        "description": "The robot moves its open gripper towards the orange juice, positioning itself above it to prepare for grasping."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 140,
+      "end_frame": 155,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[orange_juice, basket]",
+        "preconditions": [
+          "Holding orange_juice"
+        ],
+        "effects": [
+          "In orange_juice basket",
+          "-Holding[orange_juice]"
+        ],
+        "description": "The robot places the orange juice into the basket."
+      }
+    }
+  ]
+}

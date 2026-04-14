@@ -1,0 +1,117 @@
+{
+  "task_name": "KITCHEN_SCENE5_put_the_ketchup_in_the_top_drawer_of_the_cabinet",
+  "demo_id": "demo_44",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/KITCHEN_SCENE5_put_the_ketchup_in_the_top_drawer_of_the_cabinet_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 211,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "put the ketchup in the top drawer of the cabinet",
+    "initial_state": {
+      "On": [
+        "akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region",
+        "plate_1 kitchen_table_plate_init_region",
+        "white_cabinet_1 kitchen_table_white_cabinet_init_region",
+        "ketchup_1 kitchen_table_ketchup_init_region"
+      ],
+      "Open": [
+        "white_cabinet_1_top_region"
+      ]
+    },
+    "goal_state": {
+      "In": [
+        "ketchup_1 white_cabinet_1_top_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "ketchup_1"
+        ],
+        "description": "pick up the ketchup",
+        "key_action": "pick up",
+        "key_event": "ketchup picked up",
+        "preconditions": [
+          "On ketchup_1 kitchen_table_ketchup_init_region"
+        ],
+        "effects": [
+          "Not(On ketchup_1 kitchen_table_ketchup_init_region)",
+          "Holding ketchup_1"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "ketchup_1",
+          "white_cabinet_1_top_region"
+        ],
+        "description": "place the ketchup in the top drawer of the cabinet",
+        "key_action": "place",
+        "key_event": "ketchup placed in cabinet",
+        "preconditions": [
+          "Holding ketchup_1",
+          "Open white_cabinet_1_top_region"
+        ],
+        "effects": [
+          "In ketchup_1 white_cabinet_1_top_region",
+          "Not(Holding ketchup_1)"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 95,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[ketchup]",
+        "preconditions": [
+          "On ketchup_1 kitchen_table_ketchup_init_region",
+          "Not(Holding ketchup_1)"
+        ],
+        "effects": [],
+        "description": "The robot arm moves its gripper towards the ketchup bottle on the table."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 96,
+      "end_frame": 191,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[ketchup]",
+        "preconditions": [
+          "On ketchup_1 kitchen_table_ketchup_init_region"
+        ],
+        "effects": [],
+        "description": "The robot arm moves to a position above the ketchup bottle, preparing to pick it up."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 192,
+      "end_frame": 210,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[ketchup, top drawer]",
+        "preconditions": [
+          "Holding ketchup_1",
+          "Open white_cabinet_1_top_region"
+        ],
+        "effects": [
+          "In ketchup_1 white_cabinet_1_top_region",
+          "Not(Holding ketchup_1)"
+        ],
+        "description": "The robot places the ketchup into the top drawer of the cabinet."
+      }
+    }
+  ]
+}

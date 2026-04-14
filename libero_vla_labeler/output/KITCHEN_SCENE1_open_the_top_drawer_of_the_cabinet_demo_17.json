@@ -1,0 +1,60 @@
+{
+  "task_name": "KITCHEN_SCENE1_open_the_top_drawer_of_the_cabinet",
+  "demo_id": "demo_17",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/KITCHEN_SCENE1_open_the_top_drawer_of_the_cabinet_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 77,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "open the top drawer of the cabinet",
+    "initial_state": {
+      "On": [
+        "akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region",
+        "plate_1 kitchen_table_plate_init_region",
+        "wooden_cabinet_1 kitchen_table_wooden_cabinet_init_region"
+      ]
+    },
+    "goal_state": {
+      "Open": [
+        "wooden_cabinet_1_top_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "Open",
+        "parameters": [
+          "wooden_cabinet_1"
+        ],
+        "description": "open the top drawer of the cabinet",
+        "key_action": "open",
+        "key_event": "drawer opened",
+        "preconditions": [
+          "On wooden_cabinet_1 kitchen_table_wooden_cabinet_init_region"
+        ],
+        "effects": [
+          "Open wooden_cabinet_1_top_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 76,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Open[cabinet]",
+        "preconditions": [
+          "On cabinet kitchen_table_wooden_cabinet_init_region"
+        ],
+        "effects": [
+          "Open cabinet_top_region"
+        ],
+        "description": "The robot opens the top drawer of the cabinet by pulling it out."
+      }
+    }
+  ]
+}

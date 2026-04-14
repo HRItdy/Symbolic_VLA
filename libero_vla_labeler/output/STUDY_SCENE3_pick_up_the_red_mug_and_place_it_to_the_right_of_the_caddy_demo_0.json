@@ -1,0 +1,93 @@
+{
+  "task_name": "STUDY_SCENE3_pick_up_the_red_mug_and_place_it_to_the_right_of_the_caddy",
+  "demo_id": "demo_0",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/STUDY_SCENE3_pick_up_the_red_mug_and_place_it_to_the_right_of_the_caddy_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 119,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Study_Tabletop_Manipulation",
+    "language": "pick up the red mug and place it to the right compartment of the caddy",
+    "initial_state": {
+      "On": [
+        "desk_caddy_1 study_table",
+        "black_book_1 study_caddy_front_left_contain_region",
+        "porcelain_mug_1 study_table_porcelain_mug_init_region",
+        "red_coffee_mug_1 study_table_red_coffee_mug_init_region"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "red_coffee_mug_1 desk_caddy_right_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "red_coffee_mug_1"
+        ],
+        "description": "pick up the red mug",
+        "key_action": "pick up",
+        "key_event": "mug picked up",
+        "preconditions": [
+          "On red_coffee_mug_1 study_table_red_coffee_mug_init_region"
+        ],
+        "effects": [
+          "Not(On red_coffee_mug_1 study_table_red_coffee_mug_init_region)"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "red_coffee_mug_1",
+          "desk_caddy_right_region"
+        ],
+        "description": "place the red mug in the right compartment of the caddy",
+        "key_action": "place",
+        "key_event": "mug placed",
+        "preconditions": [],
+        "effects": [
+          "On red_coffee_mug_1 desk_caddy_right_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 53,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[red mug]",
+        "preconditions": [
+          "On red_coffee_mug_1 study_table_red_coffee_mug_init_region",
+          "Not(Holding red_coffee_mug_1)"
+        ],
+        "effects": [],
+        "description": "The robot arm moves to position itself above the red mug, preparing for a subsequent pick-up action."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 54,
+      "end_frame": 118,
+      "gripper_state": "open",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[red mug, caddy right region]",
+        "preconditions": [
+          "Holding red_coffee_mug_1"
+        ],
+        "effects": [
+          "-Holding red_coffee_mug_1",
+          "On red_coffee_mug_1 desk_caddy_right_region"
+        ],
+        "description": "The robot places the red mug into the right compartment of the caddy."
+      }
+    }
+  ]
+}

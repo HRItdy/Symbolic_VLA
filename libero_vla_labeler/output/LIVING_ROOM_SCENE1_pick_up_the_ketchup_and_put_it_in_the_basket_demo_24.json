@@ -1,0 +1,136 @@
+{
+  "task_name": "LIVING_ROOM_SCENE1_pick_up_the_ketchup_and_put_it_in_the_basket",
+  "demo_id": "demo_24",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/LIVING_ROOM_SCENE1_pick_up_the_ketchup_and_put_it_in_the_basket_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 238,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "pick up the ketchup and put it in the basket",
+    "initial_state": {
+      "On": [
+        "alphabet_soup_1 living_room_table_alphabet_soup_init_region",
+        "cream_cheese_1 living_room_table_cream_cheese_init_region",
+        "tomato_sauce_1 living_room_table_tomato_sauce_init_region",
+        "ketchup_1 living_room_table_ketchup_init_region",
+        "basket_1 living_room_table_basket_init_region"
+      ]
+    },
+    "goal_state": {
+      "In": [
+        "ketchup_1 basket_1_contain_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "ketchup_1"
+        ],
+        "description": "pick up the ketchup",
+        "key_action": "pick up",
+        "key_event": "ketchup picked up",
+        "preconditions": [
+          "On ketchup_1 living_room_table_ketchup_init_region"
+        ],
+        "effects": [
+          "Not(On ketchup_1 living_room_table_ketchup_init_region)",
+          "Holding(ketchup_1)"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "ketchup_1",
+          "basket_1"
+        ],
+        "description": "put the ketchup in the basket",
+        "key_action": "place",
+        "key_event": "ketchup placed in basket",
+        "preconditions": [
+          "Holding(ketchup_1)",
+          "On basket_1 living_room_table_basket_init_region"
+        ],
+        "effects": [
+          "Not(Holding(ketchup_1))",
+          "In(ketchup_1 basket_1_contain_region)"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 51,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "Place[ketchup, basket]",
+        "preconditions": [
+          "Holding(ketchup)",
+          "On(basket, living_room_table_basket_init_region)"
+        ],
+        "effects": [
+          "-Holding[ketchup]",
+          "In[ketchup, basket_contain_region]"
+        ],
+        "description": "The robot moves the ketchup, which it is holding, and places it into the basket."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 52,
+      "end_frame": 95,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[ketchup]",
+        "preconditions": [
+          "On ketchup_1 living_room_table_ketchup_init_region"
+        ],
+        "effects": [],
+        "description": "The robot moves its arm with an open gripper to a position above the ketchup bottle, preparing to pick it up."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 96,
+      "end_frame": 151,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "PickUp[ketchup]",
+        "preconditions": [
+          "On[ketchup, living_room_table]"
+        ],
+        "effects": [
+          "-On[ketchup, living_room_table]",
+          "Holding[ketchup]"
+        ],
+        "description": "The robot picks up the ketchup bottle from the table."
+      }
+    },
+    {
+      "segment_id": "seg_4",
+      "start_frame": 152,
+      "end_frame": 237,
+      "gripper_state": "open",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[ketchup, basket]",
+        "preconditions": [
+          "Holding(ketchup)",
+          "On(basket, living_room_table)"
+        ],
+        "effects": [
+          "-Holding(ketchup)",
+          "In(ketchup, basket)"
+        ],
+        "description": "The robot places the ketchup bottle into the basket."
+      }
+    }
+  ]
+}

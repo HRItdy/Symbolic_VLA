@@ -1,0 +1,99 @@
+{
+  "task_name": "STUDY_SCENE4_pick_up_the_book_in_the_middle_and_place_it_on_the_cabinet_shelf",
+  "demo_id": "demo_17",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/STUDY_SCENE4_pick_up_the_book_in_the_middle_and_place_it_on_the_cabinet_shelf_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 155,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Study_Tabletop_Manipulation",
+    "language": "pick up the book in the middle and place it on the cabinet shelf",
+    "initial_state": {
+      "On": [
+        "yellow_book_1 study_table_yellow_book_right_init_region",
+        "yellow_book_2 study_table_yellow_book_left_init_region",
+        "black_book_1 study_table_black_book_init_region",
+        "On wooden_two_layer_shelf_1 study_table_wooden_two_layer_shelf_init_region"
+      ]
+    },
+    "goal_state": {
+      "In": [
+        "black_book_1 wooden_two_layer_shelf_1_top_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "black_book"
+        ],
+        "description": "pick up the black book from the study table",
+        "key_action": "pick up",
+        "key_event": "book picked up",
+        "preconditions": [
+          "On black_book_1 study_table_black_book_init_region"
+        ],
+        "effects": [
+          "Not(On black_book_1 study_table_black_book_init_region)",
+          "Holding black_book_1"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "black_book",
+          "wooden_two_layer_shelf"
+        ],
+        "description": "place the black book on the top shelf of the wooden two-layer shelf",
+        "key_action": "place",
+        "key_event": "book placed",
+        "preconditions": [
+          "Holding black_book_1"
+        ],
+        "effects": [
+          "In black_book_1 wooden_two_layer_shelf_1_top_region",
+          "Not(Holding black_book_1)"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 55,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "PickUp[black_book]",
+        "preconditions": [
+          "On black_book_1 study_table_black_book_init_region"
+        ],
+        "effects": [
+          "-On[black_book_1, study_table_black_book_init_region]",
+          "Holding[black_book_1]"
+        ],
+        "description": "The robot picks up the black book from the study table, lifting it with a closed gripper."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 56,
+      "end_frame": 154,
+      "gripper_state": "open",
+      "transition_out": null,
+      "annotation": {
+        "operator": "PickUp[black_book]",
+        "preconditions": [
+          "On black_book_1 study_table_black_book_init_region"
+        ],
+        "effects": [
+          "-On black_book_1 study_table_black_book_init_region",
+          "Holding black_book_1"
+        ],
+        "description": "The robot moves its arm down, grasps the black book, and lifts it from the study table."
+      }
+    }
+  ]
+}

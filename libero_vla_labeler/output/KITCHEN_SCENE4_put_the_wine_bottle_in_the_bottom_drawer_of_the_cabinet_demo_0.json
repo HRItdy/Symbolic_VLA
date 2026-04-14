@@ -1,0 +1,116 @@
+{
+  "task_name": "KITCHEN_SCENE4_put_the_wine_bottle_in_the_bottom_drawer_of_the_cabinet",
+  "demo_id": "demo_0",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/KITCHEN_SCENE4_put_the_wine_bottle_in_the_bottom_drawer_of_the_cabinet_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 169,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "put the wine bottle in the bottom drawer of the cabinet",
+    "initial_state": {
+      "On": [
+        "akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region",
+        "wine_bottle_1 kitchen_table_wine_bottle_init_region",
+        "white_cabinet_1 kitchen_table_white_cabinet_init_region",
+        "wine_rack_1 kitchen_table_wine_rack_init_region"
+      ],
+      "Open": [
+        "white_cabinet_1_bottom_region"
+      ]
+    },
+    "goal_state": {
+      "In": [
+        "wine_bottle_1 white_cabinet_1_bottom_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "wine_bottle_1"
+        ],
+        "description": "pick up the wine bottle",
+        "key_action": "pick up",
+        "key_event": "picked up wine bottle",
+        "preconditions": [
+          "On wine_bottle_1 kitchen_table_wine_bottle_init_region"
+        ],
+        "effects": [
+          "Not(On wine_bottle_1 kitchen_table_wine_bottle_init_region)",
+          "Holding(wine_bottle_1)"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "wine_bottle_1",
+          "white_cabinet_1_bottom_region"
+        ],
+        "description": "place the wine bottle in the bottom drawer of the cabinet",
+        "key_action": "place",
+        "key_event": "placed wine bottle in cabinet",
+        "preconditions": [
+          "Holding(wine_bottle_1)",
+          "Open white_cabinet_1_bottom_region"
+        ],
+        "effects": [
+          "In(wine_bottle_1 white_cabinet_1_bottom_region)",
+          "Not(Holding(wine_bottle_1))"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 41,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[wine_bottle]",
+        "preconditions": [
+          "On wine_bottle_1 kitchen_table_wine_bottle_init_region"
+        ],
+        "effects": [],
+        "description": "The robot arm moves towards the wine bottle, positioning itself to pick it up."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 42,
+      "end_frame": 97,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[wine_bottle]",
+        "preconditions": [
+          "On wine_bottle_1 kitchen_table_wine_bottle_init_region"
+        ],
+        "effects": [],
+        "description": "The robot moves its arm with an open gripper to position itself over the wine bottle, preparing to grasp it."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 98,
+      "end_frame": 168,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[wine bottle, bottom drawer]",
+        "preconditions": [
+          "Holding[wine bottle]",
+          "Open[bottom drawer]"
+        ],
+        "effects": [
+          "In[wine bottle, bottom drawer]",
+          "-Holding[wine bottle]"
+        ],
+        "description": "The robot places the wine bottle into the open bottom drawer of the cabinet."
+      }
+    }
+  ]
+}

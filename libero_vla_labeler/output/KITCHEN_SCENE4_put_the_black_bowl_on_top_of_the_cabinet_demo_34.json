@@ -1,0 +1,111 @@
+{
+  "task_name": "KITCHEN_SCENE4_put_the_black_bowl_on_top_of_the_cabinet",
+  "demo_id": "demo_34",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/KITCHEN_SCENE4_put_the_black_bowl_on_top_of_the_cabinet_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 144,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "put the black bowl on top of the cabinet",
+    "initial_state": {
+      "On": [
+        "akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region",
+        "wine_bottle_1 kitchen_table_wine_bottle_init_region",
+        "white_cabinet_1 kitchen_table_white_cabinet_init_region",
+        "wine_rack_1 kitchen_table_wine_rack_init_region"
+      ],
+      "Open": [
+        "white_cabinet_1_bottom_region"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "akita_black_bowl_1 white_cabinet_1_top_side"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "akita_black_bowl_1"
+        ],
+        "description": "pick up the black bowl",
+        "key_action": "pick up",
+        "key_event": "bowl picked up",
+        "preconditions": [
+          "On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region"
+        ],
+        "effects": [
+          "Not On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "akita_black_bowl_1",
+          "white_cabinet_1"
+        ],
+        "description": "place the black bowl on top of the cabinet",
+        "key_action": "place",
+        "key_event": "bowl placed on cabinet",
+        "preconditions": [
+          "Not On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region"
+        ],
+        "effects": [
+          "On akita_black_bowl_1 white_cabinet_1_top_side"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 62,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[cabinet]",
+        "preconditions": [
+          "Not On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region"
+        ],
+        "effects": [],
+        "description": "Move the robot arm, while implicitly holding the black bowl, towards the cabinet in preparation for placing it."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 63,
+      "end_frame": 133,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[bowl]",
+        "preconditions": [
+          "On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region"
+        ],
+        "effects": [],
+        "description": "Move the robot arm to position the open gripper above the black bowl, preparing to grasp it."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 134,
+      "end_frame": 143,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[bowl, cabinet]",
+        "preconditions": [
+          "Not On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region"
+        ],
+        "effects": [
+          "On akita_black_bowl_1 white_cabinet_1_top_side"
+        ],
+        "description": "The robot places the black bowl on top of the cabinet."
+      }
+    }
+  ]
+}

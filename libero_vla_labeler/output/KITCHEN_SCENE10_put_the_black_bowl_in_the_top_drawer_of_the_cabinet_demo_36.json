@@ -1,0 +1,99 @@
+{
+  "task_name": "KITCHEN_SCENE10_put_the_black_bowl_in_the_top_drawer_of_the_cabinet",
+  "demo_id": "demo_36",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/KITCHEN_SCENE10_put_the_black_bowl_in_the_top_drawer_of_the_cabinet_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 119,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "put the black bowl in the top drawer of the cabinet",
+    "initial_state": {
+      "On": [
+        "akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region",
+        "butter_1 kitchen_table_butter_front_init_region",
+        "butter_2 kitchen_table_butter_back_init_region",
+        "chocolate_pudding_1 kitchen_table_chocolate_pudding_init_region",
+        "wooden_cabinet_1 kitchen_table_wooden_cabinet_init_region"
+      ],
+      "Open": [
+        "wooden_cabinet_1_top_region"
+      ]
+    },
+    "goal_state": {
+      "In": [
+        "akita_black_bowl_1 wooden_cabinet_1_top_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "akita_black_bowl_1"
+        ],
+        "description": "pick up the black bowl",
+        "key_action": "pick up",
+        "key_event": "picked up black bowl",
+        "preconditions": [
+          "On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region"
+        ],
+        "effects": [
+          "Not On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "akita_black_bowl_1",
+          "wooden_cabinet_1_top_region"
+        ],
+        "description": "place the black bowl in the top drawer of the cabinet",
+        "key_action": "place",
+        "key_event": "placed black bowl in cabinet",
+        "preconditions": [
+          "Not On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region"
+        ],
+        "effects": [
+          "In akita_black_bowl_1 wooden_cabinet_1_top_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 36,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "Place[bowl, top drawer]",
+        "preconditions": [
+          "Holding[bowl]",
+          "Open[top drawer]"
+        ],
+        "effects": [
+          "-Holding[bowl]",
+          "In[bowl, top drawer]"
+        ],
+        "description": "The robot places the bowl into the open top drawer of the cabinet."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 37,
+      "end_frame": 118,
+      "gripper_state": "open",
+      "transition_out": null,
+      "annotation": {
+        "operator": "moveto[cabinet]",
+        "preconditions": [
+          "In akita_black_bowl_1 wooden_cabinet_1_top_region"
+        ],
+        "effects": [],
+        "description": "Move the arm away from the cabinet after placing the black bowl."
+      }
+    }
+  ]
+}

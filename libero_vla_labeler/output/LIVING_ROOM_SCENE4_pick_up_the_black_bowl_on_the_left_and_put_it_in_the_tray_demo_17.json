@@ -1,0 +1,109 @@
+{
+  "task_name": "LIVING_ROOM_SCENE4_pick_up_the_black_bowl_on_the_left_and_put_it_in_the_tray",
+  "demo_id": "demo_17",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/LIVING_ROOM_SCENE4_pick_up_the_black_bowl_on_the_left_and_put_it_in_the_tray_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 118,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "pick up the black bowl on the left and put it in the tray",
+    "initial_state": {
+      "On": [
+        "chocolate_pudding_1 living_room_table_chocolate_pudding_init_region",
+        "akita_black_bowl_1 living_room_table_akita_black_bowl_left_init_region",
+        "akita_black_bowl_2 living_room_table_akita_black_bowl_right_init_region",
+        "new_salad_dressing_1 living_room_table_salad_dressing_init_region",
+        "wooden_tray_1 living_room_table_wooden_tray_init_region"
+      ]
+    },
+    "goal_state": {
+      "In": [
+        "akita_black_bowl_1 wooden_tray_1_contain_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "akita_black_bowl_1"
+        ],
+        "description": "pick up the black bowl on the left",
+        "key_action": "pick up",
+        "key_event": "picked up akita_black_bowl_1",
+        "preconditions": [
+          "On akita_black_bowl_1 living_room_table_akita_black_bowl_left_init_region"
+        ],
+        "effects": [
+          "Not On akita_black_bowl_1 living_room_table_akita_black_bowl_left_init_region"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "akita_black_bowl_1",
+          "wooden_tray_1"
+        ],
+        "description": "put the black bowl in the tray",
+        "key_action": "place",
+        "key_event": "placed akita_black_bowl_1 in wooden_tray_1",
+        "preconditions": [
+          "Not On akita_black_bowl_1 living_room_table_akita_black_bowl_left_init_region"
+        ],
+        "effects": [
+          "In akita_black_bowl_1 wooden_tray_1_contain_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 45,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[bowl, tray]",
+        "preconditions": [
+          "Not On akita_black_bowl_1 living_room_table_akita_black_bowl_left_init_region"
+        ],
+        "effects": [],
+        "description": "The robot moves the black bowl it is holding towards the tray."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 46,
+      "end_frame": 111,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[left black bowl]",
+        "preconditions": [
+          "On left black bowl table"
+        ],
+        "effects": [],
+        "description": "The robot arm moves to position itself above the left black bowl, with the gripper open."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 112,
+      "end_frame": 117,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[bowl, tray]",
+        "preconditions": [
+          "Not On akita_black_bowl_1 living_room_table_akita_black_bowl_left_init_region"
+        ],
+        "effects": [
+          "In akita_black_bowl_1 wooden_tray_1_contain_region"
+        ],
+        "description": "The robot places the black bowl into the wooden tray."
+      }
+    }
+  ]
+}

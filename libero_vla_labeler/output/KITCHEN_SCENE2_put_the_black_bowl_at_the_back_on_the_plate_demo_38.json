@@ -1,0 +1,110 @@
+{
+  "task_name": "KITCHEN_SCENE2_put_the_black_bowl_at_the_back_on_the_plate",
+  "demo_id": "demo_38",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/KITCHEN_SCENE2_put_the_black_bowl_at_the_back_on_the_plate_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 100,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "put the black bowl at the back on the plate",
+    "initial_state": {
+      "On": [
+        "akita_black_bowl_1 kitchen_table_akita_black_bowl_front_init_region",
+        "akita_black_bowl_2 kitchen_table_akita_black_bowl_middle_init_region",
+        "akita_black_bowl_3 kitchen_table_akita_black_bowl_back_init_region",
+        "plate_1 kitchen_table_plate_init_region",
+        "wooden_cabinet_1 kitchen_table_wooden_cabinet_init_region"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "akita_black_bowl_3 plate_1"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "akita_black_bowl_3"
+        ],
+        "description": "pick up the black bowl from the back of the table",
+        "key_action": "pick up",
+        "key_event": "picked up akita_black_bowl_3",
+        "preconditions": [
+          "On akita_black_bowl_3 kitchen_table_akita_black_bowl_back_init_region"
+        ],
+        "effects": [
+          "not On akita_black_bowl_3 kitchen_table_akita_black_bowl_back_init_region"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "akita_black_bowl_3",
+          "plate_1"
+        ],
+        "description": "place the black bowl on the plate",
+        "key_action": "place",
+        "key_event": "placed akita_black_bowl_3 on plate_1",
+        "preconditions": [],
+        "effects": [
+          "On akita_black_bowl_3 plate_1"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 34,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[black bowl back]",
+        "preconditions": [
+          "On akita_black_bowl_3 kitchen_table_akita_black_bowl_back_init_region",
+          "not (robot-has akita_black_bowl_3)"
+        ],
+        "effects": [],
+        "description": "The robot moves its arm towards the black bowl at the back, preparing to pick it up."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 35,
+      "end_frame": 87,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[bowl]",
+        "preconditions": [
+          "On akita_black_bowl_3 kitchen_table_akita_black_bowl_back_init_region"
+        ],
+        "effects": [],
+        "description": "The robot moves its gripper towards the black bowl at the back of the table while the gripper is open."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 88,
+      "end_frame": 99,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[black bowl, plate]",
+        "preconditions": [
+          "Holding black bowl",
+          "On plate kitchen_table_plate_init_region"
+        ],
+        "effects": [
+          "On black bowl plate",
+          "-Holding black bowl"
+        ],
+        "description": "The robot places the black bowl on the plate."
+      }
+    }
+  ]
+}

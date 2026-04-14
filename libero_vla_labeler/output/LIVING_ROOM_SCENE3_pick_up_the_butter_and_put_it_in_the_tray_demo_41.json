@@ -1,0 +1,116 @@
+{
+  "task_name": "LIVING_ROOM_SCENE3_pick_up_the_butter_and_put_it_in_the_tray",
+  "demo_id": "demo_41",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/LIVING_ROOM_SCENE3_pick_up_the_butter_and_put_it_in_the_tray_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 104,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "pick up the butter and put it in the tray",
+    "initial_state": {
+      "On": [
+        "alphabet_soup_1 living_room_table_alphabet_soup_init_region",
+        "cream_cheese_1 living_room_table_cream_cheese_init_region",
+        "tomato_sauce_1 living_room_table_tomato_sauce_init_region",
+        "ketchup_1 living_room_table_ketchup_init_region",
+        "butter_1 living_room_table_butter_init_region",
+        "wooden_tray_1 living_room_table_wooden_tray_init_region"
+      ]
+    },
+    "goal_state": {
+      "In": [
+        "butter_1 wooden_tray_1_contain_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "butter_1"
+        ],
+        "description": "pick up the butter",
+        "key_action": "pick up",
+        "key_event": "butter picked up",
+        "preconditions": [
+          "On(butter_1, living_room_table_butter_init_region)"
+        ],
+        "effects": [
+          "not On(butter_1, living_room_table_butter_init_region)",
+          "Holding(butter_1)"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "butter_1",
+          "wooden_tray_1"
+        ],
+        "description": "put the butter in the tray",
+        "key_action": "place",
+        "key_event": "butter placed in tray",
+        "preconditions": [
+          "Holding(butter_1)"
+        ],
+        "effects": [
+          "In(butter_1, wooden_tray_1_contain_region)",
+          "not Holding(butter_1)"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 37,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "PickUp[butter]",
+        "preconditions": [
+          "On[butter, living_room_table]"
+        ],
+        "effects": [
+          "-On[butter, living_room_table]",
+          "Holding[butter]"
+        ],
+        "description": "The robot moves to the butter and picks it up from the table."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 38,
+      "end_frame": 85,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[butter]",
+        "preconditions": [
+          "On[butter, table]"
+        ],
+        "effects": [],
+        "description": "The robot moves its open gripper towards the butter, preparing to pick it up."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 86,
+      "end_frame": 103,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[butter, tray]",
+        "preconditions": [
+          "Holding(butter)"
+        ],
+        "effects": [
+          "In(butter, tray)",
+          "-Holding(butter)"
+        ],
+        "description": "The robot moves the butter it is holding into the tray, completing the placement."
+      }
+    }
+  ]
+}

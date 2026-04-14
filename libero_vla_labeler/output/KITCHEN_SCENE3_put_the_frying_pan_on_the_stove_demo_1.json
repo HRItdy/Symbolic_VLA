@@ -1,0 +1,109 @@
+{
+  "task_name": "KITCHEN_SCENE3_put_the_frying_pan_on_the_stove",
+  "demo_id": "demo_1",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/KITCHEN_SCENE3_put_the_frying_pan_on_the_stove_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 174,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "put the frying pan on the stove",
+    "initial_state": {
+      "On": [
+        "flat_stove_1 kitchen_table_flat_stove_init_region",
+        "chefmate_8_frypan_1 kitchen_table_frypan_init_region",
+        "moka_pot_1 kitchen_table_moka_pot_init_region"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "chefmate_8_frypan_1 flat_stove_1_cook_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "frying pan"
+        ],
+        "description": "pick up the frying pan from the kitchen table",
+        "key_action": "pick up",
+        "key_event": "frying pan picked up",
+        "preconditions": [
+          "On chefmate_8_frypan_1 kitchen_table_frypan_init_region"
+        ],
+        "effects": [
+          "Not On chefmate_8_frypan_1 kitchen_table_frypan_init_region"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "frying pan",
+          "stove"
+        ],
+        "description": "place the frying pan on the stove",
+        "key_action": "place on",
+        "key_event": "frying pan placed on stove",
+        "preconditions": [
+          "Not On chefmate_8_frypan_1 kitchen_table_frypan_init_region"
+        ],
+        "effects": [
+          "On chefmate_8_frypan_1 flat_stove_1_cook_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 85,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "PickUp[frying pan]",
+        "preconditions": [
+          "On chefmate_8_frypan_1 kitchen_table_frypan_init_region"
+        ],
+        "effects": [
+          "-On chefmate_8_frypan_1 kitchen_table_frypan_init_region"
+        ],
+        "description": "The robot moves its arm to the frying pan, grasps it with the gripper, and lifts it off the table."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 86,
+      "end_frame": 168,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[frying pan]",
+        "preconditions": [
+          "On chefmate_8_frypan_1 kitchen_table_frypan_init_region"
+        ],
+        "effects": [],
+        "description": "The robot arm moves and positions its open gripper above the frying pan, preparing to grasp it."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 169,
+      "end_frame": 173,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[frying pan, stove]",
+        "preconditions": [
+          "Not On chefmate_8_frypan_1 kitchen_table_frypan_init_region"
+        ],
+        "effects": [
+          "On chefmate_8_frypan_1 flat_stove_1_cook_region"
+        ],
+        "description": "The robot places the frying pan onto the stove."
+      }
+    }
+  ]
+}

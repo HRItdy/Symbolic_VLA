@@ -1,0 +1,91 @@
+{
+  "task_name": "STUDY_SCENE4_pick_up_the_book_on_the_left_and_place_it_on_top_of_the_shelf",
+  "demo_id": "demo_46",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/STUDY_SCENE4_pick_up_the_book_on_the_left_and_place_it_on_top_of_the_shelf_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 173,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Study_Tabletop_Manipulation",
+    "language": "pick up the book on the left and place it on top of the shelf",
+    "initial_state": {
+      "On": [
+        "wooden_two_layer_shelf_1 study_table_wooden_two_layer_shelf_init_region",
+        "yellow_book_1 study_table_yellow_book_right_init_region",
+        "yellow_book_2 study_table_yellow_book_left_init_region",
+        "black_book_1 study_table_black_book_init_region"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "yellow_book_2 wooden_two_layer_shelf_1_top_side"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "yellow_book_2"
+        ],
+        "description": "pick up the yellow book on the left",
+        "key_action": "pick up",
+        "key_event": "picked up yellow_book_2",
+        "preconditions": [
+          "On yellow_book_2 study_table_yellow_book_left_init_region"
+        ],
+        "effects": [
+          "Not(On yellow_book_2 study_table_yellow_book_left_init_region)"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "yellow_book_2",
+          "wooden_two_layer_shelf_1_top_side"
+        ],
+        "description": "place the yellow book on top of the shelf",
+        "key_action": "place",
+        "key_event": "placed yellow_book_2 on wooden_two_layer_shelf_1_top_side",
+        "preconditions": [
+          "Not(On yellow_book_2 study_table_yellow_book_left_init_region)"
+        ],
+        "effects": [
+          "On yellow_book_2 wooden_two_layer_shelf_1_top_side"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 59,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[shelf]",
+        "preconditions": [
+          "Not(On yellow_book_2 study_table_yellow_book_left_init_region)"
+        ],
+        "effects": [],
+        "description": "The robot moves the yellow book towards the shelf while holding it."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 60,
+      "end_frame": 172,
+      "gripper_state": "open",
+      "transition_out": null,
+      "annotation": {
+        "operator": "moveto[shelf]",
+        "preconditions": [
+          "On[book, shelf top]"
+        ],
+        "effects": [],
+        "description": "The robot moves its arm away from the shelf, indicating completion of the placement task."
+      }
+    }
+  ]
+}

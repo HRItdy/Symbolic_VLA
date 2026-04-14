@@ -1,0 +1,179 @@
+{
+  "task_name": "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket",
+  "demo_id": "demo_36",
+  "hdf5_path": "/home/tiandy/libero_100/libero_10/LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 290,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "put both the alphabet soup and the cream cheese box in the basket",
+    "initial_state": {
+      "On": [
+        "alphabet_soup_1 living_room_table_alphabet_soup_init_region",
+        "cream_cheese_1 living_room_table_cream_cheese_init_region",
+        "tomato_sauce_1 living_room_table_tomato_sauce_init_region",
+        "ketchup_1 living_room_table_ketchup_init_region",
+        "basket_1 living_room_table_basket_init_region"
+      ]
+    },
+    "goal_state": {
+      "In": [
+        "alphabet_soup_1 basket_1_contain_region",
+        "cream_cheese_1 basket_1_contain_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "alphabet_soup_1"
+        ],
+        "description": "pick up the alphabet soup",
+        "key_action": "pick up",
+        "key_event": "picked up alphabet soup",
+        "preconditions": [
+          "On alphabet_soup_1 living_room_table_alphabet_soup_init_region"
+        ],
+        "effects": [
+          "In alphabet_soup_1 basket_1_contain_region"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "PickUp",
+        "parameters": [
+          "cream_cheese_1"
+        ],
+        "description": "pick up the cream cheese box",
+        "key_action": "pick up",
+        "key_event": "picked up cream cheese",
+        "preconditions": [
+          "On cream_cheese_1 living_room_table_cream_cheese_init_region"
+        ],
+        "effects": [
+          "In cream_cheese_1 basket_1_contain_region"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "alphabet_soup_1",
+          "basket_1"
+        ],
+        "description": "place the alphabet soup in the basket",
+        "key_action": "place",
+        "key_event": "placed alphabet soup in basket",
+        "preconditions": [
+          "In alphabet_soup_1 basket_1_contain_region"
+        ],
+        "effects": [],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "cream_cheese_1",
+          "basket_1"
+        ],
+        "description": "place the cream cheese in the basket",
+        "key_action": "place",
+        "key_event": "placed cream cheese in basket",
+        "preconditions": [
+          "In cream_cheese_1 basket_1_contain_region"
+        ],
+        "effects": [],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 81,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "Place[alphabet_soup, basket]",
+        "preconditions": [
+          "Holding alphabet_soup",
+          "Near robot basket"
+        ],
+        "effects": [
+          "-Holding alphabet_soup",
+          "In alphabet_soup basket"
+        ],
+        "description": "The robot places the alphabet soup into the basket."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 82,
+      "end_frame": 147,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[alphabet_soup]",
+        "preconditions": [
+          "On alphabet_soup_1 living_room_table_alphabet_soup_init_region",
+          "gripper_open",
+          "robot_empty_hand"
+        ],
+        "effects": [],
+        "description": "The robot arm moves to position its open gripper above the alphabet soup, preparing to grasp it."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 148,
+      "end_frame": 216,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "Place[cream_cheese, basket]",
+        "preconditions": [
+          "holding[cream_cheese]",
+          "On[cream_cheese, table]"
+        ],
+        "effects": [
+          "In[cream_cheese, basket]",
+          "-holding[cream_cheese]",
+          "-On[cream_cheese, table]"
+        ],
+        "description": "The robot places the cream cheese box into the basket."
+      }
+    },
+    {
+      "segment_id": "seg_4",
+      "start_frame": 217,
+      "end_frame": 271,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[alphabet_soup]",
+        "preconditions": [
+          "On alphabet_soup_1 living_room_table_alphabet_soup_init_region"
+        ],
+        "effects": [],
+        "description": "The robot arm moves to position itself above the alphabet soup box, preparing to grasp it."
+      }
+    },
+    {
+      "segment_id": "seg_5",
+      "start_frame": 272,
+      "end_frame": 289,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "moveto[home]",
+        "preconditions": [
+          "Not Holding",
+          "In cream_cheese basket"
+        ],
+        "effects": [],
+        "description": "The robot arm retracts to a home or neutral position after placing the cream cheese box in the basket."
+      }
+    }
+  ]
+}

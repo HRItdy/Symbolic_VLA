@@ -1,0 +1,142 @@
+{
+  "task_name": "LIVING_ROOM_SCENE3_pick_up_the_cream_cheese_and_put_it_in_the_tray",
+  "demo_id": "demo_28",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/LIVING_ROOM_SCENE3_pick_up_the_cream_cheese_and_put_it_in_the_tray_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 214,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "pick up the cream cheese and put it in the tray",
+    "initial_state": {
+      "On": [
+        "alphabet_soup_1 living_room_table_alphabet_soup_init_region",
+        "cream_cheese_1 living_room_table_cream_cheese_init_region",
+        "tomato_sauce_1 living_room_table_tomato_sauce_init_region",
+        "ketchup_1 living_room_table_ketchup_init_region",
+        "butter_1 living_room_table_butter_init_region",
+        "wooden_tray_1 living_room_table_wooden_tray_init_region"
+      ]
+    },
+    "goal_state": {
+      "In": [
+        "cream_cheese_1 wooden_tray_1_contain_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "cream_cheese_1"
+        ],
+        "description": "pick up the cream cheese",
+        "key_action": "pick up",
+        "key_event": "picked up cream cheese",
+        "preconditions": [
+          "On cream_cheese_1 living_room_table_cream_cheese_init_region"
+        ],
+        "effects": [
+          "Not(On cream_cheese_1 living_room_table_cream_cheese_init_region)"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "cream_cheese_1",
+          "wooden_tray_1"
+        ],
+        "description": "put the cream cheese in the tray",
+        "key_action": "place",
+        "key_event": "placed cream cheese in tray",
+        "preconditions": [
+          "Not(On cream_cheese_1 living_room_table_cream_cheese_init_region)"
+        ],
+        "effects": [
+          "In cream_cheese_1 wooden_tray_1_contain_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 67,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "PickUp[cream cheese]",
+        "preconditions": [
+          "On cream_cheese_1 living_room_table_cream_cheese_init_region"
+        ],
+        "effects": [
+          "-On[cream_cheese_1, living_room_table_cream_cheese_init_region]"
+        ],
+        "description": "The robot moves to and picks up the cream cheese from the table."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 68,
+      "end_frame": 101,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[cream_cheese]",
+        "preconditions": [
+          "On cream_cheese living_room_table_cream_cheese_init_region"
+        ],
+        "effects": [],
+        "description": "The robot arm moves to position its open gripper above the cream cheese."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 102,
+      "end_frame": 125,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[cream_cheese, tray]",
+        "preconditions": [
+          "Not(On cream_cheese living_room_table_cream_cheese_init_region)"
+        ],
+        "effects": [],
+        "description": "The robot moves the cream cheese, which it is holding, towards the tray for placement."
+      }
+    },
+    {
+      "segment_id": "seg_4",
+      "start_frame": 126,
+      "end_frame": 196,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[cream cheese]",
+        "preconditions": [
+          "On cream_cheese living_room_table_cream_cheese_init_region",
+          "Not(Holding cream_cheese)",
+          "gripper_open"
+        ],
+        "effects": [],
+        "description": "The robot arm moves with an open gripper to position itself above the cream cheese."
+      }
+    },
+    {
+      "segment_id": "seg_5",
+      "start_frame": 197,
+      "end_frame": 213,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "moveto[tray]",
+        "preconditions": [
+          "Not(On cream_cheese_1 living_room_table_cream_cheese_init_region)"
+        ],
+        "effects": [],
+        "description": "The robot arm moves while holding the cream cheese, heading towards the tray for placement."
+      }
+    }
+  ]
+}

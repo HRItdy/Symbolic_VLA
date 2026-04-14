@@ -1,0 +1,139 @@
+{
+  "task_name": "KITCHEN_SCENE9_put_the_white_bowl_on_top_of_the_cabinet",
+  "demo_id": "demo_21",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/KITCHEN_SCENE9_put_the_white_bowl_on_top_of_the_cabinet_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 202,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "put the white bowl on top of the cabinet",
+    "initial_state": {
+      "On": [
+        "flat_stove_1 kitchen_table_flat_stove_init_region",
+        "chefmate_8_frypan_1 kitchen_table_frypan_init_region",
+        "white_bowl_1 kitchen_table_white_bowl_init_region",
+        "wooden_two_layer_shelf_1 kitchen_table_wooden_two_layer_shelf_init_region"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "white_bowl_1 wooden_two_layer_shelf_1_top_side"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "white_bowl_1"
+        ],
+        "description": "pick up the white bowl",
+        "key_action": "pick up",
+        "key_event": "picked up white bowl",
+        "preconditions": [
+          "On white_bowl_1 kitchen_table_white_bowl_init_region"
+        ],
+        "effects": [
+          "not On white_bowl_1 kitchen_table_white_bowl_init_region"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "white_bowl_1",
+          "wooden_two_layer_shelf_1_top_side"
+        ],
+        "description": "place the white bowl on top of the cabinet",
+        "key_action": "place",
+        "key_event": "placed white bowl on top of the cabinet",
+        "preconditions": [
+          "not On white_bowl_1 kitchen_table_white_bowl_init_region"
+        ],
+        "effects": [
+          "On white_bowl_1 wooden_two_layer_shelf_1_top_side"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 75,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[bowl, cabinet]",
+        "preconditions": [
+          "not On white_bowl_1 kitchen_table_white_bowl_init_region"
+        ],
+        "effects": [],
+        "description": "The robot moves the white bowl, which it is currently holding, towards the cabinet."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 76,
+      "end_frame": 85,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[bowl]",
+        "preconditions": [
+          "On[bowl, kitchen_table]"
+        ],
+        "effects": [],
+        "description": "The robot arm moves its open gripper towards the white bowl to prepare for picking it up."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 86,
+      "end_frame": 114,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "Place[white bowl, cabinet]",
+        "preconditions": [
+          "not On white_bowl_1 kitchen_table_white_bowl_init_region"
+        ],
+        "effects": [
+          "On white_bowl_1 wooden_two_layer_shelf_1_top_side"
+        ],
+        "description": "The robot places the white bowl on top of the cabinet."
+      }
+    },
+    {
+      "segment_id": "seg_4",
+      "start_frame": 115,
+      "end_frame": 187,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[white bowl]",
+        "preconditions": [
+          "On white_bowl_1 kitchen_table_white_bowl_init_region",
+          "gripper_open"
+        ],
+        "effects": [],
+        "description": "The robot arm moves with an open gripper to position itself above the white bowl, preparing to pick it up."
+      }
+    },
+    {
+      "segment_id": "seg_5",
+      "start_frame": 188,
+      "end_frame": 201,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "moveto[cabinet]",
+        "preconditions": [
+          "not On[white bowl, kitchen table]"
+        ],
+        "effects": [],
+        "description": "The robot moves the arm, while holding the white bowl, towards the cabinet."
+      }
+    }
+  ]
+}

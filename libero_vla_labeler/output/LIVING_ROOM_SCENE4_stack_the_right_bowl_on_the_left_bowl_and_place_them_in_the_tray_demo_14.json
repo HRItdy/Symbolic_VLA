@@ -1,0 +1,182 @@
+{
+  "task_name": "LIVING_ROOM_SCENE4_stack_the_right_bowl_on_the_left_bowl_and_place_them_in_the_tray",
+  "demo_id": "demo_14",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/LIVING_ROOM_SCENE4_stack_the_right_bowl_on_the_left_bowl_and_place_them_in_the_tray_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 228,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "stack the right bowl on the left bowl and place them in the tray",
+    "initial_state": {
+      "On": [
+        "chocolate_pudding_1 living_room_table_chocolate_pudding_init_region",
+        "akita_black_bowl_1 living_room_table_akita_black_bowl_left_init_region",
+        "akita_black_bowl_2 living_room_table_akita_black_bowl_right_init_region",
+        "new_salad_dressing_1 living_room_table_salad_dressing_init_region",
+        "wooden_tray_1 living_room_table_wooden_tray_init_region"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "akita_black_bowl_2 akita_black_bowl_1"
+      ],
+      "In": [
+        "akita_black_bowl_1 wooden_tray_1_contain_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "akita_black_bowl_2"
+        ],
+        "description": "pick up the right bowl",
+        "key_action": "pick up",
+        "key_event": "picked up akita_black_bowl_2",
+        "preconditions": [
+          "On akita_black_bowl_2 living_room_table_akita_black_bowl_right_init_region"
+        ],
+        "effects": [
+          "Not(On akita_black_bowl_2 living_room_table_akita_black_bowl_right_init_region)"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "akita_black_bowl_2",
+          "akita_black_bowl_1"
+        ],
+        "description": "stack the right bowl on the left bowl",
+        "key_action": "place",
+        "key_event": "placed akita_black_bowl_2 on akita_black_bowl_1",
+        "preconditions": [
+          "Not(On akita_black_bowl_2 living_room_table_akita_black_bowl_right_init_region)",
+          "On akita_black_bowl_1 living_room_table_akita_black_bowl_left_init_region"
+        ],
+        "effects": [
+          "On akita_black_bowl_2 akita_black_bowl_1"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "PickUp",
+        "parameters": [
+          "akita_black_bowl_1"
+        ],
+        "description": "pick up the left bowl",
+        "key_action": "pick up",
+        "key_event": "picked up akita_black_bowl_1",
+        "preconditions": [
+          "On akita_black_bowl_1 living_room_table_akita_black_bowl_left_init_region"
+        ],
+        "effects": [
+          "Not(On akita_black_bowl_1 living_room_table_akita_black_bowl_left_init_region)"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "akita_black_bowl_1",
+          "wooden_tray_1"
+        ],
+        "description": "place the left bowl in the tray",
+        "key_action": "place",
+        "key_event": "placed akita_black_bowl_1 in wooden_tray_1",
+        "preconditions": [
+          "Not(On akita_black_bowl_1 living_room_table_akita_black_bowl_left_init_region)"
+        ],
+        "effects": [
+          "In akita_black_bowl_1 wooden_tray_1_contain_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 44,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "Place[right bowl, left bowl]",
+        "preconditions": [
+          "Not(On akita_black_bowl_2 living_room_table_akita_black_bowl_right_init_region)",
+          "On akita_black_bowl_1 living_room_table_akita_black_bowl_left_init_region"
+        ],
+        "effects": [
+          "On akita_black_bowl_2 akita_black_bowl_1"
+        ],
+        "description": "The robot places the right bowl onto the left bowl to stack them."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 45,
+      "end_frame": 109,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[right bowl]",
+        "preconditions": [
+          "On akita_black_bowl_2 living_room_table_akita_black_bowl_right_init_region"
+        ],
+        "effects": [],
+        "description": "Move the robot gripper to a pre-grasping position above the right bowl."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 110,
+      "end_frame": 150,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "Place[right bowl, left bowl]",
+        "preconditions": [
+          "Not(On akita_black_bowl_2 living_room_table_akita_black_bowl_right_init_region)",
+          "On akita_black_bowl_1 living_room_table_akita_black_bowl_left_init_region"
+        ],
+        "effects": [
+          "On akita_black_bowl_2 akita_black_bowl_1"
+        ],
+        "description": "Stack the right bowl on the left bowl."
+      }
+    },
+    {
+      "segment_id": "seg_4",
+      "start_frame": 151,
+      "end_frame": 216,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[salad_dressing]",
+        "preconditions": [
+          "On new_salad_dressing_1 living_room_table_salad_dressing_init_region"
+        ],
+        "effects": [],
+        "description": "The robot arm moves towards the salad dressing."
+      }
+    },
+    {
+      "segment_id": "seg_5",
+      "start_frame": 217,
+      "end_frame": 227,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[bowl, tray]",
+        "preconditions": [
+          "Not(On bowl living_room_table_akita_black_bowl_left_init_region)"
+        ],
+        "effects": [
+          "In bowl wooden_tray_1_contain_region"
+        ],
+        "description": "The robot places the stacked bowls into the tray."
+      }
+    }
+  ]
+}

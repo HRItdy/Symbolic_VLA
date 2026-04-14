@@ -1,0 +1,112 @@
+{
+  "task_name": "LIVING_ROOM_SCENE5_put_the_red_mug_on_the_right_plate",
+  "demo_id": "demo_7",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/LIVING_ROOM_SCENE5_put_the_red_mug_on_the_right_plate_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 168,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "put the red mug on the right plate",
+    "initial_state": {
+      "On": [
+        "plate_1 living_room_table_plate_left_region",
+        "plate_2 living_room_table_plate_right_region",
+        "red_coffee_mug_1 living_room_table_red_coffee_mug_init_region",
+        "white_yellow_mug_1 living_room_table_white_yellow_mug_init_region",
+        "porcelain_mug_1 living_room_table_porcelain_mug_init_region"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "red_coffee_mug_1 plate_2"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "red_coffee_mug_1"
+        ],
+        "description": "pick up the red mug",
+        "key_action": "pick up",
+        "key_event": "mug picked up",
+        "preconditions": [
+          "On red_coffee_mug_1 living_room_table_red_coffee_mug_init_region"
+        ],
+        "effects": [
+          "not On red_coffee_mug_1 living_room_table_red_coffee_mug_init_region"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "red_coffee_mug_1",
+          "plate_2"
+        ],
+        "description": "place the red mug on the right plate",
+        "key_action": "place on",
+        "key_event": "mug placed on plate",
+        "preconditions": [
+          "not On red_coffee_mug_1 living_room_table_red_coffee_mug_init_region"
+        ],
+        "effects": [
+          "On red_coffee_mug_1 plate_2"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 41,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "PickUp[red mug]",
+        "preconditions": [
+          "On red mug table"
+        ],
+        "effects": [
+          "-On red mug table"
+        ],
+        "description": "The robot picks up the red mug from the table."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 42,
+      "end_frame": 149,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[red mug]",
+        "preconditions": [
+          "On red_coffee_mug_1 living_room_table_red_coffee_mug_init_region",
+          "gripper_open"
+        ],
+        "effects": [],
+        "description": "The robot arm moves towards the red mug, positioning itself for grasping."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 150,
+      "end_frame": 167,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[red mug, right plate]",
+        "preconditions": [
+          "not On red_coffee_mug_1 living_room_table_red_coffee_mug_init_region"
+        ],
+        "effects": [
+          "On red_coffee_mug_1 plate_2"
+        ],
+        "description": "The robot moves the red mug it is holding and places it onto the right plate."
+      }
+    }
+  ]
+}

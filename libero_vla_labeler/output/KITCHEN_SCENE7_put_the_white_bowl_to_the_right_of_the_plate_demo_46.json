@@ -1,0 +1,113 @@
+{
+  "task_name": "KITCHEN_SCENE7_put_the_white_bowl_to_the_right_of_the_plate",
+  "demo_id": "demo_46",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/KITCHEN_SCENE7_put_the_white_bowl_to_the_right_of_the_plate_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 137,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "put the white bowl to the right of the plate",
+    "initial_state": {
+      "On": [
+        "white_bowl_1 microwave_1_top_side",
+        "plate_1 kitchen_table_plate_init_region"
+      ],
+      "Close": [
+        "microwave_1"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "white_bowl_1 kitchen_table_plate_right_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "white_bowl_1"
+        ],
+        "description": "pick up the white bowl",
+        "key_action": "picking up the white bowl",
+        "key_event": "white bowl picked up",
+        "preconditions": [
+          "On white_bowl_1 microwave_1_top_side"
+        ],
+        "effects": [
+          "Not On white_bowl_1 microwave_1_top_side"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "white_bowl_1",
+          "kitchen_table_plate_right_region"
+        ],
+        "description": "place the white bowl to the right of the plate",
+        "key_action": "placing the white bowl",
+        "key_event": "white bowl placed to the right of the plate",
+        "preconditions": [
+          "Not On white_bowl_1 microwave_1_top_side"
+        ],
+        "effects": [
+          "On white_bowl_1 kitchen_table_plate_right_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 49,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "Place[white_bowl, plate_right_region]",
+        "preconditions": [
+          "Not On white_bowl_1 microwave_1_top_side"
+        ],
+        "effects": [
+          "On white_bowl_1 kitchen_table_plate_right_region"
+        ],
+        "description": "The robot moves the white bowl, which it is already holding, to the target location on the kitchen table to the right of the plate, and prepares to release it."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 50,
+      "end_frame": 123,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[white bowl]",
+        "preconditions": [
+          "On white_bowl_1 microwave_1_top_side"
+        ],
+        "effects": [],
+        "description": "The robot arm moves with an open gripper to position itself directly above the white bowl."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 124,
+      "end_frame": 136,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[bowl, right of plate]",
+        "preconditions": [
+          "Holding bowl",
+          "On plate kitchen_table"
+        ],
+        "effects": [
+          "-Holding bowl",
+          "On bowl right of plate"
+        ],
+        "description": "The robot places the white bowl on the table, to the right of the plate."
+      }
+    }
+  ]
+}

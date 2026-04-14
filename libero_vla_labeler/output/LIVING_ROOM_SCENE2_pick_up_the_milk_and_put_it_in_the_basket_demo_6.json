@@ -1,0 +1,116 @@
+{
+  "task_name": "LIVING_ROOM_SCENE2_pick_up_the_milk_and_put_it_in_the_basket",
+  "demo_id": "demo_6",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/LIVING_ROOM_SCENE2_pick_up_the_milk_and_put_it_in_the_basket_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 127,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "pick up the milk and put it in the basket",
+    "initial_state": {
+      "On": [
+        "alphabet_soup_1 living_room_table",
+        "cream_cheese_1 living_room_table",
+        "tomato_sauce_1 living_room_table",
+        "ketchup_1 living_room_table",
+        "milk_1 living_room_table",
+        "orange_juice_1 living_room_table",
+        "butter_1 living_room_table",
+        "basket_1 living_room_table"
+      ]
+    },
+    "goal_state": {
+      "In": [
+        "milk_1 basket_1"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "milk"
+        ],
+        "description": "pick up the milk",
+        "key_action": "pick up",
+        "key_event": "picked up milk",
+        "preconditions": [
+          "On(milk_1 living_room_table)"
+        ],
+        "effects": [
+          "Not(On(milk_1 living_room_table))"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "milk",
+          "basket"
+        ],
+        "description": "put the milk in the basket",
+        "key_action": "place",
+        "key_event": "placed milk in basket",
+        "preconditions": [
+          "Not(On(milk_1 living_room_table))",
+          "On(basket_1 living_room_table)"
+        ],
+        "effects": [
+          "In(milk_1 basket_1)"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 44,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "PickUp[milk]",
+        "preconditions": [
+          "On(milk_1 living_room_table)"
+        ],
+        "effects": [
+          "-On(milk_1 living_room_table)"
+        ],
+        "description": "The robot picks up the milk from the table."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 45,
+      "end_frame": 108,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[milk]",
+        "preconditions": [
+          "On(milk_1 living_room_table)"
+        ],
+        "effects": [],
+        "description": "The robot moves its gripper above the milk carton, preparing to pick it up."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 109,
+      "end_frame": 126,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "Place[milk, basket]",
+        "preconditions": [
+          "Not(On(milk_1 living_room_table))",
+          "On(basket_1 living_room_table)"
+        ],
+        "effects": [
+          "In(milk_1 basket_1)"
+        ],
+        "description": "The robot places the milk into the basket."
+      }
+    }
+  ]
+}

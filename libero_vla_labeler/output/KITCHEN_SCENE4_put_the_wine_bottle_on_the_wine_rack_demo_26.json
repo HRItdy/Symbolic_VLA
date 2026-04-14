@@ -1,0 +1,110 @@
+{
+  "task_name": "KITCHEN_SCENE4_put_the_wine_bottle_on_the_wine_rack",
+  "demo_id": "demo_26",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/KITCHEN_SCENE4_put_the_wine_bottle_on_the_wine_rack_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 240,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "put the wine bottle on the wine rack",
+    "initial_state": {
+      "On": [
+        "akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region",
+        "wine_bottle_1 kitchen_table_wine_bottle_init_region",
+        "white_cabinet_1 kitchen_table_white_cabinet_init_region",
+        "wine_rack_1 kitchen_table_wine_rack_init_region"
+      ],
+      "Open": [
+        "white_cabinet_1_bottom_region"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "wine_bottle_1 wine_rack_1_top_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "wine_bottle_1"
+        ],
+        "description": "pick up the wine bottle",
+        "key_action": "pick up",
+        "key_event": "picked up wine bottle",
+        "preconditions": [
+          "On wine_bottle_1 kitchen_table_wine_bottle_init_region"
+        ],
+        "effects": [
+          "Not On wine_bottle_1 kitchen_table_wine_bottle_init_region"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "wine_bottle_1",
+          "wine_rack_1"
+        ],
+        "description": "place the wine bottle on the wine rack",
+        "key_action": "place",
+        "key_event": "placed wine bottle on wine rack",
+        "preconditions": [
+          "Not On wine_bottle_1 kitchen_table_wine_bottle_init_region"
+        ],
+        "effects": [
+          "On wine_bottle_1 wine_rack_1_top_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 137,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[wine_bottle]",
+        "preconditions": [
+          "On wine_bottle_1 kitchen_table_wine_bottle_init_region"
+        ],
+        "effects": [],
+        "description": "The robot arm moves to position itself above the wine bottle."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 138,
+      "end_frame": 225,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[wine_bottle]",
+        "preconditions": [
+          "On wine_bottle_1 kitchen_table_wine_bottle_init_region"
+        ],
+        "effects": [],
+        "description": "The robot arm moves to position its open gripper above the wine bottle."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 226,
+      "end_frame": 239,
+      "gripper_state": "close",
+      "transition_out": null,
+      "annotation": {
+        "operator": "moveto[home]",
+        "preconditions": [
+          "On wine_bottle wine_rack",
+          "Not Held wine_bottle"
+        ],
+        "effects": [],
+        "description": "The robot arm moves to a neutral home position after placing the wine bottle on the wine rack."
+      }
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "task_name": "KITCHEN_SCENE8_turn_off_the_stove",
+  "demo_id": "demo_20",
+  "hdf5_path": "/home/tiandy/libero_100/libero_90/KITCHEN_SCENE8_turn_off_the_stove_demo.hdf5",
+  "bddl_path": null,
+  "total_frames": 240,
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "turn off the stove",
+    "initial_state": {
+      "On": [
+        "flat_stove_1 kitchen_table_flat_stove_init_region",
+        "moka_pot_1 kitchen_table_moka_pot_right_init_region",
+        "moka_pot_2 kitchen_table_moka_pot_left_init_region"
+      ],
+      "Turnon": [
+        "flat_stove_1"
+      ]
+    },
+    "goal_state": {
+      "Turnoff": [
+        "flat_stove_1"
+      ]
+    },
+    "operators": [
+      {
+        "name": "TurnOff",
+        "parameters": [
+          "stove"
+        ],
+        "description": "turn off the stove",
+        "key_action": "turn off",
+        "key_event": "stove turned off",
+        "preconditions": [
+          "Turnon stove"
+        ],
+        "effects": [
+          "Turnoff stove"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": [
+    {
+      "segment_id": "seg_1",
+      "start_frame": 0,
+      "end_frame": 100,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "moveto[stove]",
+        "preconditions": [],
+        "effects": [],
+        "description": "The robot arm moves towards the stove."
+      }
+    },
+    {
+      "segment_id": "seg_2",
+      "start_frame": 101,
+      "end_frame": 192,
+      "gripper_state": "open",
+      "transition_out": "close",
+      "annotation": {
+        "operator": "moveto[stove]",
+        "preconditions": [
+          "Turnon flat_stove_1"
+        ],
+        "effects": [],
+        "description": "The robot moves its arm towards the stove."
+      }
+    },
+    {
+      "segment_id": "seg_3",
+      "start_frame": 193,
+      "end_frame": 215,
+      "gripper_state": "close",
+      "transition_out": "open",
+      "annotation": {
+        "operator": "TurnOff[stove]",
+        "preconditions": [
+          "Turnon stove"
+        ],
+        "effects": [
+          "Turnoff stove"
+        ],
+        "description": "The robot turns off the stove by interacting with its knob."
+      }
+    },
+    {
+      "segment_id": "seg_4",
+      "start_frame": 216,
+      "end_frame": 239,
+      "gripper_state": "open",
+      "transition_out": null,
+      "annotation": {
+        "operator": "TurnOff[stove]",
+        "preconditions": [
+          "Turnon stove"
+        ],
+        "effects": [
+          "Turnoff stove"
+        ],
+        "description": "The robot moves its arm to the stove and turns the knob to switch it off."
+      }
+    }
+  ]
+}

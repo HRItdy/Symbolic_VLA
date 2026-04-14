@@ -1,0 +1,27 @@
+# LLM for BDDL -> canonical operator conversion
+llm:
+  provider: "openai"          # "gemini" or "openai"
+  model: "gpt-4o-mini"
+  api_key: ""                 # or set env var OPENAI_API_KEY
+
+# Gemini for segment annotation (vision)
+gemini:
+  model: "gemini-2.5-flash"
+  api_key: ""                 # or set env var GEMINI_API_KEY
+  max_frames_per_segment: 5   # key frames sampled per segment for visual context
+
+# Gripper detection
+gripper:
+  action_dim: 7               # total action dimensions in LIBERO
+  gripper_idx: -1             # index of gripper channel in action vector
+  open_threshold: 0.5         # gripper value > this => open
+  close_threshold: 0.0        # gripper value <= this => closed
+  min_segment_frames: 3       # discard transition artefacts shorter than this
+
+# I/O paths
+paths:
+  dataset_dir: "./data/libero"
+  output_dir: "./output"
+
+# Camera used to extract key frames for Gemini
+camera: "agentview_rgb"       # name of the image observation key in the HDF5

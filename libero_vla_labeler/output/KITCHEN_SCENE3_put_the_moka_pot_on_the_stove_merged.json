@@ -1,0 +1,1856 @@
+{
+  "task_name": "KITCHEN_SCENE3_put_the_moka_pot_on_the_stove",
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "put the moka pot on the stove",
+    "initial_state": {
+      "On": [
+        "flat_stove_1 kitchen_table_flat_stove_init_region",
+        "chefmate_8_frypan_1 kitchen_table_frypan_init_region",
+        "moka_pot_1 kitchen_table_moka_pot_init_region"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "moka_pot_1 flat_stove_1_cook_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "moka_pot_1"
+        ],
+        "description": "pick up the moka pot",
+        "key_action": "pick up",
+        "key_event": "moka pot picked up",
+        "preconditions": [
+          "On moka_pot_1 kitchen_table_moka_pot_init_region"
+        ],
+        "effects": [
+          "Not On moka_pot_1 kitchen_table_moka_pot_init_region"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "moka_pot_1",
+          "flat_stove_1"
+        ],
+        "description": "place the moka pot on the stove",
+        "key_action": "place",
+        "key_event": "moka pot placed on stove",
+        "preconditions": [
+          "Not On moka_pot_1 kitchen_table_moka_pot_init_region"
+        ],
+        "effects": [
+          "On moka_pot_1 flat_stove_1_cook_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": {
+    "demo_0": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 86,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 87,
+        "end_frame": 134,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_1": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 105,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 106,
+        "end_frame": 169,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_2": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 114,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 115,
+        "end_frame": 163,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka_pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove, releasing it from its gripper."
+        }
+      }
+    ],
+    "demo_3": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 87,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 88,
+        "end_frame": 143,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_4": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 99,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 100,
+        "end_frame": 154,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_5": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 104,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 105,
+        "end_frame": 150,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_6": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 86,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 87,
+        "end_frame": 132,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_7": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 100,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 101,
+        "end_frame": 152,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_8": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 119,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 120,
+        "end_frame": 163,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_9": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 89,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 90,
+        "end_frame": 138,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_10": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 90,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 91,
+        "end_frame": 136,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_11": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 95,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 96,
+        "end_frame": 138,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_12": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 85,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 86,
+        "end_frame": 135,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_13": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 97,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 98,
+        "end_frame": 144,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_14": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 177,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 178,
+        "end_frame": 217,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_15": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 85,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 86,
+        "end_frame": 125,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_16": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 111,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 112,
+        "end_frame": 161,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_17": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 107,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 108,
+        "end_frame": 154,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_18": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 114,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 115,
+        "end_frame": 162,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_19": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 110,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 111,
+        "end_frame": 149,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_20": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 92,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 93,
+        "end_frame": 157,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_21": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 103,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 104,
+        "end_frame": 141,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_22": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 107,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 108,
+        "end_frame": 148,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_23": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 126,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 127,
+        "end_frame": 183,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_24": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 99,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 100,
+        "end_frame": 141,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_25": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 98,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 99,
+        "end_frame": 153,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_26": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 85,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 86,
+        "end_frame": 135,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_27": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 97,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 98,
+        "end_frame": 143,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_28": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 101,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 102,
+        "end_frame": 157,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_29": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 90,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 91,
+        "end_frame": 137,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_30": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 99,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 100,
+        "end_frame": 152,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_31": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 109,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 110,
+        "end_frame": 146,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_32": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 98,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 99,
+        "end_frame": 144,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka_pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_33": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 93,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 94,
+        "end_frame": 135,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_34": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 120,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 121,
+        "end_frame": 175,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_35": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 100,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 101,
+        "end_frame": 147,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_36": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 106,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 107,
+        "end_frame": 163,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_37": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 97,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 98,
+        "end_frame": 147,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_38": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 116,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 117,
+        "end_frame": 165,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_39": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 92,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 93,
+        "end_frame": 143,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_40": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 92,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 93,
+        "end_frame": 137,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_41": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 100,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 101,
+        "end_frame": 156,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_42": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 93,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 94,
+        "end_frame": 151,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_43": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 97,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 98,
+        "end_frame": 146,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_44": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 93,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 94,
+        "end_frame": 144,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_45": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 85,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 86,
+        "end_frame": 140,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_46": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 111,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 112,
+        "end_frame": 158,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_47": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 91,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 92,
+        "end_frame": 134,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_48": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 107,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 108,
+        "end_frame": 153,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ],
+    "demo_49": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 106,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[moka pot]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[moka pot]"
+          ],
+          "description": "The robot picks up the moka pot."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 107,
+        "end_frame": 163,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[moka pot, stove]",
+          "preconditions": [
+            "Holding[moka pot]"
+          ],
+          "effects": [
+            "On[moka pot, stove]"
+          ],
+          "description": "The robot places the moka pot onto the stove."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,989 @@
+{
+  "task_name": "KITCHEN_SCENE1_open_the_top_drawer_of_the_cabinet",
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "open the top drawer of the cabinet",
+    "initial_state": {
+      "On": [
+        "akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region",
+        "plate_1 kitchen_table_plate_init_region",
+        "wooden_cabinet_1 kitchen_table_wooden_cabinet_init_region"
+      ]
+    },
+    "goal_state": {
+      "Open": [
+        "wooden_cabinet_1_top_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "Open",
+        "parameters": [
+          "wooden_cabinet_1"
+        ],
+        "description": "open the top drawer of the cabinet",
+        "key_action": "open",
+        "key_event": "drawer opened",
+        "preconditions": [
+          "On wooden_cabinet_1 kitchen_table_wooden_cabinet_init_region"
+        ],
+        "effects": [
+          "Open wooden_cabinet_1_top_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": {
+    "demo_0": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 176,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer of cabinet]",
+          "preconditions": [
+            "Closed[top drawer of cabinet]"
+          ],
+          "effects": [
+            "Open[top drawer of cabinet]"
+          ],
+          "description": "The robot moves to and then opens the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_1": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 76,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Not Open[top drawer]"
+          ],
+          "effects": [
+            "Open[top drawer]"
+          ],
+          "description": "The robot grasps the handle of the top drawer of the cabinet and pulls it open."
+        }
+      }
+    ],
+    "demo_2": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 84,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed[top drawer]"
+          ],
+          "effects": [
+            "Open[top drawer]"
+          ],
+          "description": "The robot arm moves to the top drawer, grasps its handle, and pulls the drawer open."
+        }
+      }
+    ],
+    "demo_3": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 104,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot moves to the cabinet and pulls the handle of the top drawer, opening it slightly."
+        }
+      }
+    ],
+    "demo_4": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 80,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed[top drawer]"
+          ],
+          "effects": [
+            "Open[top drawer]"
+          ],
+          "description": "The robot arm moves to and opens the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_5": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 102,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Not Open top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot arm opens the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_6": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 148,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed[top drawer]"
+          ],
+          "effects": [
+            "Open[top drawer]"
+          ],
+          "description": "The robot moves its arm to the top drawer of the cabinet, grasps the handle with its closed gripper, and pulls it open."
+        }
+      }
+    ],
+    "demo_7": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 76,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer of cabinet]",
+          "preconditions": [
+            "Closed[top drawer of cabinet]"
+          ],
+          "effects": [
+            "Open[top drawer of cabinet]"
+          ],
+          "description": "The robot grasps the handle of the top drawer of the cabinet and pulls it open."
+        }
+      }
+    ],
+    "demo_8": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 91,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot opens the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_9": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 85,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed[top drawer]"
+          ],
+          "effects": [
+            "Open[top drawer]"
+          ],
+          "description": "The robot moves its arm to the top drawer of the cabinet, grasps the handle, and pulls it open."
+        }
+      }
+    ],
+    "demo_10": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 92,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed[top drawer]"
+          ],
+          "effects": [
+            "Open[top drawer]"
+          ],
+          "description": "The robot arm opens the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_11": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 77,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed[top drawer]"
+          ],
+          "effects": [
+            "Open[top drawer]"
+          ],
+          "description": "The robot moves its arm to the cabinet, grasps the handle, and pulls the top drawer open."
+        }
+      }
+    ],
+    "demo_12": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 81,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot moves to and then pulls open the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_13": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 108,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed[top drawer]"
+          ],
+          "effects": [
+            "Open[top drawer]"
+          ],
+          "description": "The robot moves to the cabinet and opens its top drawer by pulling the handle."
+        }
+      }
+    ],
+    "demo_14": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 114,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Not Open top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot moves to and opens the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_15": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 75,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot opens the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_16": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 149,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Not[Open[top drawer]]"
+          ],
+          "effects": [
+            "Open[top drawer]"
+          ],
+          "description": "The robot opens the top drawer of the cabinet by pulling its handle."
+        }
+      }
+    ],
+    "demo_17": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 76,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Not Open top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot opens the top drawer of the cabinet by pulling it out."
+        }
+      }
+    ],
+    "demo_18": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 87,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed[top drawer]"
+          ],
+          "effects": [
+            "Open[top drawer]"
+          ],
+          "description": "The robot arm moves to the cabinet, grips the handle of the top drawer, and pulls it open."
+        }
+      }
+    ],
+    "demo_19": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 90,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Not Open top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot moves to and opens the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_20": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 94,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Not Open top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot moves its arm to the cabinet and pulls open its top drawer."
+        }
+      }
+    ],
+    "demo_21": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 77,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Not Open top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot grasps the handle of the top drawer of the cabinet and pulls it open."
+        }
+      }
+    ],
+    "demo_22": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 81,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Not Open top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot arm moves to and opens the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_23": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 83,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Not Open top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot arm moves to position itself in front of the cabinet's top drawer."
+        }
+      }
+    ],
+    "demo_24": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 87,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "(not (Open top drawer))"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot moves to the top drawer of the cabinet, grasps its handle, and pulls it open."
+        }
+      }
+    ],
+    "demo_25": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 78,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Not Open top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot arm moves into position towards the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_26": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 93,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Not Open top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot opens the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_27": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 77,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed[top drawer]"
+          ],
+          "effects": [
+            "Open[top drawer]"
+          ],
+          "description": "The robot opens the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_28": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 80,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot grasps the top drawer handle and pulls it open."
+        }
+      }
+    ],
+    "demo_29": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 80,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Not Open top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot arm moves towards the top drawer of the cabinet, positioning itself to interact with it."
+        }
+      }
+    ],
+    "demo_30": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 105,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed[top_drawer]"
+          ],
+          "effects": [
+            "Open[top_drawer]"
+          ],
+          "description": "The robot moves to the cabinet and pulls open its top drawer."
+        }
+      }
+    ],
+    "demo_31": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 119,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot opens the top drawer of the cabinet by pulling its handle."
+        }
+      }
+    ],
+    "demo_32": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 95,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Not Open top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot opens the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_33": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 72,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Not Open top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot moves its arm to reach the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_34": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 77,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot grasps the handle of the top drawer of the cabinet and pulls it open."
+        }
+      }
+    ],
+    "demo_35": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 101,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot arm moves towards the handle of the top drawer of the cabinet to prepare for opening it."
+        }
+      }
+    ],
+    "demo_36": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 88,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer of cabinet]",
+          "preconditions": [
+            "Closed cabinet_top_region"
+          ],
+          "effects": [
+            "Open cabinet_top_region"
+          ],
+          "description": "The robot moves to and opens the top drawer of the cabinet by pulling it."
+        }
+      }
+    ],
+    "demo_37": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 92,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot arm moves to position itself near the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_38": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 126,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer of cabinet]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot moves its gripper to the handle of the top drawer of the cabinet, grasps it, and pulls the drawer open."
+        }
+      }
+    ],
+    "demo_39": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 88,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot moves its arm to position the gripper in front of the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_40": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 140,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot reaches for and opens the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_41": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 89,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot opens the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_42": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 82,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot arm moves to the cabinet, grasps the handle of its top drawer, and pulls it open."
+        }
+      }
+    ],
+    "demo_43": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 66,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed[top drawer]"
+          ],
+          "effects": [
+            "Open[top drawer]"
+          ],
+          "description": "The robot arm moves towards the cabinet's top drawer, grips it, and pulls it open."
+        }
+      }
+    ],
+    "demo_44": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 88,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot grasps the handle of the top drawer of the cabinet and pulls it open."
+        }
+      }
+    ],
+    "demo_45": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 95,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot reaches for the handle of the cabinet's top drawer, grasps it, and pulls the drawer open."
+        }
+      }
+    ],
+    "demo_46": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 91,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot pulls the top drawer of the cabinet, causing it to open."
+        }
+      }
+    ],
+    "demo_47": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 101,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot opens the top drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_48": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 79,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot moves its arm to position the gripper in front of the cabinet's top drawer."
+        }
+      }
+    ],
+    "demo_49": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 91,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
+          "effects": [
+            "Open top drawer"
+          ],
+          "description": "The robot grasps the handle of the cabinet's top drawer and pulls it open."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1858 @@
+{
+  "task_name": "KITCHEN_SCENE7_put_the_white_bowl_to_the_right_of_the_plate",
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "put the white bowl to the right of the plate",
+    "initial_state": {
+      "On": [
+        "white_bowl_1 microwave_1_top_side",
+        "plate_1 kitchen_table_plate_init_region"
+      ],
+      "Close": [
+        "microwave_1"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "white_bowl_1 kitchen_table_plate_right_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "white_bowl_1"
+        ],
+        "description": "pick up the white bowl",
+        "key_action": "picking up the white bowl",
+        "key_event": "white bowl picked up",
+        "preconditions": [
+          "On white_bowl_1 microwave_1_top_side"
+        ],
+        "effects": [
+          "Not On white_bowl_1 microwave_1_top_side"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "white_bowl_1",
+          "kitchen_table_plate_right_region"
+        ],
+        "description": "place the white bowl to the right of the plate",
+        "key_action": "placing the white bowl",
+        "key_event": "white bowl placed to the right of the plate",
+        "preconditions": [
+          "Not On white_bowl_1 microwave_1_top_side"
+        ],
+        "effects": [
+          "On white_bowl_1 kitchen_table_plate_right_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": {
+    "demo_0": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 67,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 68,
+        "end_frame": 119,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_1": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 65,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 66,
+        "end_frame": 125,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_2": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 60,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 61,
+        "end_frame": 118,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_3": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 76,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 77,
+        "end_frame": 131,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_4": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 68,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 69,
+        "end_frame": 127,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_5": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 72,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 73,
+        "end_frame": 134,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_6": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 77,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 78,
+        "end_frame": 135,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_7": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 61,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 62,
+        "end_frame": 117,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_8": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 79,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 80,
+        "end_frame": 136,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_9": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 71,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 72,
+        "end_frame": 126,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_10": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 82,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 83,
+        "end_frame": 146,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_11": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 69,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 70,
+        "end_frame": 136,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_12": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 65,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 66,
+        "end_frame": 129,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_13": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 63,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 64,
+        "end_frame": 117,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_14": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 62,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 63,
+        "end_frame": 111,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_15": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 65,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 66,
+        "end_frame": 126,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_16": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 70,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 71,
+        "end_frame": 122,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_17": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 105,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 106,
+        "end_frame": 166,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_18": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 68,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 69,
+        "end_frame": 126,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_19": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 77,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 78,
+        "end_frame": 138,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_20": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 75,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 76,
+        "end_frame": 131,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_21": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 78,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 79,
+        "end_frame": 131,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_22": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 71,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 72,
+        "end_frame": 137,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_23": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 120,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 121,
+        "end_frame": 191,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_24": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 73,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 74,
+        "end_frame": 124,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_25": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 96,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 97,
+        "end_frame": 145,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_26": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 71,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 72,
+        "end_frame": 225,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_27": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 61,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 62,
+        "end_frame": 123,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_28": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 73,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 74,
+        "end_frame": 130,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_29": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 62,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 63,
+        "end_frame": 124,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_30": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 70,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 71,
+        "end_frame": 122,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_31": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 77,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 78,
+        "end_frame": 137,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_32": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 93,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 94,
+        "end_frame": 155,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_33": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 61,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 62,
+        "end_frame": 117,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_34": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 121,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 122,
+        "end_frame": 175,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_35": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 75,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 76,
+        "end_frame": 195,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_36": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 67,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 68,
+        "end_frame": 128,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_37": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 66,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 67,
+        "end_frame": 116,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_38": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 123,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 124,
+        "end_frame": 184,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_39": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 70,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 71,
+        "end_frame": 127,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_40": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 79,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 80,
+        "end_frame": 151,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_41": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 125,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 126,
+        "end_frame": 179,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_42": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 60,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 61,
+        "end_frame": 114,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_43": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 70,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 71,
+        "end_frame": 125,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_44": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 103,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 104,
+        "end_frame": 166,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_45": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 75,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 76,
+        "end_frame": 126,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_46": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 67,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 68,
+        "end_frame": 136,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_47": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 77,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 78,
+        "end_frame": 141,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_48": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 72,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 73,
+        "end_frame": 132,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ],
+    "demo_49": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 64,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[white bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[white bowl]"
+          ],
+          "description": "The robot arm picks up the white bowl on the microwave."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 65,
+        "end_frame": 124,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[white bowl, right of plate]",
+          "preconditions": [
+            "Holding[white bowl]"
+          ],
+          "effects": [
+            "On[white bowl, right of plate]"
+          ],
+          "description": "The robot places the white bowl to the right of the plate, completing the task."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1857 @@
+{
+  "task_name": "KITCHEN_SCENE9_put_the_frying_pan_on_top_of_the_cabinet",
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "put the frying pan on top of the cabinet",
+    "initial_state": {
+      "On": [
+        "flat_stove_1 kitchen_table_flat_stove_init_region",
+        "chefmate_8_frypan_1 kitchen_table_frypan_init_region",
+        "white_bowl_1 kitchen_table_white_bowl_init_region",
+        "wooden_two_layer_shelf_1 kitchen_table_wooden_two_layer_shelf_init_region"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "chefmate_8_frypan_1 wooden_two_layer_shelf_1_top_side"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "frypan"
+        ],
+        "description": "pick up the frying pan from the stove",
+        "key_action": "pick up",
+        "key_event": "frying pan picked up",
+        "preconditions": [
+          "On chefmate_8_frypan_1 flat_stove_1"
+        ],
+        "effects": [
+          "Not On chefmate_8_frypan_1 flat_stove_1"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "frypan",
+          "shelf"
+        ],
+        "description": "place the frying pan on top of the cabinet",
+        "key_action": "place",
+        "key_event": "frying pan placed on shelf",
+        "preconditions": [
+          "Not On chefmate_8_frypan_1 wooden_two_layer_shelf_1_top_side"
+        ],
+        "effects": [
+          "On chefmate_8_frypan_1 wooden_two_layer_shelf_1_top_side"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": {
+    "demo_0": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 117,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 118,
+        "end_frame": 226,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_1": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 134,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 135,
+        "end_frame": 194,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_2": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 99,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 100,
+        "end_frame": 167,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_3": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 97,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 98,
+        "end_frame": 199,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_4": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 106,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 107,
+        "end_frame": 180,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_5": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 119,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 120,
+        "end_frame": 184,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_6": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 94,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 95,
+        "end_frame": 150,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_7": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 98,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 99,
+        "end_frame": 186,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_8": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 106,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 107,
+        "end_frame": 244,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_9": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 89,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 90,
+        "end_frame": 159,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_10": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 89,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 90,
+        "end_frame": 183,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_11": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 102,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 103,
+        "end_frame": 185,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_12": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 94,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 95,
+        "end_frame": 171,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_13": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 99,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 100,
+        "end_frame": 165,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_14": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 98,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 99,
+        "end_frame": 172,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_15": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 111,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 112,
+        "end_frame": 196,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_16": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 96,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 97,
+        "end_frame": 163,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_17": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 86,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 87,
+        "end_frame": 169,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_18": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 102,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 103,
+        "end_frame": 162,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_19": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 92,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 93,
+        "end_frame": 167,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_20": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 85,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 86,
+        "end_frame": 156,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_21": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 103,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 104,
+        "end_frame": 194,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_22": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 94,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 95,
+        "end_frame": 194,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_23": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 120,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 121,
+        "end_frame": 183,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_24": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 105,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 106,
+        "end_frame": 200,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_25": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 103,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 104,
+        "end_frame": 166,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_26": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 135,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 136,
+        "end_frame": 210,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_27": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 107,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 108,
+        "end_frame": 189,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_28": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 117,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 118,
+        "end_frame": 191,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_29": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 114,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 115,
+        "end_frame": 182,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_30": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 136,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 137,
+        "end_frame": 227,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_31": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 108,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 109,
+        "end_frame": 179,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_32": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 90,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 91,
+        "end_frame": 178,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_33": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 94,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 95,
+        "end_frame": 186,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_34": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 96,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 97,
+        "end_frame": 169,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_35": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 97,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 98,
+        "end_frame": 155,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_36": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 79,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 80,
+        "end_frame": 190,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_37": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 101,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 102,
+        "end_frame": 168,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_38": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 111,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 112,
+        "end_frame": 186,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_39": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 179,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 180,
+        "end_frame": 272,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_40": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 116,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 117,
+        "end_frame": 196,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_41": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 95,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 96,
+        "end_frame": 180,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_42": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 99,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 100,
+        "end_frame": 176,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_43": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 93,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 94,
+        "end_frame": 176,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_44": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 104,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 105,
+        "end_frame": 177,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_45": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 139,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 140,
+        "end_frame": 210,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_46": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 108,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 109,
+        "end_frame": 197,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_47": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 98,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 99,
+        "end_frame": 180,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_48": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 94,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 95,
+        "end_frame": 164,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ],
+    "demo_49": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 108,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[frying pan]"
+          ],
+          "description": "The robot grasps the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 109,
+        "end_frame": 169,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, cabinet]",
+          "preconditions": [
+            "Holding[frying pan]"
+          ],
+          "effects": [
+            "On[frying pan, cabinet]"
+          ],
+          "description": "The robot moves the frying pan it is holding and places it on top of the cabinet."
+        }
+      }
+    ]
+  }
+}

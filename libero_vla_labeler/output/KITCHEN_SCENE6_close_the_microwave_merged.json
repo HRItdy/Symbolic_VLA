@@ -1,0 +1,2742 @@
+{
+  "task_name": "KITCHEN_SCENE6_close_the_microwave",
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "close the microwave",
+    "initial_state": {
+      "On": [
+        "porcelain_mug_1 kitchen_table_porcelain_mug_init_region",
+        "white_yellow_mug_1 kitchen_table_white_yellow_mug_init_region",
+        "microwave_1 kitchen_table_microwave_init_region"
+      ],
+      "Open": [
+        "microwave_1"
+      ]
+    },
+    "goal_state": {
+      "Close": [
+        "microwave_1"
+      ]
+    },
+    "operators": [
+      {
+        "name": "Close",
+        "parameters": [
+          "microwave"
+        ],
+        "description": "close the microwave",
+        "key_action": "close",
+        "key_event": "microwave closed",
+        "preconditions": [
+          "Open microwave"
+        ],
+        "effects": [
+          "Close microwave"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": {
+    "demo_0": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 73,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 74,
+        "end_frame": 149,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 150,
+        "end_frame": 235,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_1": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 65,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 66,
+        "end_frame": 107,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 108,
+        "end_frame": 170,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_2": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 101,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 102,
+        "end_frame": 154,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 155,
+        "end_frame": 252,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_3": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 69,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 70,
+        "end_frame": 110,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 111,
+        "end_frame": 174,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_4": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 63,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 64,
+        "end_frame": 119,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 120,
+        "end_frame": 188,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_5": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 65,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 66,
+        "end_frame": 139,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 140,
+        "end_frame": 235,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_6": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 56,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 57,
+        "end_frame": 102,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 103,
+        "end_frame": 171,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_7": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 64,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 65,
+        "end_frame": 104,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 105,
+        "end_frame": 161,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_8": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 74,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 75,
+        "end_frame": 127,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 128,
+        "end_frame": 211,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_9": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 64,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 65,
+        "end_frame": 121,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 122,
+        "end_frame": 201,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_10": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 52,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 53,
+        "end_frame": 103,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 104,
+        "end_frame": 187,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_11": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 69,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 70,
+        "end_frame": 116,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 117,
+        "end_frame": 186,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_12": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 58,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 59,
+        "end_frame": 105,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 106,
+        "end_frame": 191,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_13": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 58,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 59,
+        "end_frame": 108,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 109,
+        "end_frame": 200,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_14": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 74,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 75,
+        "end_frame": 124,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 125,
+        "end_frame": 217,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_15": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 75,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 76,
+        "end_frame": 134,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 135,
+        "end_frame": 215,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_16": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 75,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 76,
+        "end_frame": 166,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 167,
+        "end_frame": 253,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_17": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 110,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 111,
+        "end_frame": 157,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 158,
+        "end_frame": 245,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_18": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 107,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 108,
+        "end_frame": 158,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 159,
+        "end_frame": 243,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_19": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 58,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 59,
+        "end_frame": 103,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 104,
+        "end_frame": 164,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_20": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 58,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 59,
+        "end_frame": 109,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 110,
+        "end_frame": 170,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_21": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 73,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 74,
+        "end_frame": 115,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 116,
+        "end_frame": 197,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_22": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 64,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 65,
+        "end_frame": 121,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 122,
+        "end_frame": 208,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_23": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 56,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 57,
+        "end_frame": 98,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 99,
+        "end_frame": 180,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_24": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 57,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 58,
+        "end_frame": 106,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 107,
+        "end_frame": 170,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_25": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 54,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 55,
+        "end_frame": 105,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 106,
+        "end_frame": 187,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_26": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 53,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 54,
+        "end_frame": 98,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 99,
+        "end_frame": 154,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_27": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 61,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 62,
+        "end_frame": 110,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 111,
+        "end_frame": 179,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_28": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 66,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 67,
+        "end_frame": 108,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 109,
+        "end_frame": 179,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_29": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 62,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 63,
+        "end_frame": 111,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 112,
+        "end_frame": 187,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_30": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 62,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 63,
+        "end_frame": 110,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 111,
+        "end_frame": 178,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_31": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 67,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 68,
+        "end_frame": 125,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 126,
+        "end_frame": 294,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_32": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 63,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 64,
+        "end_frame": 125,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 126,
+        "end_frame": 211,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_33": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 57,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 58,
+        "end_frame": 108,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 109,
+        "end_frame": 185,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_34": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 62,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 63,
+        "end_frame": 123,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 124,
+        "end_frame": 215,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_35": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 106,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 107,
+        "end_frame": 159,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 160,
+        "end_frame": 256,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_36": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 75,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 71,
+        "end_frame": 127,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 128,
+        "end_frame": 225,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_37": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 58,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 59,
+        "end_frame": 108,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 109,
+        "end_frame": 198,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_38": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 56,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 57,
+        "end_frame": 106,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 107,
+        "end_frame": 174,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_39": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 59,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 60,
+        "end_frame": 100,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 101,
+        "end_frame": 185,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_40": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 64,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 65,
+        "end_frame": 117,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 118,
+        "end_frame": 197,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_41": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 63,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 64,
+        "end_frame": 111,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 112,
+        "end_frame": 185,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_42": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 64,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 65,
+        "end_frame": 131,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 132,
+        "end_frame": 250,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_43": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 76,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 77,
+        "end_frame": 136,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 137,
+        "end_frame": 235,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_44": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 58,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 59,
+        "end_frame": 101,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 102,
+        "end_frame": 194,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_45": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 116,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 117,
+        "end_frame": 159,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 160,
+        "end_frame": 228,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_46": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 65,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 66,
+        "end_frame": 121,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 122,
+        "end_frame": 216,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_47": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 55,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 56,
+        "end_frame": 106,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 107,
+        "end_frame": 176,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_48": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 68,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 69,
+        "end_frame": 115,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 116,
+        "end_frame": 190,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ],
+    "demo_49": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 72,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Pickup[yellow and white mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[yellow and white mug]"
+          ],
+          "description": "The robot arm picks up the yellow and white mug blocking the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 73,
+        "end_frame": 129,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[yellow and white mug]",
+          "preconditions": [
+            "Holding[yellow and white mug]"
+          ],
+          "effects": [
+            "Empty[gripper]"
+          ],
+          "description": "The robot arm places the yellow and white mug on the position doesn't block the microwave door."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 130,
+        "end_frame": 208,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[microwave]",
+          "preconditions": [
+            "Open[microwave]",
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Closed[microwave]"
+          ],
+          "description": "The robot arm closes the microwave door."
+        }
+      }
+    ]
+  }
+}

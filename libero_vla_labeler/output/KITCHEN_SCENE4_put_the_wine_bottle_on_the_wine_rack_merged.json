@@ -1,0 +1,1860 @@
+{
+  "task_name": "KITCHEN_SCENE4_put_the_wine_bottle_on_the_wine_rack",
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "put the wine bottle on the wine rack",
+    "initial_state": {
+      "On": [
+        "akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region",
+        "wine_bottle_1 kitchen_table_wine_bottle_init_region",
+        "white_cabinet_1 kitchen_table_white_cabinet_init_region",
+        "wine_rack_1 kitchen_table_wine_rack_init_region"
+      ],
+      "Open": [
+        "white_cabinet_1_bottom_region"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "wine_bottle_1 wine_rack_1_top_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "wine_bottle_1"
+        ],
+        "description": "pick up the wine bottle",
+        "key_action": "pick up",
+        "key_event": "picked up wine bottle",
+        "preconditions": [
+          "On wine_bottle_1 kitchen_table_wine_bottle_init_region"
+        ],
+        "effects": [
+          "Not On wine_bottle_1 kitchen_table_wine_bottle_init_region"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "wine_bottle_1",
+          "wine_rack_1"
+        ],
+        "description": "place the wine bottle on the wine rack",
+        "key_action": "place",
+        "key_event": "placed wine bottle on wine rack",
+        "preconditions": [
+          "Not On wine_bottle_1 kitchen_table_wine_bottle_init_region"
+        ],
+        "effects": [
+          "On wine_bottle_1 wine_rack_1_top_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": {
+    "demo_0": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 151,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 152,
+        "end_frame": 308,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_1": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 156,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 157,
+        "end_frame": 216,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_2": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 109,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 110,
+        "end_frame": 201,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_3": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 105,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 106,
+        "end_frame": 205,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_4": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 134,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 135,
+        "end_frame": 229,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_5": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 121,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 122,
+        "end_frame": 224,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_6": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 148,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 149,
+        "end_frame": 230,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_7": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 166,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 167,
+        "end_frame": 272,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_8": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 111,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 112,
+        "end_frame": 201,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_9": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 119,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 120,
+        "end_frame": 195,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_10": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 125,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 126,
+        "end_frame": 240,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_11": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 177,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 178,
+        "end_frame": 270,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_12": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 131,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 132,
+        "end_frame": 258,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_13": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 168,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 169,
+        "end_frame": 301,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_14": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 132,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 133,
+        "end_frame": 247,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_15": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 125,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 126,
+        "end_frame": 209,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_16": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 134,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 135,
+        "end_frame": 286,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_17": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 125,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 126,
+        "end_frame": 209,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_18": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 125,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 126,
+        "end_frame": 221,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_19": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 144,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 145,
+        "end_frame": 236,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_20": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 129,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 130,
+        "end_frame": 252,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_21": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 143,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 144,
+        "end_frame": 241,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_22": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 151,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 152,
+        "end_frame": 289,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_23": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 144,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 145,
+        "end_frame": 295,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_24": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 151,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 152,
+        "end_frame": 237,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_25": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 119,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 120,
+        "end_frame": 219,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_26": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 149,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 150,
+        "end_frame": 239,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_27": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 234,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 235,
+        "end_frame": 352,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_28": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 136,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 137,
+        "end_frame": 242,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_29": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 145,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 146,
+        "end_frame": 365,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_30": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 112,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 113,
+        "end_frame": 213,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_31": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 115,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 116,
+        "end_frame": 193,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_32": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 125,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 126,
+        "end_frame": 231,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_33": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 112,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 113,
+        "end_frame": 182,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_34": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 171,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 172,
+        "end_frame": 264,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_35": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 132,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 133,
+        "end_frame": 214,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_36": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 113,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 114,
+        "end_frame": 187,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_37": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 124,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 125,
+        "end_frame": 203,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_38": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 125,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 126,
+        "end_frame": 212,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_39": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 119,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 120,
+        "end_frame": 191,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_40": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 155,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 156,
+        "end_frame": 225,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_41": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 155,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 156,
+        "end_frame": 274,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_42": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 137,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 138,
+        "end_frame": 239,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_43": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 138,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 139,
+        "end_frame": 229,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_44": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 153,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 154,
+        "end_frame": 236,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_45": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 133,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 134,
+        "end_frame": 190,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_46": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 126,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 127,
+        "end_frame": 230,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_47": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 135,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 136,
+        "end_frame": 249,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_48": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 141,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 142,
+        "end_frame": 220,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ],
+    "demo_49": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 232,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[wine bottle]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[wine bottle]"
+          ],
+          "description": "The robot arm picks up the wine bottle."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 233,
+        "end_frame": 372,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[wine bottle, wine rack]",
+          "preconditions": [
+            "Holding[wine bottle]"
+          ],
+          "effects": [
+            "On[wine bottle, wine rack]"
+          ],
+          "description": "The robot arm places the wine bottle on the wine rack."
+        }
+      }
+    ]
+  }
+}

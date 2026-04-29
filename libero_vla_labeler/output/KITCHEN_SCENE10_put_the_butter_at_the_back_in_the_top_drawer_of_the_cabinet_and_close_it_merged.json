@@ -1,0 +1,2833 @@
+{
+  "task_name": "KITCHEN_SCENE10_put_the_butter_at_the_back_in_the_top_drawer_of_the_cabinet_and_close_it",
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "put the butter at the back in the top drawer of the cabinet and close it",
+    "initial_state": {
+      "On": [
+        "akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region",
+        "butter_1 kitchen_table_butter_front_init_region",
+        "butter_2 kitchen_table_butter_back_init_region",
+        "chocolate_pudding_1 kitchen_table_chocolate_pudding_init_region",
+        "wooden_cabinet_1 kitchen_table_wooden_cabinet_init_region"
+      ],
+      "Open": [
+        "wooden_cabinet_1_top_region"
+      ]
+    },
+    "goal_state": {
+      "In": [
+        "butter_2 wooden_cabinet_1_top_region"
+      ],
+      "Close": [
+        "wooden_cabinet_1_top_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "butter_2"
+        ],
+        "description": "pick up the butter",
+        "key_action": "pick up",
+        "key_event": "butter picked up",
+        "preconditions": [
+          "On butter_2 kitchen_table_butter_back_init_region"
+        ],
+        "effects": [
+          "Not On butter_2 kitchen_table_butter_back_init_region",
+          "Holding butter_2"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "butter_2",
+          "wooden_cabinet_1_top_region"
+        ],
+        "description": "place the butter in the top drawer of the cabinet",
+        "key_action": "place",
+        "key_event": "butter placed in cabinet",
+        "preconditions": [
+          "Holding butter_2",
+          "Open wooden_cabinet_1_top_region"
+        ],
+        "effects": [
+          "In butter_2 wooden_cabinet_1_top_region",
+          "Not Holding butter_2"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Close",
+        "parameters": [
+          "wooden_cabinet_1_top_region"
+        ],
+        "description": "close the top drawer of the cabinet",
+        "key_action": "close",
+        "key_event": "cabinet closed",
+        "preconditions": [
+          "In butter_2 wooden_cabinet_1_top_region"
+        ],
+        "effects": [
+          "Close wooden_cabinet_1_top_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": {
+    "demo_0": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 62,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 63,
+        "end_frame": 126,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 127,
+        "end_frame": 182,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_1": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 72,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 73,
+        "end_frame": 137,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 138,
+        "end_frame": 203,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_2": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 69,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 70,
+        "end_frame": 130,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 131,
+        "end_frame": 191,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_3": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 64,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 65,
+        "end_frame": 134,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 135,
+        "end_frame": 203,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_4": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 70,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 71,
+        "end_frame": 125,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 126,
+        "end_frame": 181,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_5": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 67,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 68,
+        "end_frame": 127,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 128,
+        "end_frame": 185,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_6": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 55,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 56,
+        "end_frame": 114,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 115,
+        "end_frame": 170,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_7": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 72,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 73,
+        "end_frame": 131,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 132,
+        "end_frame": 209,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_8": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 65,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 66,
+        "end_frame": 136,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 137,
+        "end_frame": 197,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_9": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 65,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 66,
+        "end_frame": 131,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 132,
+        "end_frame": 193,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_10": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 71,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 72,
+        "end_frame": 134,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 135,
+        "end_frame": 202,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_11": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 61,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 62,
+        "end_frame": 123,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 124,
+        "end_frame": 179,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_12": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 73,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 74,
+        "end_frame": 140,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 141,
+        "end_frame": 197,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_13": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 64,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 65,
+        "end_frame": 127,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 128,
+        "end_frame": 181,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_14": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 65,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 66,
+        "end_frame": 127,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 128,
+        "end_frame": 181,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_15": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 67,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 68,
+        "end_frame": 125,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 126,
+        "end_frame": 182,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_16": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 66,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 67,
+        "end_frame": 123,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 124,
+        "end_frame": 176,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_17": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 64,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 65,
+        "end_frame": 118,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 119,
+        "end_frame": 188,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_18": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 66,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 67,
+        "end_frame": 126,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 127,
+        "end_frame": 193,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_19": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 59,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 60,
+        "end_frame": 125,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 126,
+        "end_frame": 182,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_20": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 73,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 74,
+        "end_frame": 138,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 139,
+        "end_frame": 194,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_21": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 67,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 68,
+        "end_frame": 132,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 133,
+        "end_frame": 198,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_22": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 74,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 75,
+        "end_frame": 133,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 134,
+        "end_frame": 198,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_23": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 53,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 54,
+        "end_frame": 116,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 117,
+        "end_frame": 175,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_24": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 66,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 67,
+        "end_frame": 128,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 129,
+        "end_frame": 184,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_25": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 65,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 66,
+        "end_frame": 129,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 130,
+        "end_frame": 184,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_26": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 65,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 66,
+        "end_frame": 136,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 137,
+        "end_frame": 198,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_27": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 62,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 63,
+        "end_frame": 123,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 124,
+        "end_frame": 185,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_28": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 71,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 72,
+        "end_frame": 140,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 141,
+        "end_frame": 204,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_29": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 69,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 70,
+        "end_frame": 134,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 135,
+        "end_frame": 199,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_30": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 63,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 64,
+        "end_frame": 123,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 124,
+        "end_frame": 177,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_31": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 59,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 60,
+        "end_frame": 117,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 118,
+        "end_frame": 184,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_32": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 68,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 69,
+        "end_frame": 135,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 136,
+        "end_frame": 205,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_33": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 63,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 64,
+        "end_frame": 118,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 119,
+        "end_frame": 170,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_34": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 59,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 60,
+        "end_frame": 121,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 122,
+        "end_frame": 181,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_35": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 71,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 72,
+        "end_frame": 134,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 135,
+        "end_frame": 193,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_36": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 72,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 73,
+        "end_frame": 132,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 133,
+        "end_frame": 189,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_37": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 87,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 88,
+        "end_frame": 153,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 154,
+        "end_frame": 211,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_38": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 68,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 69,
+        "end_frame": 128,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 129,
+        "end_frame": 182,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_39": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 60,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 61,
+        "end_frame": 132,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 133,
+        "end_frame": 201,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_40": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 78,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 79,
+        "end_frame": 136,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 137,
+        "end_frame": 195,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_41": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 64,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 65,
+        "end_frame": 124,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 125,
+        "end_frame": 188,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_42": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 60,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 61,
+        "end_frame": 120,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 121,
+        "end_frame": 193,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_43": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 56,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 57,
+        "end_frame": 124,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 125,
+        "end_frame": 179,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_44": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 66,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 67,
+        "end_frame": 121,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 122,
+        "end_frame": 184,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_45": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 54,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 55,
+        "end_frame": 114,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 115,
+        "end_frame": 168,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_46": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 63,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 64,
+        "end_frame": 120,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 121,
+        "end_frame": 177,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_47": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 58,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 59,
+        "end_frame": 114,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 115,
+        "end_frame": 172,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_48": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 59,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 60,
+        "end_frame": 119,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 120,
+        "end_frame": 176,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ],
+    "demo_49": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 61,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[back butter]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[back butter]"
+          ],
+          "description": "The robot arm picks up the back butter from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 62,
+        "end_frame": 118,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "Place[back butter, top drawer]",
+          "preconditions": [
+            "Holding[back butter]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "In[back butter, top drawer]"
+          ],
+          "description": "The robot places the back butter into the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 119,
+        "end_frame": 171,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "In[back butter, top drawer]",
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet, which contains the butter."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1037 @@
+{
+  "task_name": "KITCHEN_SCENE1_open_the_bottom_drawer_of_the_cabinet",
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "open the bottom drawer of the cabinet",
+    "initial_state": {
+      "On": [
+        "akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region",
+        "plate_1 kitchen_table_plate_init_region",
+        "wooden_cabinet_1 kitchen_table_wooden_cabinet_init_region"
+      ]
+    },
+    "goal_state": {
+      "Open": [
+        "wooden_cabinet_1_bottom_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "Open",
+        "parameters": [
+          "wooden_cabinet_1"
+        ],
+        "description": "open the bottom drawer of the cabinet",
+        "key_action": "open",
+        "key_event": "drawer opened",
+        "preconditions": [
+          "On wooden_cabinet_1 kitchen_table_wooden_cabinet_init_region"
+        ],
+        "effects": [
+          "Open wooden_cabinet_1_bottom_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": {
+    "demo_0": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 123,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot moves to and grasps the handle of the bottom drawer, then pulls it open."
+        }
+      }
+    ],
+    "demo_1": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 155,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[cabinet]",
+          "preconditions": [
+            "On cabinet kitchen_table",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot reaches for and pulls the handle of the bottom drawer, opening it."
+        }
+      }
+    ],
+    "demo_2": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 135,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On cabinet kitchen_table",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot arm moves to the cabinet, grasps the handle of the bottom drawer, and pulls it open."
+        }
+      }
+    ],
+    "demo_3": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 122,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot moves to the bottom drawer, grasps its handle, and pulls it open."
+        }
+      }
+    ],
+    "demo_4": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 131,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On cabinet kitchen_table",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot moves its end-effector to the handle of the bottom drawer of the cabinet, grips it, and pulls the drawer open."
+        }
+      }
+    ],
+    "demo_5": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 138,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[cabinet]",
+          "preconditions": [
+            "On cabinet table",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot moves to the cabinet, grasps the handle, and opens its bottom drawer."
+        }
+      }
+    ],
+    "demo_6": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 175,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On[cabinet, table]",
+            "Closed[bottom drawer]"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot moves its arm to grasp the handle of the bottom drawer and pulls it open."
+        }
+      }
+    ],
+    "demo_7": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 139,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[cabinet]",
+          "preconditions": [
+            "Closed bottom drawer",
+            "On cabinet kitchen_table"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot opens the bottom drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_8": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 137,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "Closed bottom drawer",
+            "On cabinet kitchen_table"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot arm grasps the handle of the bottom drawer and pulls it open."
+        }
+      }
+    ],
+    "demo_9": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 156,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On cabinet table",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot arm moves to the bottom drawer of the cabinet, grips it with a closed gripper, and pulls the drawer open."
+        }
+      }
+    ],
+    "demo_10": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 116,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On cabinet kitchen_table",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot reaches for and opens the bottom drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_11": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 125,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[cabinet]",
+          "preconditions": [
+            "On cabinet kitchen_table",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot moves to the cabinet and opens its bottom drawer."
+        }
+      }
+    ],
+    "demo_12": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 140,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On[cabinet, cabinet_init_region]",
+            "(not Open[bottom drawer])"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot arm moves to the cabinet, grasps the handle of the bottom drawer, and pulls it open."
+        }
+      }
+    ],
+    "demo_13": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 141,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "(not (Open bottom drawer))",
+            "(On cabinet table)"
+          ],
+          "effects": [
+            "(Open bottom drawer)"
+          ],
+          "description": "The robot moves its arm to grasp the handle of the bottom drawer and pulls it open."
+        }
+      }
+    ],
+    "demo_14": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 141,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "open[bottom drawer]",
+          "preconditions": [
+            "On wooden_cabinet_1 kitchen_table_wooden_cabinet_init_region",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot moves its arm towards the bottom drawer of the cabinet to prepare for opening it."
+        }
+      }
+    ],
+    "demo_15": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 196,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "open[bottom drawer]",
+          "preconditions": [
+            "On wooden_cabinet_1 kitchen_table_wooden_cabinet_init_region",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot arm moves towards the handle of the bottom drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_16": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 160,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On cabinet kitchen_table_wooden_cabinet_init_region",
+            "not (Open bottom drawer)"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot arm moves to the cabinet, grasps the handle, and pulls open the bottom drawer."
+        }
+      }
+    ],
+    "demo_17": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 121,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On wooden_cabinet_1 kitchen_table_wooden_cabinet_init_region",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot moves to and opens the bottom drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_18": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 126,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On[cabinet, table]",
+            "Closed[bottom drawer]"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot moves to the bottom drawer of the cabinet, grasps its handle, and pulls it open."
+        }
+      }
+    ],
+    "demo_19": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 156,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On cabinet table",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot arm grasps the handle of the bottom drawer and pulls it open."
+        }
+      }
+    ],
+    "demo_20": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 131,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On[cabinet, kitchen_table]",
+            "Not[Open[bottom drawer]]"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot grasps the handle of the bottom drawer and pulls it open."
+        }
+      }
+    ],
+    "demo_21": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 129,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On[cabinet, kitchen_table_wooden_cabinet_init_region]",
+            "Closed[bottom drawer]"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot arm reaches for the handle of the bottom drawer and pulls it open."
+        }
+      }
+    ],
+    "demo_22": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 139,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On[cabinet, table]",
+            "Closed[bottom drawer]"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot arm moves to the cabinet, grasps the handle of the bottom drawer, and pulls it open."
+        }
+      }
+    ],
+    "demo_23": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 124,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[cabinet]",
+          "preconditions": [
+            "On cabinet kitchen_table",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot arm grasps the handle of the bottom drawer of the cabinet and pulls it open."
+        }
+      }
+    ],
+    "demo_24": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 159,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "open[bottom drawer]",
+          "preconditions": [
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot arm moves to position itself in front of the bottom drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_25": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 153,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[cabinet]",
+          "preconditions": [
+            "On cabinet kitchen_table",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot moves its arm to grasp the bottom drawer handle and pulls it open."
+        }
+      }
+    ],
+    "demo_26": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 141,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On[cabinet, table]",
+            "Closed[bottom drawer]"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot moves to the cabinet and pulls open its bottom drawer."
+        }
+      }
+    ],
+    "demo_27": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 142,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On[cabinet]",
+            "Close[bottom drawer]"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot arm moves to the cabinet and pulls the bottom drawer open."
+        }
+      }
+    ],
+    "demo_28": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 205,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "Not Open[bottom drawer]",
+            "On[cabinet, kitchen_table]"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot moves to the bottom drawer of the cabinet, grips the handle, and pulls it open."
+        }
+      }
+    ],
+    "demo_29": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 128,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On[cabinet, table]",
+            "Closed[bottom drawer]"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot arm moves to the bottom drawer, grasps its handle, and pulls it open."
+        }
+      }
+    ],
+    "demo_30": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 131,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[cabinet]",
+          "preconditions": [
+            "On[cabinet, kitchen table]",
+            "Closed[bottom drawer]"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot moves to and opens the bottom drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_31": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 162,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On wooden_cabinet_1 kitchen_table_wooden_cabinet_init_region",
+            "Closed wdooden_cabinet_1_bottom_region"
+          ],
+          "effects": [
+            "Open wooden_cabinet_1_bottom_region"
+          ],
+          "description": "The robot moves its arm to the handle of the bottom drawer and pulls it open."
+        }
+      }
+    ],
+    "demo_32": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 135,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On[cabinet, table]",
+            "Closed[bottom drawer]"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot arm moves to the bottom drawer handle, pulls it open, and then retracts slightly."
+        }
+      }
+    ],
+    "demo_33": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 130,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "open[bottom drawer]",
+          "preconditions": [
+            "On cabinet kitchen_table",
+            "Closed bottom drawer",
+            "Not (Grasping robot bottom drawer handle)"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot moves its arm to reach the handle of the bottom drawer."
+        }
+      }
+    ],
+    "demo_34": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 184,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On cabinet kitchen_table_wooden_cabinet_init_region",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom_drawer"
+          ],
+          "description": "The robot reaches for the bottom drawer of the cabinet and pulls it open."
+        }
+      }
+    ],
+    "demo_35": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 132,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On cabinet table",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom_drawer"
+          ],
+          "description": "The robot arm moves towards the cabinet, grasps the handle of the bottom drawer, and pulls it open."
+        }
+      }
+    ],
+    "demo_36": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 137,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On[cabinet, kitchen_table]",
+            "Closed[bottom drawer]"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot reaches for the handle of the bottom drawer and pulls it open."
+        }
+      }
+    ],
+    "demo_37": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 138,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On cabinet table",
+            "Not Open bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot arm moves towards and then opens the bottom drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_38": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 129,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On[cabinet, table]",
+            "Closed[bottom drawer]"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot moves to the cabinet, grasps the handle of the bottom drawer, and pulls it open."
+        }
+      }
+    ],
+    "demo_39": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 120,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "open[bottom drawer]",
+          "preconditions": [
+            "Not (Open bottom drawer)",
+            "On cabinet table"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot arm moves towards the bottom drawer of the cabinet to prepare for interaction."
+        }
+      }
+    ],
+    "demo_40": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 126,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On[cabinet, table]",
+            "Closed[bottom drawer]"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot opens the bottom drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_41": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 138,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On cabinet kitchen_table",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot arm reaches for the handle of the bottom drawer and pulls it open."
+        }
+      }
+    ],
+    "demo_42": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 137,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On cabinet kitchen_table",
+            "not (Open bottom drawer)"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot grasps the handle of the bottom drawer and pulls it open."
+        }
+      }
+    ],
+    "demo_43": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 136,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On cabinet table",
+            "Not Open[bottom drawer]"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot arm moves towards the bottom drawer of the cabinet to prepare for opening it."
+        }
+      }
+    ],
+    "demo_44": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 134,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On cabinet table",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot moves its arm to the cabinet and pulls open its bottom drawer."
+        }
+      }
+    ],
+    "demo_45": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 121,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On cabinet kitchen_table",
+            "Not Open bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot moves to the cabinet, grasps the handle of the bottom drawer, and pulls it open."
+        }
+      }
+    ],
+    "demo_46": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 182,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On cabinet table",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot moves to the bottom drawer of the cabinet, grasps its handle, and pulls it open."
+        }
+      }
+    ],
+    "demo_47": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 146,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On wooden_cabinet_1 kitchen_table_wooden_cabinet_init_region",
+            "Closed[bottom drawer]"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot moves its arm to position the gripper in front of the bottom drawer of the cabinet."
+        }
+      }
+    ],
+    "demo_48": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 164,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On[cabinet, table]",
+            "Closed[bottom drawer]"
+          ],
+          "effects": [
+            "Open[bottom drawer]"
+          ],
+          "description": "The robot grasps the handle of the bottom drawer of the cabinet and pulls it open."
+        }
+      }
+    ],
+    "demo_49": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 141,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[bottom drawer]",
+          "preconditions": [
+            "On cabinet table",
+            "Closed bottom drawer"
+          ],
+          "effects": [
+            "Open bottom drawer"
+          ],
+          "description": "The robot arm moves to the cabinet and opens its bottom drawer."
+        }
+      }
+    ]
+  }
+}

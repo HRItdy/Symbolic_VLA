@@ -1,0 +1,1862 @@
+{
+  "task_name": "LIVING_ROOM_SCENE2_pick_up_the_milk_and_put_it_in_the_basket",
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "pick up the milk and put it in the basket",
+    "initial_state": {
+      "On": [
+        "alphabet_soup_1 living_room_table",
+        "cream_cheese_1 living_room_table",
+        "tomato_sauce_1 living_room_table",
+        "ketchup_1 living_room_table",
+        "milk_1 living_room_table",
+        "orange_juice_1 living_room_table",
+        "butter_1 living_room_table",
+        "basket_1 living_room_table"
+      ]
+    },
+    "goal_state": {
+      "In": [
+        "milk_1 basket_1"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "milk"
+        ],
+        "description": "pick up the milk",
+        "key_action": "pick up",
+        "key_event": "picked up milk",
+        "preconditions": [
+          "On(milk_1 living_room_table)"
+        ],
+        "effects": [
+          "Not(On(milk_1 living_room_table))"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "milk",
+          "basket"
+        ],
+        "description": "put the milk in the basket",
+        "key_action": "place",
+        "key_event": "placed milk in basket",
+        "preconditions": [
+          "Not(On(milk_1 living_room_table))",
+          "On(basket_1 living_room_table)"
+        ],
+        "effects": [
+          "In(milk_1 basket_1)"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": {
+    "demo_0": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 44,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 45,
+        "end_frame": 103,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_1": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 45,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 46,
+        "end_frame": 104,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_2": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 40,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 41,
+        "end_frame": 108,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_3": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 44,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 45,
+        "end_frame": 110,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_4": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 49,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 50,
+        "end_frame": 113,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_5": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 55,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 56,
+        "end_frame": 113,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_6": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 52,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 53,
+        "end_frame": 126,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_7": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 55,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 56,
+        "end_frame": 129,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_8": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 48,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 49,
+        "end_frame": 119,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_9": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 90,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 91,
+        "end_frame": 162,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_10": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 44,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 45,
+        "end_frame": 138,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_11": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 46,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 47,
+        "end_frame": 120,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_12": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 46,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 47,
+        "end_frame": 108,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_13": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 57,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 58,
+        "end_frame": 118,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_14": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 56,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 57,
+        "end_frame": 124,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_15": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 51,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 52,
+        "end_frame": 111,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_16": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 46,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 47,
+        "end_frame": 121,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_17": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 47,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 48,
+        "end_frame": 106,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_18": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 48,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 49,
+        "end_frame": 110,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_19": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 44,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 45,
+        "end_frame": 113,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_20": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 50,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 51,
+        "end_frame": 113,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_21": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 47,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 48,
+        "end_frame": 107,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_22": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 49,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 50,
+        "end_frame": 110,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_23": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 56,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 57,
+        "end_frame": 126,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_24": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 50,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 51,
+        "end_frame": 119,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_25": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 45,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 46,
+        "end_frame": 115,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_26": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 44,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 45,
+        "end_frame": 109,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_27": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 47,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 48,
+        "end_frame": 115,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_28": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 89,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 90,
+        "end_frame": 175,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_29": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 46,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 47,
+        "end_frame": 115,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_30": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 48,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 49,
+        "end_frame": 103,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_31": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 43,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 44,
+        "end_frame": 121,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_32": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 44,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 45,
+        "end_frame": 119,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_33": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 39,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 40,
+        "end_frame": 101,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_34": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 44,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 45,
+        "end_frame": 109,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_35": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 64,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 65,
+        "end_frame": 126,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_36": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 40,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 41,
+        "end_frame": 106,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_37": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 48,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 49,
+        "end_frame": 108,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_38": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 41,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 42,
+        "end_frame": 99,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_39": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 48,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 49,
+        "end_frame": 112,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_40": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 55,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 56,
+        "end_frame": 131,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_41": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 42,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 43,
+        "end_frame": 117,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_42": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 41,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 42,
+        "end_frame": 104,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_43": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 48,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 49,
+        "end_frame": 113,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_44": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 53,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 54,
+        "end_frame": 118,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_45": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 52,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 53,
+        "end_frame": 114,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_46": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 41,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 42,
+        "end_frame": 105,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_47": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 55,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 56,
+        "end_frame": 126,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_48": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 49,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 50,
+        "end_frame": 118,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ],
+    "demo_49": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 48,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[milk]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[milk]"
+          ],
+          "description": "The robot arm picks up the milk."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 49,
+        "end_frame": 115,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[milk, basket]",
+          "preconditions": [
+            "Holding[milk]"
+          ],
+          "effects": [
+            "In[milk, basket]"
+          ],
+          "description": "The robot places the milk into the basket, completing the task."
+        }
+      }
+    ]
+  }
+}

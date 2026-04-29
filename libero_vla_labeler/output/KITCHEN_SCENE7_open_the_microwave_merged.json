@@ -1,0 +1,992 @@
+{
+  "task_name": "KITCHEN_SCENE7_open_the_microwave",
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "open the microwave",
+    "initial_state": {
+      "On": [
+        "white_bowl_1 microwave_1_top_side",
+        "microwave_1 kitchen_table_microwave_init_region",
+        "plate_1 kitchen_table_plate_init_region"
+      ],
+      "Close": [
+        "microwave_1"
+      ]
+    },
+    "goal_state": {
+      "Open": [
+        "microwave_1"
+      ]
+    },
+    "operators": [
+      {
+        "name": "Open",
+        "parameters": [
+          "microwave"
+        ],
+        "description": "open the microwave",
+        "key_action": "open",
+        "key_event": "microwave opened",
+        "preconditions": [
+          "Close(microwave)"
+        ],
+        "effects": [
+          "Open(microwave)"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": {
+    "demo_0": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 130,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close(microwave)"
+          ],
+          "effects": [
+            "Open(microwave)"
+          ],
+          "description": "The robot opens the microwave door."
+        }
+      }
+    ],
+    "demo_1": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 149,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot opens the microwave door by pulling its handle."
+        }
+      }
+    ],
+    "demo_2": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 142,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot arm moves to the microwave handle and pulls it to open the microwave door."
+        }
+      }
+    ],
+    "demo_3": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 155,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close(microwave)"
+          ],
+          "effects": [
+            "Open(microwave)"
+          ],
+          "description": "The robot moves its gripper to the microwave handle and opens the microwave door."
+        }
+      }
+    ],
+    "demo_4": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 147,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close(microwave)"
+          ],
+          "effects": [
+            "Open(microwave)"
+          ],
+          "description": "The robot arm moves towards the microwave handle and pulls it to open the microwave door."
+        }
+      }
+    ],
+    "demo_5": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 153,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot arm moves to and opens the microwave door."
+        }
+      }
+    ],
+    "demo_6": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 150,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot reaches for the microwave handle and opens the microwave door."
+        }
+      }
+    ],
+    "demo_7": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 136,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot opens the microwave by pulling its handle."
+        }
+      }
+    ],
+    "demo_8": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 157,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot opens the microwave door by pulling its handle."
+        }
+      }
+    ],
+    "demo_9": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 165,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close(microwave)"
+          ],
+          "effects": [
+            "Open(microwave)"
+          ],
+          "description": "The robot opens the microwave door."
+        }
+      }
+    ],
+    "demo_10": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 159,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close(microwave)"
+          ],
+          "effects": [
+            "Open(microwave)"
+          ],
+          "description": "The robot moves to the microwave, grasps its handle, and pulls it open."
+        }
+      }
+    ],
+    "demo_11": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 142,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close(microwave)"
+          ],
+          "effects": [
+            "Open(microwave)"
+          ],
+          "description": "The robot opens the microwave door."
+        }
+      }
+    ],
+    "demo_12": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 133,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close(microwave)"
+          ],
+          "effects": [
+            "Open(microwave)"
+          ],
+          "description": "The robot reaches for the microwave handle and opens its door."
+        }
+      }
+    ],
+    "demo_13": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 161,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot moves its arm to the microwave handle and pulls it open."
+        }
+      }
+    ],
+    "demo_14": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 141,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot grasps the microwave handle and pulls it open."
+        }
+      }
+    ],
+    "demo_15": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 165,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot opens the microwave."
+        }
+      }
+    ],
+    "demo_16": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 141,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot arm moves to the microwave handle and pulls the microwave door open."
+        }
+      }
+    ],
+    "demo_17": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 153,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot grasps the microwave handle and pulls the door open."
+        }
+      }
+    ],
+    "demo_18": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 150,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot grasps the microwave handle and pulls it to open the microwave door."
+        }
+      }
+    ],
+    "demo_19": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 136,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close(microwave)"
+          ],
+          "effects": [
+            "Open(microwave)"
+          ],
+          "description": "The robot moves to the microwave handle, grasps it with its closed gripper, and pulls the microwave door open."
+        }
+      }
+    ],
+    "demo_20": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 149,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot opens the microwave door."
+        }
+      }
+    ],
+    "demo_21": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 161,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot opens the microwave door by grasping its handle and pulling it open."
+        }
+      }
+    ],
+    "demo_22": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 176,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot opens the microwave door by pulling its handle."
+        }
+      }
+    ],
+    "demo_23": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 153,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close(microwave)"
+          ],
+          "effects": [
+            "Open(microwave)"
+          ],
+          "description": "The robot moves its arm to grasp the microwave handle and pulls the door open."
+        }
+      }
+    ],
+    "demo_24": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 150,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close(microwave)"
+          ],
+          "effects": [
+            "Open(microwave)"
+          ],
+          "description": "The robot arm reaches for the microwave handle and opens the microwave door."
+        }
+      }
+    ],
+    "demo_25": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 150,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close(microwave)"
+          ],
+          "effects": [
+            "Open(microwave)"
+          ],
+          "description": "The robot moves to the microwave, grasps its handle, and pulls to open the door."
+        }
+      }
+    ],
+    "demo_26": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 150,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close(microwave)"
+          ],
+          "effects": [
+            "Open(microwave)"
+          ],
+          "description": "The robot moves its arm to the microwave handle and opens the microwave door."
+        }
+      }
+    ],
+    "demo_27": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 125,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot opens the microwave door by grasping its handle and pulling it."
+        }
+      }
+    ],
+    "demo_28": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 101,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot moves its arm to the microwave door and opens it, transitioning it from a closed to an open state."
+        }
+      }
+    ],
+    "demo_29": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 147,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot moves its arm to the microwave handle and opens the microwave door."
+        }
+      }
+    ],
+    "demo_30": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 159,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot arm reaches for the microwave handle and pulls the door open."
+        }
+      }
+    ],
+    "demo_31": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 142,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close(microwave)"
+          ],
+          "effects": [
+            "Open(microwave)"
+          ],
+          "description": "The robot arm grips the microwave handle and pulls it to open the microwave door."
+        }
+      }
+    ],
+    "demo_32": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 152,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot arm moves to the microwave handle and pulls it open."
+        }
+      }
+    ],
+    "demo_33": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 154,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot arm moves to the microwave handle and pulls it to open the microwave door."
+        }
+      }
+    ],
+    "demo_34": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 154,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot opens the microwave door."
+        }
+      }
+    ],
+    "demo_35": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 143,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close(microwave)"
+          ],
+          "effects": [
+            "Open(microwave)"
+          ],
+          "description": "The robot opens the microwave door."
+        }
+      }
+    ],
+    "demo_36": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 146,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot moves to the microwave, grasps its handle, and pulls it open."
+        }
+      }
+    ],
+    "demo_37": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 168,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot reaches for the microwave handle and pulls it to open the microwave door."
+        }
+      }
+    ],
+    "demo_38": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 158,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close(microwave)"
+          ],
+          "effects": [
+            "Open(microwave)"
+          ],
+          "description": "The robot opens the microwave by pulling its handle."
+        }
+      }
+    ],
+    "demo_39": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 147,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close(microwave)"
+          ],
+          "effects": [
+            "Open(microwave)"
+          ],
+          "description": "The robot arm moves to the microwave handle and pulls it open, causing the microwave door to open."
+        }
+      }
+    ],
+    "demo_40": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 155,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot arm grasps the microwave handle and pulls the door open."
+        }
+      }
+    ],
+    "demo_41": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 142,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot opens the microwave door."
+        }
+      }
+    ],
+    "demo_42": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 140,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot opens the microwave door by pulling its handle."
+        }
+      }
+    ],
+    "demo_43": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 139,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot moves its arm to the microwave handle and opens the microwave door."
+        }
+      }
+    ],
+    "demo_44": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 134,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot moves its arm to grasp the microwave handle and opens the microwave door."
+        }
+      }
+    ],
+    "demo_45": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 143,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close(microwave)"
+          ],
+          "effects": [
+            "Open(microwave)"
+          ],
+          "description": "The robot pulls the microwave door open."
+        }
+      }
+    ],
+    "demo_46": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 135,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot opens the microwave door."
+        }
+      }
+    ],
+    "demo_47": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 145,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot arm moves to the microwave handle and pulls it to open the microwave door."
+        }
+      }
+    ],
+    "demo_48": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 139,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot arm moves to the microwave handle, grasps it with the closed gripper, and pulls to open the microwave door."
+        }
+      }
+    ],
+    "demo_49": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 142,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Open[microwave]",
+          "preconditions": [
+            "Close[microwave]"
+          ],
+          "effects": [
+            "Open[microwave]"
+          ],
+          "description": "The robot arm reaches for and opens the microwave door."
+        }
+      }
+    ]
+  }
+}

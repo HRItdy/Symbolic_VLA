@@ -1,0 +1,990 @@
+{
+  "task_name": "KITCHEN_SCENE9_turn_on_the_stove",
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "turn on the stove",
+    "initial_state": {
+      "On": [
+        "flat_stove_1 kitchen_table_flat_stove_init_region",
+        "chefmate_8_frypan_1 kitchen_table_frypan_init_region",
+        "white_bowl_1 kitchen_table_white_bowl_init_region",
+        "wooden_two_layer_shelf_1 kitchen_table_wooden_two_layer_shelf_init_region"
+      ]
+    },
+    "goal_state": {
+      "Turnon": [
+        "flat_stove_1"
+      ]
+    },
+    "operators": [
+      {
+        "name": "TurnOn",
+        "parameters": [
+          "stove"
+        ],
+        "description": "turn on the stove",
+        "key_action": "turn on",
+        "key_event": "stove turned on",
+        "preconditions": [
+          "On stove kitchen_table_flat_stove_init_region"
+        ],
+        "effects": [
+          "Turnon stove"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": {
+    "demo_0": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 114,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_1": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 113,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_2": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 99,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_3": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 120,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_4": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 112,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_5": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 123,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_6": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 123,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_7": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 115,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_8": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 121,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_9": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 125,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_10": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 123,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_11": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 123,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_12": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 104,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_13": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 124,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_14": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 107,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_15": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 126,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_16": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 99,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_17": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 104,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_18": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 138,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_19": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 109,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_20": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 104,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_21": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 123,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_22": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 122,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_23": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 125,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_24": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 119,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_25": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 119,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_26": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 124,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_27": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 124,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_28": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 119,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_29": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 115,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_30": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 119,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_31": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 112,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_32": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 114,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_33": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 119,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_34": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 115,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_35": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 107,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_36": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 117,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_37": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 131,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_38": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 115,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_39": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 98,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_40": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 131,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_41": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 119,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_42": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 127,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_43": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 114,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_44": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 110,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_45": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 111,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_46": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 96,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_47": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 114,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_48": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 120,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ],
+    "demo_49": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 116,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "TurnOff[stove]"
+          ],
+          "effects": [
+            "TurnOn[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      }
+    ]
+  }
+}

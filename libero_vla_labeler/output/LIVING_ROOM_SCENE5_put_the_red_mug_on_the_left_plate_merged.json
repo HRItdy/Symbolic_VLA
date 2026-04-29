@@ -1,0 +1,1858 @@
+{
+  "task_name": "LIVING_ROOM_SCENE5_put_the_red_mug_on_the_left_plate",
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "put the red mug on the left plate",
+    "initial_state": {
+      "On": [
+        "plate_1 living_room_table_plate_left_region",
+        "plate_2 living_room_table_plate_right_region",
+        "red_coffee_mug_1 living_room_table_red_coffee_mug_init_region",
+        "white_yellow_mug_1 living_room_table_white_yellow_mug_init_region",
+        "porcelain_mug_1 living_room_table_porcelain_mug_init_region"
+      ]
+    },
+    "goal_state": {
+      "On": [
+        "red_coffee_mug_1 plate_1"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "red_coffee_mug_1"
+        ],
+        "description": "pick up the red mug",
+        "key_action": "pick up",
+        "key_event": "mug picked up",
+        "preconditions": [
+          "On red_coffee_mug_1 living_room_table_red_coffee_mug_init_region"
+        ],
+        "effects": [
+          "Not(On red_coffee_mug_1 living_room_table_red_coffee_mug_init_region)"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "red_coffee_mug_1",
+          "plate_1"
+        ],
+        "description": "place the red mug on the left plate",
+        "key_action": "place on",
+        "key_event": "mug placed on plate",
+        "preconditions": [
+          "Not(On red_coffee_mug_1 living_room_table_red_coffee_mug_init_region)"
+        ],
+        "effects": [
+          "On red_coffee_mug_1 plate_1"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": {
+    "demo_0": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 57,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 58,
+        "end_frame": 126,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_1": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 66,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 67,
+        "end_frame": 142,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_2": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 60,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 61,
+        "end_frame": 160,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_3": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 53,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 54,
+        "end_frame": 154,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_4": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 56,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 57,
+        "end_frame": 136,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_5": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 53,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 54,
+        "end_frame": 142,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_6": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 54,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 55,
+        "end_frame": 156,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_7": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 66,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 67,
+        "end_frame": 150,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_8": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 67,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 68,
+        "end_frame": 181,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_9": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 53,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 54,
+        "end_frame": 133,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_10": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 56,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 57,
+        "end_frame": 146,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_11": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 63,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 64,
+        "end_frame": 136,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_12": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 50,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 51,
+        "end_frame": 129,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_13": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 55,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 56,
+        "end_frame": 140,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_14": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 59,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 60,
+        "end_frame": 140,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_15": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 62,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 63,
+        "end_frame": 134,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_16": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 53,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 54,
+        "end_frame": 179,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_17": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 68,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 69,
+        "end_frame": 173,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_18": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 58,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 59,
+        "end_frame": 127,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_19": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 49,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 50,
+        "end_frame": 159,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_20": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 69,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 70,
+        "end_frame": 142,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_21": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 53,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 54,
+        "end_frame": 118,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_22": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 56,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 57,
+        "end_frame": 124,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_23": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 59,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 60,
+        "end_frame": 179,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_24": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 57,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 58,
+        "end_frame": 128,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_25": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 67,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 68,
+        "end_frame": 133,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_26": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 70,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 71,
+        "end_frame": 183,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_27": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 59,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 60,
+        "end_frame": 138,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_28": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 56,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 57,
+        "end_frame": 134,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_29": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 56,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 57,
+        "end_frame": 144,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_30": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 88,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 89,
+        "end_frame": 169,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_31": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 52,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 53,
+        "end_frame": 134,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_32": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 61,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 62,
+        "end_frame": 157,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_33": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 51,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 52,
+        "end_frame": 127,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_34": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 107,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 108,
+        "end_frame": 183,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_35": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 55,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 56,
+        "end_frame": 140,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_36": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 49,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 50,
+        "end_frame": 111,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_37": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 53,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 54,
+        "end_frame": 120,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_38": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 58,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 59,
+        "end_frame": 140,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_39": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 65,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 66,
+        "end_frame": 171,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_40": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 55,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 56,
+        "end_frame": 144,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_41": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 50,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 51,
+        "end_frame": 119,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_42": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 55,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 56,
+        "end_frame": 124,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_43": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 57,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 58,
+        "end_frame": 136,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_44": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 58,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 59,
+        "end_frame": 156,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_45": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 54,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 55,
+        "end_frame": 140,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_46": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 65,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 66,
+        "end_frame": 143,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_47": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 52,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 53,
+        "end_frame": 126,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_48": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 60,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 61,
+        "end_frame": 144,
+        "gripper_state": "open",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ],
+    "demo_49": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 59,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[red mug]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[red mug]"
+          ],
+          "description": "The robot picks up the red mug."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 60,
+        "end_frame": 139,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[red mug, left plate]",
+          "preconditions": [
+            "Holding[red mug]"
+          ],
+          "effects": [
+            "On[red mug, left plate]"
+          ],
+          "description": "The robot places the red mug onto the left plate, completing the task."
+        }
+      }
+    ]
+  }
+}

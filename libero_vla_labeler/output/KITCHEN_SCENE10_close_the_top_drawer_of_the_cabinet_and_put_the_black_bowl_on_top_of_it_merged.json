@@ -1,0 +1,2731 @@
+{
+  "task_name": "KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet_and_put_the_black_bowl_on_top_of_it",
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "close the top drawer of the cabinet and put the black bowl on top of it",
+    "initial_state": {
+      "On": [
+        "akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region",
+        "butter_1 kitchen_table_butter_front_init_region",
+        "butter_2 kitchen_table_butter_back_init_region",
+        "chocolate_pudding_1 kitchen_table_chocolate_pudding_init_region",
+        "wooden_cabinet_1 kitchen_table_wooden_cabinet_init_region"
+      ],
+      "Open": [
+        "wooden_cabinet_1_top_region"
+      ]
+    },
+    "goal_state": {
+      "Close": [
+        "wooden_cabinet_1_top_region"
+      ],
+      "On": [
+        "akita_black_bowl_1 wooden_cabinet_1_top_side"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "akita_black_bowl_1"
+        ],
+        "description": "pick up the black bowl",
+        "key_action": "pick up",
+        "key_event": "picked up black bowl",
+        "preconditions": [
+          "On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region"
+        ],
+        "effects": [
+          "Not On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "akita_black_bowl_1",
+          "wooden_cabinet_1_top_side"
+        ],
+        "description": "put the black bowl on top of the cabinet",
+        "key_action": "place",
+        "key_event": "placed black bowl on cabinet",
+        "preconditions": [
+          "Not On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region"
+        ],
+        "effects": [
+          "On akita_black_bowl_1 wooden_cabinet_1_top_side"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Close",
+        "parameters": [
+          "wooden_cabinet_1_top_region"
+        ],
+        "description": "close the top drawer of the cabinet",
+        "key_action": "close",
+        "key_event": "closed cabinet drawer",
+        "preconditions": [
+          "Open wooden_cabinet_1_top_region"
+        ],
+        "effects": [
+          "Not Open wooden_cabinet_1_top_region",
+          "Close wooden_cabinet_1_top_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": {
+    "demo_0": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 66,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 67,
+        "end_frame": 131,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 132,
+        "end_frame": 196,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_1": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 69,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 70,
+        "end_frame": 138,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 139,
+        "end_frame": 206,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_2": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 70,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 71,
+        "end_frame": 212,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 213,
+        "end_frame": 283,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_3": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 75,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 76,
+        "end_frame": 148,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 149,
+        "end_frame": 222,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_4": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 70,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 71,
+        "end_frame": 140,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 141,
+        "end_frame": 209,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_5": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 103,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 104,
+        "end_frame": 177,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 178,
+        "end_frame": 250,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_6": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 71,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 72,
+        "end_frame": 147,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 148,
+        "end_frame": 211,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_7": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 76,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 77,
+        "end_frame": 126,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 127,
+        "end_frame": 185,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_8": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 74,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 75,
+        "end_frame": 142,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 143,
+        "end_frame": 220,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_9": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 89,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 90,
+        "end_frame": 152,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 153,
+        "end_frame": 216,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_10": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 64,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 65,
+        "end_frame": 128,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 129,
+        "end_frame": 191,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_11": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 72,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 73,
+        "end_frame": 151,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 152,
+        "end_frame": 213,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_12": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 83,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 84,
+        "end_frame": 147,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 148,
+        "end_frame": 213,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_13": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 71,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 72,
+        "end_frame": 137,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 138,
+        "end_frame": 205,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_14": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 70,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 71,
+        "end_frame": 128,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 129,
+        "end_frame": 189,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_15": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 102,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 103,
+        "end_frame": 168,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 169,
+        "end_frame": 234,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_16": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 78,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 79,
+        "end_frame": 141,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 142,
+        "end_frame": 201,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_17": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 62,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 63,
+        "end_frame": 156,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 157,
+        "end_frame": 224,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_18": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 79,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 80,
+        "end_frame": 143,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 144,
+        "end_frame": 210,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_19": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 78,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 79,
+        "end_frame": 144,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 145,
+        "end_frame": 207,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_20": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 75,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 76,
+        "end_frame": 260,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 261,
+        "end_frame": 321,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_21": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 68,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 69,
+        "end_frame": 135,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 136,
+        "end_frame": 202,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_22": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 65,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 66,
+        "end_frame": 122,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 123,
+        "end_frame": 194,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_23": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 68,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 69,
+        "end_frame": 150,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 151,
+        "end_frame": 225,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_24": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 70,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 71,
+        "end_frame": 140,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 141,
+        "end_frame": 209,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_25": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 89,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 90,
+        "end_frame": 157,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 158,
+        "end_frame": 227,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_26": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 69,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 70,
+        "end_frame": 133,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 134,
+        "end_frame": 205,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_27": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 88,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 89,
+        "end_frame": 162,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 163,
+        "end_frame": 222,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_28": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 75,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 76,
+        "end_frame": 135,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 136,
+        "end_frame": 206,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_29": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 70,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 71,
+        "end_frame": 122,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 123,
+        "end_frame": 179,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_30": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 81,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 82,
+        "end_frame": 146,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 147,
+        "end_frame": 218,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_31": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 103,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 104,
+        "end_frame": 175,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 176,
+        "end_frame": 252,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_32": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 68,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 69,
+        "end_frame": 126,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 127,
+        "end_frame": 189,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_33": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 72,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 73,
+        "end_frame": 124,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 125,
+        "end_frame": 182,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_34": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 84,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 85,
+        "end_frame": 149,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 150,
+        "end_frame": 223,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_35": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 69,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 70,
+        "end_frame": 136,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 137,
+        "end_frame": 204,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_36": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 68,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 69,
+        "end_frame": 127,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 128,
+        "end_frame": 201,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_37": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 69,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 70,
+        "end_frame": 138,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 139,
+        "end_frame": 206,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_38": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 74,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 75,
+        "end_frame": 130,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 131,
+        "end_frame": 195,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_39": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 76,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 77,
+        "end_frame": 147,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 148,
+        "end_frame": 203,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_40": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 108,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 109,
+        "end_frame": 171,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 172,
+        "end_frame": 226,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_41": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 60,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 61,
+        "end_frame": 116,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 117,
+        "end_frame": 178,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_42": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 74,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 75,
+        "end_frame": 138,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 139,
+        "end_frame": 207,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_43": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 61,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 62,
+        "end_frame": 121,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 122,
+        "end_frame": 181,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_44": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 71,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 72,
+        "end_frame": 133,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 134,
+        "end_frame": 199,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_45": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 76,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 77,
+        "end_frame": 143,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 144,
+        "end_frame": 221,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_46": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 74,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 75,
+        "end_frame": 134,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 135,
+        "end_frame": 201,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_47": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 67,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 68,
+        "end_frame": 124,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 125,
+        "end_frame": 185,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_48": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 70,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 71,
+        "end_frame": 133,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 134,
+        "end_frame": 208,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ],
+    "demo_49": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 81,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Close[top drawer]",
+          "preconditions": [
+            "Open[top drawer]"
+          ],
+          "effects": [
+            "Closed[top drawer]"
+          ],
+          "description": "The robot arm closes the top drawer of the cabinet."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 82,
+        "end_frame": 183,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[black bowl]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[black bowl]"
+          ],
+          "description": "The robot arm picks up the black bowl."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 184,
+        "end_frame": 258,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[black bowl, top of cabinet]",
+          "preconditions": [
+            "Holding[black bowl]"
+          ],
+          "effects": [
+            "On[black bowl, cabinet]"
+          ],
+          "description": "The robot places the black bowl onto the top of the cabinet."
+        }
+      }
+    ]
+  }
+}

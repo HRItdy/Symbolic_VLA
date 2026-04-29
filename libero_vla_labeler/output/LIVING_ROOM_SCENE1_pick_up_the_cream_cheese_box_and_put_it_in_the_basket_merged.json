@@ -1,0 +1,1860 @@
+{
+  "task_name": "LIVING_ROOM_SCENE1_pick_up_the_cream_cheese_box_and_put_it_in_the_basket",
+  "canonical_operators": {
+    "problem_name": "LIBERO_Living_Room_Tabletop_Manipulation",
+    "language": "pick up the cream cheese box and put it in the basket",
+    "initial_state": {
+      "On": [
+        "alphabet_soup_1 living_room_table_alphabet_soup_init_region",
+        "cream_cheese_1 living_room_table_cream_cheese_init_region",
+        "tomato_sauce_1 living_room_table_tomato_sauce_init_region",
+        "ketchup_1 living_room_table_ketchup_init_region",
+        "basket_1 living_room_table_basket_init_region"
+      ]
+    },
+    "goal_state": {
+      "In": [
+        "cream_cheese_1 basket_1_contain_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "PickUp",
+        "parameters": [
+          "cream_cheese_1"
+        ],
+        "description": "pick up the cream cheese box",
+        "key_action": "picking up",
+        "key_event": "cream cheese box picked up",
+        "preconditions": [
+          "On cream_cheese_1 living_room_table_cream_cheese_init_region"
+        ],
+        "effects": [
+          "Not(On cream_cheese_1 living_room_table_cream_cheese_init_region)",
+          "Holding cream_cheese_1"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "cream_cheese_1",
+          "basket_1"
+        ],
+        "description": "put the cream cheese box in the basket",
+        "key_action": "placing",
+        "key_event": "cream cheese box placed in basket",
+        "preconditions": [
+          "Holding cream_cheese_1"
+        ],
+        "effects": [
+          "In cream_cheese_1 basket_1_contain_region",
+          "Not(Holding cream_cheese_1)"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": {
+    "demo_0": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 74,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 75,
+        "end_frame": 160,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_1": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 75,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 76,
+        "end_frame": 160,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_2": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 66,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 67,
+        "end_frame": 143,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_3": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 68,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 69,
+        "end_frame": 144,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_4": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 64,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 65,
+        "end_frame": 145,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_5": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 75,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 76,
+        "end_frame": 150,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_6": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 67,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 68,
+        "end_frame": 141,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_7": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 66,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 67,
+        "end_frame": 134,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_8": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 75,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 76,
+        "end_frame": 147,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_9": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 67,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 68,
+        "end_frame": 142,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_10": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 61,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 62,
+        "end_frame": 149,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_11": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 63,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 64,
+        "end_frame": 141,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_12": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 71,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 72,
+        "end_frame": 133,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_13": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 62,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 63,
+        "end_frame": 142,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_14": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 82,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 83,
+        "end_frame": 159,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_15": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 79,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 80,
+        "end_frame": 163,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_16": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 72,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 73,
+        "end_frame": 151,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_17": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 57,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 58,
+        "end_frame": 127,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_18": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 71,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 72,
+        "end_frame": 146,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_19": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 79,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 80,
+        "end_frame": 146,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_20": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 57,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 58,
+        "end_frame": 137,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_21": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 66,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 67,
+        "end_frame": 150,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_22": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 72,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 73,
+        "end_frame": 146,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_23": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 69,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 70,
+        "end_frame": 137,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_24": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 72,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 73,
+        "end_frame": 157,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_25": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 64,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 65,
+        "end_frame": 151,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_26": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 70,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 71,
+        "end_frame": 149,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_27": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 61,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 62,
+        "end_frame": 135,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_28": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 76,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 77,
+        "end_frame": 158,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_29": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 69,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 70,
+        "end_frame": 150,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_30": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 58,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 59,
+        "end_frame": 131,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_31": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 62,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 63,
+        "end_frame": 145,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_32": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 69,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 70,
+        "end_frame": 144,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_33": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 69,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 70,
+        "end_frame": 149,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_34": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 65,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 66,
+        "end_frame": 144,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_35": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 68,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 69,
+        "end_frame": 148,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_36": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 62,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 63,
+        "end_frame": 159,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_37": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 71,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 72,
+        "end_frame": 147,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_38": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 76,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 77,
+        "end_frame": 161,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_39": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 72,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 73,
+        "end_frame": 156,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_40": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 79,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 80,
+        "end_frame": 181,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_41": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 60,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 61,
+        "end_frame": 140,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_42": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 76,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 77,
+        "end_frame": 150,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_43": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 75,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 76,
+        "end_frame": 154,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_44": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 64,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 65,
+        "end_frame": 162,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_45": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 79,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 80,
+        "end_frame": 158,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_46": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 72,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 73,
+        "end_frame": 146,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_47": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 57,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 58,
+        "end_frame": 131,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_48": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 60,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 61,
+        "end_frame": 143,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ],
+    "demo_49": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 59,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "PickUp[cream cheese]",
+          "preconditions": [
+            "Empty[gripper]"
+          ],
+          "effects": [
+            "Holding[cream cheese]"
+          ],
+          "description": "The robot arm picks up the cream cheese box from the table."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 60,
+        "end_frame": 134,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[cream cheese, basket]",
+          "preconditions": [
+            "Holding[cream cheese]"
+          ],
+          "effects": [
+            "In[cream cheese, basket]"
+          ],
+          "description": "The robot places the cream cheese into the basket."
+        }
+      }
+    ]
+  }
+}

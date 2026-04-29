@@ -1,0 +1,2805 @@
+{
+  "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_frying_pan_on_it",
+  "canonical_operators": {
+    "problem_name": "LIBERO_Kitchen_Tabletop_Manipulation",
+    "language": "turn on the stove and put the frying pan on it",
+    "initial_state": {
+      "On": [
+        "flat_stove_1 kitchen_table_flat_stove_init_region",
+        "chefmate_8_frypan_1 kitchen_table_frypan_init_region",
+        "moka_pot_1 kitchen_table_moka_pot_init_region"
+      ]
+    },
+    "goal_state": {
+      "And": [
+        "Turnon flat_stove_1",
+        "On chefmate_8_frypan_1 flat_stove_1_cook_region"
+      ]
+    },
+    "operators": [
+      {
+        "name": "TurnOn",
+        "parameters": [
+          "flat_stove_1"
+        ],
+        "description": "turn on the stove",
+        "key_action": "turn on",
+        "key_event": "stove turned on",
+        "preconditions": [],
+        "effects": [
+          "Turnon flat_stove_1"
+        ],
+        "source_predicates": []
+      },
+      {
+        "name": "Place",
+        "parameters": [
+          "chefmate_8_frypan_1",
+          "flat_stove_1"
+        ],
+        "description": "put the frying pan on the stove",
+        "key_action": "place",
+        "key_event": "frying pan placed on stove",
+        "preconditions": [
+          "On chefmate_8_frypan_1 kitchen_table_frypan_init_region"
+        ],
+        "effects": [
+          "On chefmate_8_frypan_1 flat_stove_1_cook_region"
+        ],
+        "source_predicates": []
+      }
+    ]
+  },
+  "segments": {
+    "demo_0": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 102,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 103,
+        "end_frame": 209,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 210,
+        "end_frame": 286,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_1": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 92,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 93,
+        "end_frame": 166,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 167,
+        "end_frame": 238,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_2": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 102,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 103,
+        "end_frame": 191,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 192,
+        "end_frame": 276,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_3": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 85,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 86,
+        "end_frame": 187,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 188,
+        "end_frame": 267,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_4": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 106,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 107,
+        "end_frame": 202,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 203,
+        "end_frame": 273,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_5": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 109,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 110,
+        "end_frame": 191,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 192,
+        "end_frame": 274,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_6": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 90,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 91,
+        "end_frame": 215,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 216,
+        "end_frame": 295,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_7": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 104,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 105,
+        "end_frame": 180,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 181,
+        "end_frame": 259,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_8": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 99,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 100,
+        "end_frame": 202,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 203,
+        "end_frame": 299,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_9": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 100,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 101,
+        "end_frame": 173,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 174,
+        "end_frame": 264,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_10": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 106,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 107,
+        "end_frame": 200,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 201,
+        "end_frame": 271,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_11": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 96,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 97,
+        "end_frame": 182,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 183,
+        "end_frame": 254,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_12": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 100,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 101,
+        "end_frame": 202,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 203,
+        "end_frame": 307,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_13": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 100,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 101,
+        "end_frame": 191,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 102,
+        "end_frame": 303,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_14": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 100,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 101,
+        "end_frame": 191,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 192,
+        "end_frame": 297,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_15": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 109,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 110,
+        "end_frame": 207,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 208,
+        "end_frame": 301,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_16": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 110,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 111,
+        "end_frame": 180,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 181,
+        "end_frame": 260,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_17": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 93,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 94,
+        "end_frame": 206,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 207,
+        "end_frame": 289,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_18": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 145,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 146,
+        "end_frame": 235,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 236,
+        "end_frame": 320,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_19": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 83,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 84,
+        "end_frame": 256,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 257,
+        "end_frame": 334,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_20": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 104,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 105,
+        "end_frame": 215,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 216,
+        "end_frame": 292,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_21": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 90,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 91,
+        "end_frame": 173,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 174,
+        "end_frame": 257,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_22": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 110,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 111,
+        "end_frame": 207,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 208,
+        "end_frame": 295,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_23": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 94,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 95,
+        "end_frame": 201,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 202,
+        "end_frame": 275,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_24": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 117,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 118,
+        "end_frame": 194,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 195,
+        "end_frame": 276,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_25": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 93,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 94,
+        "end_frame": 179,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 180,
+        "end_frame": 250,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_26": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 89,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 90,
+        "end_frame": 168,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 169,
+        "end_frame": 249,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_27": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 94,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 95,
+        "end_frame": 194,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 195,
+        "end_frame": 276,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_28": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 104,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 105,
+        "end_frame": 215,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 216,
+        "end_frame": 312,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_29": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 98,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 99,
+        "end_frame": 182,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 183,
+        "end_frame": 267,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_30": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 95,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 96,
+        "end_frame": 178,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 179,
+        "end_frame": 255,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_31": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 103,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 104,
+        "end_frame": 207,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 208,
+        "end_frame": 310,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_32": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 103,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 104,
+        "end_frame": 199,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 200,
+        "end_frame": 303,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_33": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 125,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 126,
+        "end_frame": 225,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 226,
+        "end_frame": 298,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_34": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 103,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 104,
+        "end_frame": 199,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 200,
+        "end_frame": 271,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_35": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 102,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 103,
+        "end_frame": 191,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 192,
+        "end_frame": 266,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_36": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 93,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 94,
+        "end_frame": 206,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 207,
+        "end_frame": 303,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_37": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 97,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 98,
+        "end_frame": 188,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 189,
+        "end_frame": 267,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_38": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 103,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 104,
+        "end_frame": 211,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 212,
+        "end_frame": 294,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_39": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 98,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 99,
+        "end_frame": 194,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 195,
+        "end_frame": 287,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_40": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 92,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 93,
+        "end_frame": 181,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 182,
+        "end_frame": 258,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_41": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 89,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 90,
+        "end_frame": 174,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 175,
+        "end_frame": 254,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_42": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 106,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 107,
+        "end_frame": 201,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 202,
+        "end_frame": 277,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_43": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 111,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 112,
+        "end_frame": 202,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 203,
+        "end_frame": 281,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_44": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 97,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 98,
+        "end_frame": 183,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 184,
+        "end_frame": 257,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_45": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 99,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 100,
+        "end_frame": 190,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 191,
+        "end_frame": 269,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_46": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 95,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 96,
+        "end_frame": 175,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 176,
+        "end_frame": 285,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_47": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 84,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 85,
+        "end_frame": 187,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 188,
+        "end_frame": 275,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_48": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 107,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 108,
+        "end_frame": 192,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 193,
+        "end_frame": 270,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ],
+    "demo_49": [
+      {
+        "segment_id": "seg_1",
+        "start_frame": 0,
+        "end_frame": 95,
+        "gripper_state": "close",
+        "transition_out": "open",
+        "annotation": {
+          "operator": "TurnOn[stove]",
+          "preconditions": [
+            "Closed[stove]"
+          ],
+          "effects": [
+            "Turnon[stove]"
+          ],
+          "description": "The robot arm turns on the stove."
+        }
+      },
+      {
+        "segment_id": "seg_2",
+        "start_frame": 96,
+        "end_frame": 172,
+        "gripper_state": "open",
+        "transition_out": "close",
+        "annotation": {
+          "operator": "PickUp[frying pan]",
+          "preconditions": [
+            "Empty[gripper]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "holding[frying pan]"
+          ],
+          "description": "The robot picks up the frying pan."
+        }
+      },
+      {
+        "segment_id": "seg_3",
+        "start_frame": 173,
+        "end_frame": 267,
+        "gripper_state": "close",
+        "transition_out": null,
+        "annotation": {
+          "operator": "Place[frying pan, stove]",
+          "preconditions": [
+            "holding[frying pan]",
+            "Turnon[stove]"
+          ],
+          "effects": [
+            "On[frying pan, stove]"
+          ],
+          "description": "The robot arm places the frying pan onto the stove."
+        }
+      }
+    ]
+  }
+}

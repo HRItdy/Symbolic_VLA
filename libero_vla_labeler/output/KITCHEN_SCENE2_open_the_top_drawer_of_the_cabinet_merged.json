@@ -85,10 +85,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "TopDrawerClosed"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "TopDrawerOpen"
+            "Open[top_drawer]"
           ],
           "description": "The robot approaches the cabinet and opens the top drawer by pulling it out."
         }
@@ -104,10 +104,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "TopDrawerClosed"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "TopDrawerOpened"
+            "Open[top_drawer]"
           ],
           "description": "The robot arm reaches the cabinet and pulls the top drawer open."
         }
@@ -123,10 +123,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open[top_drawer]"
           ],
           "description": "The robot positions itself near the cabinet and executes the drawer opening action."
         }
@@ -142,10 +142,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "TopDrawerClosed"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "TopDrawerOpen"
+            "Open[top_drawer]"
           ],
           "description": "The robot moves to the cabinet and opens the top drawer."
         }
@@ -199,10 +199,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "TopDrawerClosed"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "TopDrawerOpen"
+            "Open[top_drawer]"
           ],
           "description": "The robot arm moves towards the cabinet where the top drawer is located and pulls it open."
         }
@@ -218,10 +218,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open[top_drawer]"
           ],
           "description": "The robot arm reaches the cabinet and pulls the top drawer open."
         }
@@ -237,10 +237,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "Closed top drawer"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "Open top drawer"
+            "Open[top_drawer]"
           ],
           "description": "The robot arm moves towards the cabinet where the top drawer is located and pulls it open."
         }
@@ -256,10 +256,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open[top_drawer]"
           ],
           "description": "The robotic arm navigates to the cabinet and pulls open the top drawer."
         }
@@ -275,10 +275,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "TopDrawerClosed"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "TopDrawerOpened"
+            "Open[top_drawer]"
           ],
           "description": "The arm extends to the cabinet, grasping the drawer handle and sliding it open."
         }
@@ -294,10 +294,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open[top_drawer]"
           ],
           "description": "The robot arm moves towards the cabinet where the top drawer is located and pulls it open."
         }
@@ -351,10 +351,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "Closed top drawer"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "Open top drawer"
+            "Open[top_drawer]"
           ],
           "description": "The robot arm reaches the cabinet and pulls the top drawer open."
         }
@@ -411,7 +411,7 @@
             "Close top drawer"
           ],
           "effects": [
-            "Open top drawer"
+            "Open[top_drawer]"
           ],
           "description": "The arm extends to the cabinet, grasping the drawer handle and sliding it open."
         }
@@ -427,10 +427,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "TopDrawerClosed"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "TopDrawerOpen"
+            "Open[top_drawer]"
           ],
           "description": "The arm extends to the cabinet, grasping the drawer handle and sliding it open."
         }
@@ -446,10 +446,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open[top_drawer]"
           ],
           "description": "The robot positions itself near the cabinet and executes the drawer opening action."
         }
@@ -484,10 +484,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open[top_drawer]"
           ],
           "description": "The robot arm reaches the cabinet and pulls the top drawer open."
         }
@@ -579,10 +579,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "Closed top drawer"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "Open top drawer"
+            "Open[top_drawer]"
           ],
           "description": "The arm extends to the cabinet, grasping the drawer handle and sliding it open."
         }
@@ -636,10 +636,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "Closed top drawer"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "Open top drawer"
+            "Open[top_drawer]"
           ],
           "description": "The arm extends to the cabinet, grasping the drawer handle and sliding it open."
         }
@@ -655,10 +655,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "TopDrawerClosed"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "TopDrawerOpen"
+            "Open[top_drawer]"
           ],
           "description": "The robot positions itself near the cabinet and executes the drawer opening action."
         }
@@ -693,10 +693,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "TopDrawerClosed"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "TopDrawerOpen"
+            "Open[top_drawer]"
           ],
           "description": "The robotic arm navigates to the cabinet and pulls open the top drawer."
         }
@@ -712,10 +712,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open[top_drawer]"
           ],
           "description": "The arm extends to the cabinet, grasping the drawer handle and sliding it open."
         }
@@ -731,10 +731,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "Closed top drawer"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "Open top drawer"
+            "Open[top_drawer]"
           ],
           "description": "The robotic arm navigates to the cabinet and pulls open the top drawer."
         }
@@ -750,10 +750,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "TopDrawerClosed"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "TopDrawerOpen"
+            "Open[top_drawer]"
           ],
           "description": "The robot positions itself near the cabinet and executes the drawer opening action."
         }
@@ -845,10 +845,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "TopDrawerClosed"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "TopDrawerOpen"
+            "Open[top_drawer]"
           ],
           "description": "The robot moves to the cabinet and opens the top drawer."
         }
@@ -940,10 +940,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open[top_drawer]"
           ],
           "description": "The arm extends to the cabinet, grasping the drawer handle and sliding it open."
         }
@@ -978,10 +978,10 @@
         "annotation": {
           "operator": "Open[top_drawer]",
           "preconditions": [
-            "TopDrawerClosed"
+            "Closed[top_drawer]"
           ],
           "effects": [
-            "TopDrawerOpen"
+            "Open[top_drawer]"
           ],
           "description": "The robot positions itself near the cabinet and executes the drawer opening action."
         }

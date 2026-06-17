@@ -61,7 +61,7 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
             "Closed top drawer"
           ],
@@ -115,12 +115,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[cabinet_top_region]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[cabinet_top_region]"
+            "Open top drawer"
           ],
           "description": "The robot arm moves towards the top drawer of the cabinet and opens it."
         }
@@ -134,7 +134,7 @@
         "annotation": {
           "operator": "grasp[bowl]",
           "preconditions": [
-            "Open[cabinet_top_region]"
+            "Open top drawer"
           ],
           "effects": [
             "Holding bowl"
@@ -169,12 +169,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[cabinet_top_region]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[cabinet_top_region]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[cabinet_top_region]"
+            "Open top drawer"
           ],
           "description": "The robot arm moves towards the cabinet, positioning itself to interact with the top drawer."
         }
@@ -188,8 +188,7 @@
         "annotation": {
           "operator": "pickup[bowl]",
           "preconditions": [
-            "Open[cabinet_top_region]",
-            "GripperEmpty"
+            "Open top drawer"
           ],
           "effects": [
             "Holding[bowl]"
@@ -224,7 +223,7 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
             "Closed top drawer"
           ],
@@ -278,12 +277,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[cabinet_top_region]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[cabinet_top_region]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[cabinet_top_region]"
+            "Open top drawer"
           ],
           "description": "The robot moves its arm to the cabinet, grabs the handle of the top drawer, and pulls it open."
         }
@@ -297,7 +296,7 @@
         "annotation": {
           "operator": "pickup[bowl]",
           "preconditions": [
-            "Open[cabinet_top_region]"
+            "Open top drawer"
           ],
           "effects": [
             "Holding[bowl]"
@@ -332,12 +331,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "description": "The robot moves its arm to the top drawer of the cabinet and opens it."
         }
@@ -351,7 +350,7 @@
         "annotation": {
           "operator": "Grab[bowl]",
           "preconditions": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "effects": [
             "Grabbing[bowl]"
@@ -386,12 +385,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "description": "The robot arm moves towards the top drawer of the cabinet and opens it."
         }
@@ -405,7 +404,7 @@
         "annotation": {
           "operator": "pickup[bowl]",
           "preconditions": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "effects": [
             "Holding[bowl]"
@@ -440,12 +439,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "description": "The robot reaches for and opens the top drawer of the cabinet."
         }
@@ -459,7 +458,7 @@
         "annotation": {
           "operator": "Pick[bowl]",
           "preconditions": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "effects": [
             "Holding[bowl]"
@@ -494,9 +493,9 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Not (Open top drawer)"
+            "Closed top drawer"
           ],
           "effects": [
             "Open top drawer"
@@ -548,7 +547,7 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
             "Closed top drawer"
           ],
@@ -602,9 +601,9 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "not (Open top drawer)"
+            "Closed top drawer"
           ],
           "effects": [
             "Open top drawer"
@@ -656,12 +655,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top of cabinet]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "not (Open top of cabinet)"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open top of cabinet"
+            "Open top drawer"
           ],
           "description": "The robot arm moves to the cabinet and opens its top drawer."
         }
@@ -675,7 +674,7 @@
         "annotation": {
           "operator": "pickup[bowl]",
           "preconditions": [
-            "Open top of cabinet"
+            "Open top drawer"
           ],
           "effects": [
             "holding bowl"
@@ -710,12 +709,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "open[top drawer of cabinet]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "not (Open top drawer of cabinet)"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open top drawer of cabinet"
+            "Open top drawer"
           ],
           "description": "The robot arm moves towards the cabinet to position itself to open the top drawer."
         }
@@ -729,7 +728,7 @@
         "annotation": {
           "operator": "pickup[bowl]",
           "preconditions": [
-            "Open top drawer of cabinet"
+            "Open top drawer"
           ],
           "effects": [
             "holding bowl"
@@ -764,12 +763,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "description": "The robot arm moves towards the top drawer of the cabinet, then opens it."
         }
@@ -783,7 +782,7 @@
         "annotation": {
           "operator": "Grasp[bowl]",
           "preconditions": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "effects": [
             "Grasping[bowl]"
@@ -818,12 +817,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "not (Open[top drawer])"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "description": "The robot arm moves its gripper towards the handle of the top drawer of the cabinet and pulls it open."
         }
@@ -837,7 +836,7 @@
         "annotation": {
           "operator": "PickUp[bowl]",
           "preconditions": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "effects": [
             "Grasping[bowl]"
@@ -872,12 +871,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "not (Open[top drawer])"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "description": "The robot opensthe top drawer of the cabinet."
         }
@@ -891,7 +890,7 @@
         "annotation": {
           "operator": "PickUp[bowl]",
           "preconditions": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "effects": [
             "Holding[bowl]"
@@ -926,12 +925,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "not (Open[top drawer])"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "description": "The robot moves its gripper to the top drawer handle, grasps it, and pulls the drawer open."
         }
@@ -945,7 +944,7 @@
         "annotation": {
           "operator": "Pick[bowl]",
           "preconditions": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "effects": [
             "Holding[bowl]"
@@ -980,12 +979,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top of cabinet]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "not (Open[top of cabinet])"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top of cabinet]"
+            "Open top drawer"
           ],
           "description": "The robot moves to the cabinet, grasps the handle of the top drawer, and pulls it open."
         }
@@ -999,7 +998,7 @@
         "annotation": {
           "operator": "Grab[bowl]",
           "preconditions": [
-            "Open[top of cabinet]"
+            "Open top drawer"
           ],
           "effects": [
             "Holding[bowl]"
@@ -1034,7 +1033,7 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
             "Closed top drawer"
           ],
@@ -1088,12 +1087,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "(Not (Open top drawer))"
+            "Closed top drawer"
           ],
           "effects": [
-            "(Open top drawer)"
+            "Open top drawer"
           ],
           "description": "The robot pulls open the top drawer of the cabinet."
         }
@@ -1142,12 +1141,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "description": "The robot arm moves towards the top drawer of the cabinet and opens it."
         }
@@ -1161,7 +1160,7 @@
         "annotation": {
           "operator": "Pickup[bowl]",
           "preconditions": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "effects": [
             "In[bowl, gripper]"
@@ -1196,12 +1195,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "not (Open[top drawer])"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "description": "The robot moves its gripper to the handle of the top drawer and pulls it open."
         }
@@ -1215,7 +1214,7 @@
         "annotation": {
           "operator": "Pick[bowl]",
           "preconditions": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "effects": [
             "In[bowl, hand]"
@@ -1250,12 +1249,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer of cabinet]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "not (Open[top drawer of cabinet])"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer of cabinet]"
+            "Open top drawer"
           ],
           "description": "The robot grasps the handle of the top drawer of the cabinet and pulls it open."
         }
@@ -1269,7 +1268,7 @@
         "annotation": {
           "operator": "Pickup[bowl]",
           "preconditions": [
-            "Open[top drawer of cabinet]"
+            "Open top drawer"
           ],
           "effects": [
             "In[bowl, hand]"
@@ -1304,12 +1303,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "not (Open[top drawer])"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "description": "The robot arm opens the top drawer of the cabinet."
         }
@@ -1323,7 +1322,7 @@
         "annotation": {
           "operator": "Pickup[bowl]",
           "preconditions": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "effects": [
             "Grasping[bowl]"
@@ -1358,7 +1357,7 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
             "Closed top drawer"
           ],
@@ -1412,12 +1411,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "description": "The robot moves its arm to the cabinet and pulls open its top drawer."
         }
@@ -1431,7 +1430,7 @@
         "annotation": {
           "operator": "Pickup[bowl]",
           "preconditions": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "effects": [
             "Grasping bowl"
@@ -1466,12 +1465,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "description": "The robot reaches for and pulls the handle of the top drawer of the cabinet, opening it."
         }
@@ -1485,7 +1484,7 @@
         "annotation": {
           "operator": "Pickup[bowl]",
           "preconditions": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "effects": [
             "Grasping bowl"
@@ -1520,12 +1519,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top of cabinet]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[top of cabinet]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top of cabinet]"
+            "Open top drawer"
           ],
           "description": "The robot arm moves to position itself in front of the cabinet's top drawer, then opens it."
         }
@@ -1539,7 +1538,7 @@
         "annotation": {
           "operator": "Pick[bowl]",
           "preconditions": [
-            "Open[top of cabinet]"
+            "Open top drawer"
           ],
           "effects": [
             "Grasping bowl"
@@ -1574,12 +1573,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "(not (Open top drawer))"
+            "Closed top drawer"
           ],
           "effects": [
-            "(Open top drawer)"
+            "Open top drawer"
           ],
           "description": "The robot opens the top drawer of the cabinet."
         }
@@ -1593,8 +1592,7 @@
         "annotation": {
           "operator": "Grasp[bowl]",
           "preconditions": [
-            "(Open top drawer)",
-            "(Grasping bowl)"
+            "Open top drawer"
           ],
           "effects": [
             "(In bowl hand)"
@@ -1629,12 +1627,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "(not (Open top drawer))"
+            "Closed top drawer"
           ],
           "effects": [
-            "(Open top drawer)"
+            "Open top drawer"
           ],
           "description": "The robot opens the top drawer of the cabinet."
         }
@@ -1648,7 +1646,7 @@
         "annotation": {
           "operator": "Pick[bowl]",
           "preconditions": [
-            "(Open top drawer)"
+            "Open top drawer"
           ],
           "effects": [
             "Holding bowl"
@@ -1683,7 +1681,7 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
             "Closed top drawer"
           ],
@@ -1737,10 +1735,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
-          "preconditions": [],
+          "operator": "Open[cabinet top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
           "effects": [
-            "Open top_drawer"
+            "Open top drawer"
           ],
           "description": "The robot moves to and opens the top drawer of the cabinet."
         }
@@ -1754,7 +1754,7 @@
         "annotation": {
           "operator": "Pickup[bowl]",
           "preconditions": [
-            "Open top_drawer"
+            "Open top drawer"
           ],
           "effects": [
             "Holding bowl"
@@ -1789,9 +1789,9 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "(not (Open top drawer))"
+            "Closed top drawer"
           ],
           "effects": [
             "Open top drawer"
@@ -1843,9 +1843,9 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "not (Open top drawer)"
+            "Closed top drawer"
           ],
           "effects": [
             "Open top drawer"
@@ -1897,9 +1897,9 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "not (Open top drawer)"
+            "Closed top drawer"
           ],
           "effects": [
             "Open top drawer"
@@ -1951,9 +1951,9 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "(not (Open top drawer))"
+            "Closed top drawer"
           ],
           "effects": [
             "Open top drawer"
@@ -2005,9 +2005,9 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "not (Open top drawer)"
+            "Closed top drawer"
           ],
           "effects": [
             "Open top drawer"
@@ -2059,8 +2059,10 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
-          "preconditions": [],
+          "operator": "Open[cabinet top drawer]",
+          "preconditions": [
+            "Closed top drawer"
+          ],
           "effects": [
             "Open top drawer"
           ],
@@ -2111,12 +2113,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "(not (Open top drawer))"
+            "Closed top drawer"
           ],
           "effects": [
-            "(Open top drawer)"
+            "Open top drawer"
           ],
           "description": "The robot moves its arm to the top drawer handle and pulls it open."
         }
@@ -2164,12 +2166,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top of cabinet]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[top of cabinet]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top of cabinet]"
+            "Open top drawer"
           ],
           "description": "The robot moves to and opens the top drawer of the cabinet."
         }
@@ -2183,7 +2185,7 @@
         "annotation": {
           "operator": "Pickup[bowl]",
           "preconditions": [
-            "Open[top of cabinet]"
+            "Open top drawer"
           ],
           "effects": [
             "Holding bowl"
@@ -2218,9 +2220,9 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "(not (Open top drawer))"
+            "Closed top drawer"
           ],
           "effects": [
             "Open top drawer"
@@ -2272,9 +2274,9 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "(not (Open top drawer))"
+            "Closed top drawer"
           ],
           "effects": [
             "Open top drawer"
@@ -2326,12 +2328,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "description": "The robot arm moves towards the top drawer of the cabinet and pulls it open."
         }
@@ -2345,7 +2347,7 @@
         "annotation": {
           "operator": "Grasp[bowl]",
           "preconditions": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "effects": [
             "Holding bowl"
@@ -2380,12 +2382,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top of cabinet]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[top of cabinet]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top of cabinet]"
+            "Open top drawer"
           ],
           "description": "The robot arm moves to the cabinet and opens its top drawer."
         }
@@ -2399,7 +2401,7 @@
         "annotation": {
           "operator": "Pickup[bowl]",
           "preconditions": [
-            "Open[top of cabinet]"
+            "Open top drawer"
           ],
           "effects": [
             "Holding bowl"
@@ -2434,12 +2436,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "description": "The robot arm moves towards the cabinet, grasps the handle of the top drawer, and pulls it open."
         }
@@ -2453,7 +2455,7 @@
         "annotation": {
           "operator": "Pickup[bowl]",
           "preconditions": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "effects": [
             "Holding bowl"
@@ -2488,9 +2490,9 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "not (Open top drawer)"
+            "Closed top drawer"
           ],
           "effects": [
             "Open top drawer"
@@ -2542,9 +2544,9 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "not (Open top drawer)"
+            "Closed top drawer"
           ],
           "effects": [
             "Open top drawer"
@@ -2596,12 +2598,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "description": "The robot arm opens the top drawer of the cabinet."
         }
@@ -2615,7 +2617,7 @@
         "annotation": {
           "operator": "Pickup[bowl]",
           "preconditions": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "effects": [
             "Holding[bowl]"
@@ -2650,12 +2652,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[top drawer]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "description": "The robot grasps the handle of the top drawer and pulls it open."
         }
@@ -2669,7 +2671,7 @@
         "annotation": {
           "operator": "Pickup[bowl]",
           "preconditions": [
-            "Open[top drawer]"
+            "Open top drawer"
           ],
           "effects": [
             "Holding[bowl]"
@@ -2704,12 +2706,12 @@
         "gripper_state": "close",
         "transition_out": "open",
         "annotation": {
-          "operator": "Open[top drawer of cabinet]",
+          "operator": "Open[cabinet top drawer]",
           "preconditions": [
-            "Closed[top drawer of cabinet]"
+            "Closed top drawer"
           ],
           "effects": [
-            "Open[top drawer of cabinet]"
+            "Open top drawer"
           ],
           "description": "The robot arm moves to grasp the handle of the top drawer and pulls it open."
         }
@@ -2723,7 +2725,7 @@
         "annotation": {
           "operator": "Pickup[bowl]",
           "preconditions": [
-            "Open[top drawer of cabinet]"
+            "Open top drawer"
           ],
           "effects": [
             "Holding[bowl]"
